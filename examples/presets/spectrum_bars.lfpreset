@@ -1,0 +1,30 @@
+{
+ "format": "lfpreset",
+ "version": 1,
+ "id": "spectrum_bars",
+ "name": "Spectrum Bars",
+ "category": "Audio-reactive",
+ "layer": {
+  "source": {
+   "type": 0,
+   "effect": "spectrum",
+   "colorA": [
+    0,
+    1,
+    0.6
+   ],
+   "colorB": [
+    1,
+    0.1,
+    0.5
+   ],
+   "enabled": true
+  },
+  "values": {
+   "opacity": 1,
+   "audio": 0.5,
+   "p1": 0.6,
+   "p3": 1
+  }
+ }
+}

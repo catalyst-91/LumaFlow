@@ -1,0 +1,4985 @@
+{
+    "audio": {
+        "device": "test:120",
+        "enabled": false,
+        "gain": 1,
+        "gate": 0.01,
+        "sensitivity": 1.4,
+        "smoothing": 0.6
+    },
+    "calibration": {
+        "brightness": 1,
+        "gainB": 1,
+        "gainG": 1,
+        "gainR": 1,
+        "gamma": 1,
+        "whitePointK": 6500
+    },
+    "composition": {
+        "layers": [
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "particle_cloud",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0,
+                    0.9,
+                    1
+                ],
+                "colorB": [
+                    0.6,
+                    0,
+                    1
+                ],
+                "effect": "energy_rings",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    1,
+                    0.3,
+                    0.1
+                ],
+                "colorB": [
+                    0.1,
+                    0.3,
+                    1
+                ],
+                "effect": "kaleidoscope",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            }
+        ],
+        "values": {
+            "audio.gain": 1,
+            "audio.reactivity": 0.5,
+            "audio.smoothing": 0.6,
+            "ext.1": 0,
+            "ext.2": 0,
+            "ext.3": 0,
+            "ext.4": 0,
+            "ext.5": 0,
+            "ext.6": 0,
+            "ext.7": 0,
+            "ext.8": 0,
+            "layer1.audio": 0,
+            "layer1.blend": 0,
+            "layer1.brightness": 1,
+            "layer1.contrast": 1,
+            "layer1.effect": 8,
+            "layer1.hue": 0,
+            "layer1.hue2": 0,
+            "layer1.opacity": 1,
+            "layer1.p1": 0.5,
+            "layer1.p2": 0.5,
+            "layer1.p3": 0.5,
+            "layer1.p4": 0.5,
+            "layer1.posx": 0,
+            "layer1.posy": 0,
+            "layer1.rotation": 0,
+            "layer1.saturation": 1,
+            "layer1.scale": 1,
+            "layer1.speed": 1,
+            "layer2.audio": 0,
+            "layer2.blend": 1,
+            "layer2.brightness": 1,
+            "layer2.contrast": 1,
+            "layer2.effect": 0,
+            "layer2.hue": 0,
+            "layer2.hue2": 0,
+            "layer2.opacity": 0.6,
+            "layer2.p1": 0.5,
+            "layer2.p2": 0.4,
+            "layer2.p3": 0.3,
+            "layer2.p4": 0.5,
+            "layer2.posx": 0,
+            "layer2.posy": 0,
+            "layer2.rotation": 0,
+            "layer2.saturation": 1,
+            "layer2.scale": 1,
+            "layer2.speed": 1,
+            "layer3.audio": 0,
+            "layer3.blend": 3,
+            "layer3.brightness": 1,
+            "layer3.contrast": 1,
+            "layer3.effect": 11,
+            "layer3.hue": 0,
+            "layer3.hue2": 0,
+            "layer3.opacity": 0,
+            "layer3.p1": 0.5,
+            "layer3.p2": 0.3,
+            "layer3.p3": 0.5,
+            "layer3.p4": 0.5,
+            "layer3.posx": 0,
+            "layer3.posy": 0,
+            "layer3.rotation": 0,
+            "layer3.saturation": 1,
+            "layer3.scale": 1,
+            "layer3.speed": 1,
+            "layer4.audio": 0,
+            "layer4.blend": 0,
+            "layer4.brightness": 1,
+            "layer4.contrast": 1,
+            "layer4.effect": 14,
+            "layer4.hue": 0,
+            "layer4.hue2": 0,
+            "layer4.opacity": 0,
+            "layer4.p1": 0.4,
+            "layer4.p2": 0.5,
+            "layer4.p3": 0.5,
+            "layer4.p4": 0.3,
+            "layer4.posx": 0,
+            "layer4.posy": 0,
+            "layer4.rotation": 0,
+            "layer4.saturation": 1,
+            "layer4.scale": 1,
+            "layer4.speed": 1,
+            "layer5.audio": 0,
+            "layer5.blend": 0,
+            "layer5.brightness": 1,
+            "layer5.contrast": 1,
+            "layer5.effect": 0,
+            "layer5.hue": 0,
+            "layer5.hue2": 0,
+            "layer5.opacity": 0,
+            "layer5.p1": 0.5,
+            "layer5.p2": 0.5,
+            "layer5.p3": 0.5,
+            "layer5.p4": 0.5,
+            "layer5.posx": 0,
+            "layer5.posy": 0,
+            "layer5.rotation": 0,
+            "layer5.saturation": 1,
+            "layer5.scale": 1,
+            "layer5.speed": 1,
+            "layer6.audio": 0,
+            "layer6.blend": 0,
+            "layer6.brightness": 1,
+            "layer6.contrast": 1,
+            "layer6.effect": 0,
+            "layer6.hue": 0,
+            "layer6.hue2": 0,
+            "layer6.opacity": 0,
+            "layer6.p1": 0.5,
+            "layer6.p2": 0.5,
+            "layer6.p3": 0.5,
+            "layer6.p4": 0.5,
+            "layer6.posx": 0,
+            "layer6.posy": 0,
+            "layer6.rotation": 0,
+            "layer6.saturation": 1,
+            "layer6.scale": 1,
+            "layer6.speed": 1,
+            "master.blackout": 0,
+            "master.blue": 1,
+            "master.green": 1,
+            "master.intensity": 1,
+            "master.red": 1,
+            "master.saturation": 1,
+            "master.strobe": 0,
+            "show.bpm": 120,
+            "show.control": 0,
+            "show.scene": 0,
+            "show.transition": 1
+        }
+    },
+    "consoles": [
+        {
+            "address": 1,
+            "enabled": false,
+            "mode": "Standard 32ch",
+            "name": "grandMA3",
+            "oscHost": "",
+            "oscPort": 0,
+            "universe": 1
+        },
+        {
+            "address": 1,
+            "enabled": false,
+            "mode": "Standard 32ch",
+            "name": "MagicQ",
+            "oscHost": "",
+            "oscPort": 0,
+            "universe": 2
+        }
+    ],
+    "cueLists": [
+        {
+            "cues": [
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 0,
+                    "followTime": 0,
+                    "name": "Plasma Drift",
+                    "number": 1,
+                    "scene": "1"
+                },
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 0,
+                    "followTime": 0,
+                    "name": "Vortex Rings",
+                    "number": 2,
+                    "scene": "2"
+                },
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 1,
+                    "followTime": 0,
+                    "name": "Kaleido Neon",
+                    "number": 3,
+                    "scene": "3"
+                },
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 0,
+                    "followTime": 0,
+                    "name": "Liquid Trails",
+                    "number": 4,
+                    "scene": "4"
+                },
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 0,
+                    "followTime": 0,
+                    "name": "Tunnel Pulse",
+                    "number": 5,
+                    "scene": "5"
+                },
+                {
+                    "actions": {
+                    },
+                    "delay": 0,
+                    "fade": 2,
+                    "follow": 0,
+                    "followTime": 0,
+                    "name": "Storm",
+                    "number": 6,
+                    "scene": "6"
+                }
+            ],
+            "name": "Main"
+        }
+    ],
+    "customEffects": [
+    ],
+    "format": "lumaflow-project",
+    "mappings": [
+        {
+            "address": "/gma3/Page1/Fader201",
+            "console": "grandMA3",
+            "deadband": 0,
+            "edge": 0,
+            "enabled": true,
+            "feedback": true,
+            "id": "3a232cb4-7856-45c3-bb8b-fc2face1b5d1",
+            "inMax": 100,
+            "inMin": 0,
+            "invert": false,
+            "oscArg": 0,
+            "outMax": 1,
+            "outMin": 0,
+            "smoothing": 0,
+            "softTakeover": true,
+            "source": "osc",
+            "target": "master.intensity",
+            "threshold": 0.5
+        },
+        {
+            "address": "/pb/1",
+            "console": "MagicQ",
+            "deadband": 0,
+            "edge": 0,
+            "enabled": true,
+            "feedback": true,
+            "id": "e7733244-737d-47da-9d66-a961f09136f1",
+            "inMax": 100,
+            "inMin": 0,
+            "invert": false,
+            "oscArg": 0,
+            "outMax": 1,
+            "outMin": 0,
+            "smoothing": 0,
+            "softTakeover": false,
+            "source": "osc",
+            "target": "layer1.opacity",
+            "threshold": 0.5
+        },
+        {
+            "address": "cc:0:1",
+            "console": "generic",
+            "deadband": 0,
+            "edge": 0,
+            "enabled": true,
+            "feedback": true,
+            "id": "56b8671f-7d30-4abe-a901-9b88bc237665",
+            "inMax": 1,
+            "inMin": 0,
+            "invert": false,
+            "oscArg": 0,
+            "outMax": 1,
+            "outMin": 0,
+            "smoothing": 0.5,
+            "softTakeover": false,
+            "source": "midi",
+            "target": "layer1.speed",
+            "threshold": 0.5
+        },
+        {
+            "address": "note:0:36",
+            "console": "generic",
+            "deadband": 0,
+            "edge": 1,
+            "enabled": true,
+            "feedback": true,
+            "id": "97377bb9-aa5b-4391-b526-8f85987e6e06",
+            "inMax": 1,
+            "inMin": 0,
+            "invert": false,
+            "oscArg": 0,
+            "outMax": 1,
+            "outMin": 0,
+            "smoothing": 0,
+            "softTakeover": false,
+            "source": "midi",
+            "target": "action:cue.go",
+            "threshold": 0.5
+        },
+        {
+            "__default": "last-change-wins",
+            "__policies": {
+            }
+        }
+    ],
+    "network": {
+        "artnetIn": false,
+        "artnetOut": false,
+        "artnetTarget": "2.255.255.255",
+        "artnetUniverseOffset": 1,
+        "bind": "0.0.0.0",
+        "inputUniverses": [
+        ],
+        "keepAliveSec": 1,
+        "oscFeedback": [
+        ],
+        "oscIn": true,
+        "oscListenPort": 8000,
+        "outputRateHz": 40,
+        "outputUniverses": [
+            4,
+            1,
+            3,
+            2
+        ],
+        "sacnIn": false,
+        "sacnOut": false,
+        "sacnPriority": 100,
+        "sacnUnicast": [
+        ],
+        "sourceName": "LUMAFLOW"
+    },
+    "patch": {
+        "fixtures": [
+            {
+                "address": 1,
+                "excluded": false,
+                "fid": 101,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 1",
+                "position": [
+                    -7,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 5,
+                "excluded": false,
+                "fid": 102,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 2",
+                "position": [
+                    -5,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 9,
+                "excluded": false,
+                "fid": 103,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 3",
+                "position": [
+                    -3,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 13,
+                "excluded": false,
+                "fid": 104,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 4",
+                "position": [
+                    -1,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 17,
+                "excluded": false,
+                "fid": 105,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 5",
+                "position": [
+                    1,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 21,
+                "excluded": false,
+                "fid": 106,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 6",
+                "position": [
+                    3,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 25,
+                "excluded": false,
+                "fid": 107,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 7",
+                "position": [
+                    5,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 29,
+                "excluded": false,
+                "fid": 108,
+                "groups": [
+                    "Front Pars"
+                ],
+                "layer": "",
+                "mode": "4ch",
+                "name": "Par 8",
+                "position": [
+                    7,
+                    -2,
+                    6
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@RGBW Par",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 41,
+                "excluded": false,
+                "fid": 109,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 1",
+                "position": [
+                    -6.25,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 55,
+                "excluded": false,
+                "fid": 110,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 2",
+                "position": [
+                    -3.75,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 69,
+                "excluded": false,
+                "fid": 111,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 3",
+                "position": [
+                    -1.25,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 83,
+                "excluded": false,
+                "fid": 112,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 4",
+                "position": [
+                    1.25,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 97,
+                "excluded": false,
+                "fid": 113,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 5",
+                "position": [
+                    3.75,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 111,
+                "excluded": false,
+                "fid": 114,
+                "groups": [
+                    "Washes"
+                ],
+                "layer": "",
+                "mode": "14ch",
+                "name": "Wash 6",
+                "position": [
+                    6.25,
+                    2,
+                    7
+                ],
+                "rotation": [
+                    180,
+                    0,
+                    0
+                ],
+                "type": "Generic@Moving Wash",
+                "universe": 1,
+                "uuid": ""
+            },
+            {
+                "address": 1,
+                "excluded": false,
+                "fid": 115,
+                "groups": [
+                    "Tubes"
+                ],
+                "layer": "",
+                "mode": "32px RGB",
+                "name": "Tube 1",
+                "position": [
+                    -4.5,
+                    4,
+                    2.5
+                ],
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "type": "Generic@Pixel Tube 32",
+                "universe": 2,
+                "uuid": ""
+            },
+            {
+                "address": 97,
+                "excluded": false,
+                "fid": 116,
+                "groups": [
+                    "Tubes"
+                ],
+                "layer": "",
+                "mode": "32px RGB",
+                "name": "Tube 2",
+                "position": [
+                    -1.5,
+                    4,
+                    2.5
+                ],
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "type": "Generic@Pixel Tube 32",
+                "universe": 2,
+                "uuid": ""
+            },
+            {
+                "address": 193,
+                "excluded": false,
+                "fid": 117,
+                "groups": [
+                    "Tubes"
+                ],
+                "layer": "",
+                "mode": "32px RGB",
+                "name": "Tube 3",
+                "position": [
+                    1.5,
+                    4,
+                    2.5
+                ],
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "type": "Generic@Pixel Tube 32",
+                "universe": 2,
+                "uuid": ""
+            },
+            {
+                "address": 289,
+                "excluded": false,
+                "fid": 118,
+                "groups": [
+                    "Tubes"
+                ],
+                "layer": "",
+                "mode": "32px RGB",
+                "name": "Tube 4",
+                "position": [
+                    4.5,
+                    4,
+                    2.5
+                ],
+                "rotation": [
+                    0,
+                    90,
+                    0
+                ],
+                "type": "Generic@Pixel Tube 32",
+                "universe": 2,
+                "uuid": ""
+            },
+            {
+                "address": 1,
+                "excluded": false,
+                "fid": 119,
+                "groups": [
+                    "Battens"
+                ],
+                "layer": "",
+                "mode": "16px RGBW+Dim",
+                "name": "Batten 1",
+                "position": [
+                    -3,
+                    5,
+                    0.3
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@LED Batten 16 RGBW",
+                "universe": 3,
+                "uuid": ""
+            },
+            {
+                "address": 66,
+                "excluded": false,
+                "fid": 120,
+                "groups": [
+                    "Battens"
+                ],
+                "layer": "",
+                "mode": "16px RGBW+Dim",
+                "name": "Batten 2",
+                "position": [
+                    3,
+                    5,
+                    0.3
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@LED Batten 16 RGBW",
+                "universe": 3,
+                "uuid": ""
+            },
+            {
+                "address": 201,
+                "excluded": false,
+                "fid": 121,
+                "groups": [
+                    "Blinders"
+                ],
+                "layer": "",
+                "mode": "1ch",
+                "name": "Blinder 1",
+                "position": [
+                    -6,
+                    6,
+                    5
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@Dimmer",
+                "universe": 3,
+                "uuid": ""
+            },
+            {
+                "address": 202,
+                "excluded": false,
+                "fid": 122,
+                "groups": [
+                    "Blinders"
+                ],
+                "layer": "",
+                "mode": "1ch",
+                "name": "Blinder 2",
+                "position": [
+                    -2,
+                    6,
+                    5
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@Dimmer",
+                "universe": 3,
+                "uuid": ""
+            },
+            {
+                "address": 203,
+                "excluded": false,
+                "fid": 123,
+                "groups": [
+                    "Blinders"
+                ],
+                "layer": "",
+                "mode": "1ch",
+                "name": "Blinder 3",
+                "position": [
+                    2,
+                    6,
+                    5
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@Dimmer",
+                "universe": 3,
+                "uuid": ""
+            },
+            {
+                "address": 204,
+                "excluded": false,
+                "fid": 124,
+                "groups": [
+                    "Blinders"
+                ],
+                "layer": "",
+                "mode": "1ch",
+                "name": "Blinder 4",
+                "position": [
+                    6,
+                    6,
+                    5
+                ],
+                "rotation": [
+                    0,
+                    0,
+                    0
+                ],
+                "type": "Generic@Dimmer",
+                "universe": 3,
+                "uuid": ""
+            }
+        ],
+        "types": [
+        ]
+    },
+    "pixelMap": {
+        "elements": [
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.04,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 101,
+                "kind": 2,
+                "name": "Par 1",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.17142857142857143,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 102,
+                "kind": 2,
+                "name": "Par 2",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.3028571428571428,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 103,
+                "kind": 2,
+                "name": "Par 3",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.43428571428571433,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 104,
+                "kind": 2,
+                "name": "Par 4",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.5657142857142857,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 105,
+                "kind": 2,
+                "name": "Par 5",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.6971428571428572,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 106,
+                "kind": 2,
+                "name": "Par 6",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.8285714285714287,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 107,
+                "kind": 2,
+                "name": "Par 7",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.9600000000000001,
+                        0.34557142857142853
+                    ]
+                ],
+                "enabled": true,
+                "fid": 108,
+                "kind": 2,
+                "name": "Par 8",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.20428571428571426,
+                        0.5437410714285715
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5457946428571429
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5478482142857144
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5499017857142857
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5519553571428572
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5540089285714287
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5560625
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5581160714285716
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5601696428571429
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5622232142857143
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5642767857142857
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5663303571428572
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5683839285714287
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5704375
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5724910714285715
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5745446428571429
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5765982142857143
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5786517857142858
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5807053571428572
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5827589285714286
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5848125000000001
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5868660714285715
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5889196428571429
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5909732142857144
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5930267857142857
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5950803571428572
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5971339285714287
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.5991875
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.6012410714285715
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.6032946428571428
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.6053482142857144
+                    ],
+                    [
+                        0.20428571428571426,
+                        0.6074017857142857
+                    ]
+                ],
+                "enabled": true,
+                "fid": 115,
+                "kind": 2,
+                "name": "Tube 1",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.4014285714285714,
+                        0.5437410714285715
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5457946428571429
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5478482142857144
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5499017857142857
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5519553571428572
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5540089285714287
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5560625
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5581160714285716
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5601696428571429
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5622232142857143
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5642767857142857
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5663303571428572
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5683839285714287
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5704375
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5724910714285715
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5745446428571429
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5765982142857143
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5786517857142858
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5807053571428572
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5827589285714286
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5848125000000001
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5868660714285715
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5889196428571429
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5909732142857144
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5930267857142857
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5950803571428572
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5971339285714287
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.5991875
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.6012410714285715
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.6032946428571428
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.6053482142857144
+                    ],
+                    [
+                        0.4014285714285714,
+                        0.6074017857142857
+                    ]
+                ],
+                "enabled": true,
+                "fid": 116,
+                "kind": 2,
+                "name": "Tube 2",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.5985714285714285,
+                        0.5437410714285715
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5457946428571429
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5478482142857144
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5499017857142857
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5519553571428572
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5540089285714287
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5560625
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5581160714285716
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5601696428571429
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5622232142857143
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5642767857142857
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5663303571428572
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5683839285714287
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5704375
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5724910714285715
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5745446428571429
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5765982142857143
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5786517857142858
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5807053571428572
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5827589285714286
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5848125000000001
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5868660714285715
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5889196428571429
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5909732142857144
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5930267857142857
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5950803571428572
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5971339285714287
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.5991875
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.6012410714285715
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.6032946428571428
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.6053482142857144
+                    ],
+                    [
+                        0.5985714285714285,
+                        0.6074017857142857
+                    ]
+                ],
+                "enabled": true,
+                "fid": 117,
+                "kind": 2,
+                "name": "Tube 3",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.7957142857142857,
+                        0.5437410714285715
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5457946428571429
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5478482142857144
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5499017857142857
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5519553571428572
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5540089285714287
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5560625
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5581160714285716
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5601696428571429
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5622232142857143
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5642767857142857
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5663303571428572
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5683839285714287
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5704375
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5724910714285715
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5745446428571429
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5765982142857143
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5786517857142858
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5807053571428572
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5827589285714286
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5848125000000001
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5868660714285715
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5889196428571429
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5909732142857144
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5930267857142857
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5950803571428572
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5971339285714287
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.5991875
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.6012410714285715
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.6032946428571428
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.6053482142857144
+                    ],
+                    [
+                        0.7957142857142857,
+                        0.6074017857142857
+                    ]
+                ],
+                "enabled": true,
+                "fid": 118,
+                "kind": 2,
+                "name": "Tube 4",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.26589285714285715,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.27082142857142855,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.27575,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.28067857142857144,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.28560714285714284,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.2905357142857143,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.29546428571428573,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.30039285714285713,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.3053214285714285,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.31024999999999997,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.3151785714285714,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.32010714285714287,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.32503571428571426,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.3299642857142857,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.3348928571428571,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.33982142857142855,
+                        0.7201428571428572
+                    ]
+                ],
+                "enabled": true,
+                "fid": 119,
+                "kind": 2,
+                "name": "Batten 1",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                    [
+                        0.6601785714285714,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6651071428571429,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6700357142857144,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6749642857142858,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6798928571428572,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6848214285714287,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6897500000000001,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6946785714285715,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.6996071428571429,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7045357142857144,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7094642857142858,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7143928571428572,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7193214285714286,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7242500000000001,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.7291785714285715,
+                        0.7201428571428572
+                    ],
+                    [
+                        0.734107142857143,
+                        0.7201428571428572
+                    ]
+                ],
+                "enabled": true,
+                "fid": 120,
+                "kind": 2,
+                "name": "Batten 2",
+                "order": "RGB",
+                "points": [
+                ],
+                "radius": 0.01,
+                "split": 0,
+                "universe": 1
+            },
+            {
+                "address": 1,
+                "calibration": {
+                    "amberFromRG": 0,
+                    "gainA": 1,
+                    "gainB": 1,
+                    "gainG": 1,
+                    "gainR": 1,
+                    "gainUV": 1,
+                    "gainW": 1,
+                    "gamma": 1,
+                    "maxBrightness": 1,
+                    "saturation": 1,
+                    "white": 1
+                },
+                "cellPoints": [
+                ],
+                "enabled": true,
+                "fid": 0,
+                "kind": 1,
+                "name": "LED Matrix 16x8",
+                "order": "GRB",
+                "points": [
+                    [
+                        0.3125,
+                        0.0625
+                    ],
+                    [
+                        0.3375,
+                        0.0625
+                    ],
+                    [
+                        0.3625,
+                        0.0625
+                    ],
+                    [
+                        0.3875,
+                        0.0625
+                    ],
+                    [
+                        0.4125,
+                        0.0625
+                    ],
+                    [
+                        0.4375,
+                        0.0625
+                    ],
+                    [
+                        0.4625,
+                        0.0625
+                    ],
+                    [
+                        0.4875,
+                        0.0625
+                    ],
+                    [
+                        0.5125,
+                        0.0625
+                    ],
+                    [
+                        0.5375,
+                        0.0625
+                    ],
+                    [
+                        0.5625,
+                        0.0625
+                    ],
+                    [
+                        0.5875,
+                        0.0625
+                    ],
+                    [
+                        0.6125,
+                        0.0625
+                    ],
+                    [
+                        0.6375,
+                        0.0625
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.0625
+                    ],
+                    [
+                        0.6875,
+                        0.0625
+                    ],
+                    [
+                        0.6875,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.6375,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.6125,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.5875,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.5625,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.5375,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.5125,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.4875,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.4625,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.4375,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.4125,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.3875,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.3625,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.3375,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.3125,
+                        0.08750000000000001
+                    ],
+                    [
+                        0.3125,
+                        0.1125
+                    ],
+                    [
+                        0.3375,
+                        0.1125
+                    ],
+                    [
+                        0.3625,
+                        0.1125
+                    ],
+                    [
+                        0.3875,
+                        0.1125
+                    ],
+                    [
+                        0.4125,
+                        0.1125
+                    ],
+                    [
+                        0.4375,
+                        0.1125
+                    ],
+                    [
+                        0.4625,
+                        0.1125
+                    ],
+                    [
+                        0.4875,
+                        0.1125
+                    ],
+                    [
+                        0.5125,
+                        0.1125
+                    ],
+                    [
+                        0.5375,
+                        0.1125
+                    ],
+                    [
+                        0.5625,
+                        0.1125
+                    ],
+                    [
+                        0.5875,
+                        0.1125
+                    ],
+                    [
+                        0.6125,
+                        0.1125
+                    ],
+                    [
+                        0.6375,
+                        0.1125
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.1125
+                    ],
+                    [
+                        0.6875,
+                        0.1125
+                    ],
+                    [
+                        0.6875,
+                        0.1375
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.1375
+                    ],
+                    [
+                        0.6375,
+                        0.1375
+                    ],
+                    [
+                        0.6125,
+                        0.1375
+                    ],
+                    [
+                        0.5875,
+                        0.1375
+                    ],
+                    [
+                        0.5625,
+                        0.1375
+                    ],
+                    [
+                        0.5375,
+                        0.1375
+                    ],
+                    [
+                        0.5125,
+                        0.1375
+                    ],
+                    [
+                        0.4875,
+                        0.1375
+                    ],
+                    [
+                        0.4625,
+                        0.1375
+                    ],
+                    [
+                        0.4375,
+                        0.1375
+                    ],
+                    [
+                        0.4125,
+                        0.1375
+                    ],
+                    [
+                        0.3875,
+                        0.1375
+                    ],
+                    [
+                        0.3625,
+                        0.1375
+                    ],
+                    [
+                        0.3375,
+                        0.1375
+                    ],
+                    [
+                        0.3125,
+                        0.1375
+                    ],
+                    [
+                        0.3125,
+                        0.1625
+                    ],
+                    [
+                        0.3375,
+                        0.1625
+                    ],
+                    [
+                        0.3625,
+                        0.1625
+                    ],
+                    [
+                        0.3875,
+                        0.1625
+                    ],
+                    [
+                        0.4125,
+                        0.1625
+                    ],
+                    [
+                        0.4375,
+                        0.1625
+                    ],
+                    [
+                        0.4625,
+                        0.1625
+                    ],
+                    [
+                        0.4875,
+                        0.1625
+                    ],
+                    [
+                        0.5125,
+                        0.1625
+                    ],
+                    [
+                        0.5375,
+                        0.1625
+                    ],
+                    [
+                        0.5625,
+                        0.1625
+                    ],
+                    [
+                        0.5875,
+                        0.1625
+                    ],
+                    [
+                        0.6125,
+                        0.1625
+                    ],
+                    [
+                        0.6375,
+                        0.1625
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.1625
+                    ],
+                    [
+                        0.6875,
+                        0.1625
+                    ],
+                    [
+                        0.6875,
+                        0.1875
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.1875
+                    ],
+                    [
+                        0.6375,
+                        0.1875
+                    ],
+                    [
+                        0.6125,
+                        0.1875
+                    ],
+                    [
+                        0.5875,
+                        0.1875
+                    ],
+                    [
+                        0.5625,
+                        0.1875
+                    ],
+                    [
+                        0.5375,
+                        0.1875
+                    ],
+                    [
+                        0.5125,
+                        0.1875
+                    ],
+                    [
+                        0.4875,
+                        0.1875
+                    ],
+                    [
+                        0.4625,
+                        0.1875
+                    ],
+                    [
+                        0.4375,
+                        0.1875
+                    ],
+                    [
+                        0.4125,
+                        0.1875
+                    ],
+                    [
+                        0.3875,
+                        0.1875
+                    ],
+                    [
+                        0.3625,
+                        0.1875
+                    ],
+                    [
+                        0.3375,
+                        0.1875
+                    ],
+                    [
+                        0.3125,
+                        0.1875
+                    ],
+                    [
+                        0.3125,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.3375,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.3625,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.3875,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.4125,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.4375,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.4625,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.4875,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.5125,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.5375,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.5625,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.5875,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.6125,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.6375,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.6875,
+                        0.21250000000000002
+                    ],
+                    [
+                        0.6875,
+                        0.2375
+                    ],
+                    [
+                        0.6625000000000001,
+                        0.2375
+                    ],
+                    [
+                        0.6375,
+                        0.2375
+                    ],
+                    [
+                        0.6125,
+                        0.2375
+                    ],
+                    [
+                        0.5875,
+                        0.2375
+                    ],
+                    [
+                        0.5625,
+                        0.2375
+                    ],
+                    [
+                        0.5375,
+                        0.2375
+                    ],
+                    [
+                        0.5125,
+                        0.2375
+                    ],
+                    [
+                        0.4875,
+                        0.2375
+                    ],
+                    [
+                        0.4625,
+                        0.2375
+                    ],
+                    [
+                        0.4375,
+                        0.2375
+                    ],
+                    [
+                        0.4125,
+                        0.2375
+                    ],
+                    [
+                        0.3875,
+                        0.2375
+                    ],
+                    [
+                        0.3625,
+                        0.2375
+                    ],
+                    [
+                        0.3375,
+                        0.2375
+                    ],
+                    [
+                        0.3125,
+                        0.2375
+                    ]
+                ],
+                "radius": 0.0125,
+                "split": 0,
+                "universe": 4
+            }
+        ],
+        "gamma": 2.2,
+        "master": 1,
+        "sampling": 1
+    },
+    "plugins": [
+    ],
+    "presets": [
+    ],
+    "preview": {
+        "layers": [
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "particle_cloud",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0,
+                    0.9,
+                    1
+                ],
+                "colorB": [
+                    0.6,
+                    0,
+                    1
+                ],
+                "effect": "energy_rings",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    1,
+                    0.3,
+                    0.1
+                ],
+                "colorB": [
+                    0.1,
+                    0.3,
+                    1
+                ],
+                "effect": "kaleidoscope",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            },
+            {
+                "colorA": [
+                    0.1,
+                    0.5,
+                    1
+                ],
+                "colorB": [
+                    0.7,
+                    0.1,
+                    1
+                ],
+                "effect": "plasma",
+                "enabled": true,
+                "mask": 0,
+                "maskFeather": 0.1,
+                "maskSize": 0.5,
+                "media": "",
+                "mediaIn": 0,
+                "mediaLoop": true,
+                "mediaOut": 0,
+                "mediaReverse": false,
+                "solo": false,
+                "text": "LUMAFLOW",
+                "type": 0
+            }
+        ],
+        "values": {
+            "audio.gain": 1,
+            "audio.reactivity": 0.5,
+            "audio.smoothing": 0.6,
+            "ext.1": 0,
+            "ext.2": 0,
+            "ext.3": 0,
+            "ext.4": 0,
+            "ext.5": 0,
+            "ext.6": 0,
+            "ext.7": 0,
+            "ext.8": 0,
+            "layer1.audio": 0,
+            "layer1.blend": 0,
+            "layer1.brightness": 1,
+            "layer1.contrast": 1,
+            "layer1.effect": 8,
+            "layer1.hue": 0,
+            "layer1.hue2": 0,
+            "layer1.opacity": 1,
+            "layer1.p1": 0.5,
+            "layer1.p2": 0.5,
+            "layer1.p3": 0.5,
+            "layer1.p4": 0.5,
+            "layer1.posx": 0,
+            "layer1.posy": 0,
+            "layer1.rotation": 0,
+            "layer1.saturation": 1,
+            "layer1.scale": 1,
+            "layer1.speed": 1,
+            "layer2.audio": 0,
+            "layer2.blend": 1,
+            "layer2.brightness": 1,
+            "layer2.contrast": 1,
+            "layer2.effect": 0,
+            "layer2.hue": 0,
+            "layer2.hue2": 0,
+            "layer2.opacity": 0,
+            "layer2.p1": 0.5,
+            "layer2.p2": 0.4,
+            "layer2.p3": 0.3,
+            "layer2.p4": 0.5,
+            "layer2.posx": 0,
+            "layer2.posy": 0,
+            "layer2.rotation": 0,
+            "layer2.saturation": 1,
+            "layer2.scale": 1,
+            "layer2.speed": 1,
+            "layer3.audio": 0,
+            "layer3.blend": 3,
+            "layer3.brightness": 1,
+            "layer3.contrast": 1,
+            "layer3.effect": 11,
+            "layer3.hue": 0,
+            "layer3.hue2": 0,
+            "layer3.opacity": 0,
+            "layer3.p1": 0.5,
+            "layer3.p2": 0.3,
+            "layer3.p3": 0.5,
+            "layer3.p4": 0.5,
+            "layer3.posx": 0,
+            "layer3.posy": 0,
+            "layer3.rotation": 0,
+            "layer3.saturation": 1,
+            "layer3.scale": 1,
+            "layer3.speed": 1,
+            "layer4.audio": 0,
+            "layer4.blend": 0,
+            "layer4.brightness": 1,
+            "layer4.contrast": 1,
+            "layer4.effect": 14,
+            "layer4.hue": 0,
+            "layer4.hue2": 0,
+            "layer4.opacity": 0,
+            "layer4.p1": 0.4,
+            "layer4.p2": 0.5,
+            "layer4.p3": 0.5,
+            "layer4.p4": 0.3,
+            "layer4.posx": 0,
+            "layer4.posy": 0,
+            "layer4.rotation": 0,
+            "layer4.saturation": 1,
+            "layer4.scale": 1,
+            "layer4.speed": 1,
+            "layer5.audio": 0,
+            "layer5.blend": 0,
+            "layer5.brightness": 1,
+            "layer5.contrast": 1,
+            "layer5.effect": 0,
+            "layer5.hue": 0,
+            "layer5.hue2": 0,
+            "layer5.opacity": 0,
+            "layer5.p1": 0.5,
+            "layer5.p2": 0.5,
+            "layer5.p3": 0.5,
+            "layer5.p4": 0.5,
+            "layer5.posx": 0,
+            "layer5.posy": 0,
+            "layer5.rotation": 0,
+            "layer5.saturation": 1,
+            "layer5.scale": 1,
+            "layer5.speed": 1,
+            "layer6.audio": 0,
+            "layer6.blend": 0,
+            "layer6.brightness": 1,
+            "layer6.contrast": 1,
+            "layer6.effect": 0,
+            "layer6.hue": 0,
+            "layer6.hue2": 0,
+            "layer6.opacity": 0,
+            "layer6.p1": 0.5,
+            "layer6.p2": 0.5,
+            "layer6.p3": 0.5,
+            "layer6.p4": 0.5,
+            "layer6.posx": 0,
+            "layer6.posy": 0,
+            "layer6.rotation": 0,
+            "layer6.saturation": 1,
+            "layer6.scale": 1,
+            "layer6.speed": 1,
+            "master.blackout": 0,
+            "master.blue": 1,
+            "master.green": 1,
+            "master.intensity": 1,
+            "master.red": 1,
+            "master.saturation": 1,
+            "master.strobe": 0,
+            "show.bpm": 120,
+            "show.control": 0,
+            "show.scene": 0,
+            "show.transition": 1
+        }
+    },
+    "profiles": {
+        "active": {
+        },
+        "history": {
+        },
+        "pending": {
+        }
+    },
+    "safety": {
+        "limiter": true,
+        "maxBrightness": 1,
+        "maxStrobeHz": 3
+    },
+    "savedAt": "2026-11-24T16:53:46Z",
+    "savedBy": "LUMAFLOW 3.0.0",
+    "scenes": [
+        {
+            "id": "6810721c-e6a7-4776-ada5-e08bf1e6f001",
+            "name": "Plasma Drift",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "particle_cloud",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 8,
+                    "layer1.hue": 0,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.5,
+                    "layer1.p2": 0.5,
+                    "layer1.p3": 0.5,
+                    "layer1.p4": 0.5,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 0,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.6,
+                    "layer2.p1": 0.5,
+                    "layer2.p2": 0.4,
+                    "layer2.p3": 0.3,
+                    "layer2.p4": 0.5,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        },
+        {
+            "id": "662004a0-92c1-4a8b-b5b1-0a19e11d1875",
+            "name": "Vortex Rings",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "particle_vortex",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 3,
+                    "layer1.hue": 0,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.6,
+                    "layer1.p2": 0.5,
+                    "layer1.p3": 0.5,
+                    "layer1.p4": 0.4,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 11,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.5,
+                    "layer2.p1": 0.5,
+                    "layer2.p2": 0.3,
+                    "layer2.p3": 0.5,
+                    "layer2.p4": 0.5,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        },
+        {
+            "id": "dd42f5b7-06de-47a7-a669-931c8a24cec2",
+            "name": "Kaleido Neon",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.1,
+                            0.8
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.9,
+                            1
+                        ],
+                        "effect": "neon_lines",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 14,
+                    "layer1.hue": 0.3,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.4,
+                    "layer1.p2": 0.5,
+                    "layer1.p3": 0.5,
+                    "layer1.p4": 0.3,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 13,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.4,
+                    "layer2.p1": 0.5,
+                    "layer2.p2": 0.4,
+                    "layer2.p3": 0.6,
+                    "layer2.p4": 0.5,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        },
+        {
+            "id": "1b473307-323b-4c1d-a057-d22486b0ae78",
+            "name": "Liquid Trails",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            0,
+                            0.4,
+                            1
+                        ],
+                        "colorB": [
+                            0,
+                            1,
+                            0.8
+                        ],
+                        "effect": "fluid",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "particle_trails",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 22,
+                    "layer1.hue": 0.55,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.5,
+                    "layer1.p2": 0.6,
+                    "layer1.p3": 0.5,
+                    "layer1.p4": 0.5,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 4,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.7,
+                    "layer2.p1": 0.5,
+                    "layer2.p2": 0.6,
+                    "layer2.p3": 0.5,
+                    "layer2.p4": 0.4,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        },
+        {
+            "id": "4267d9d7-3f4d-4419-8083-786ebf80864a",
+            "name": "Tunnel Pulse",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            0,
+                            1,
+                            0.7
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "geo_tunnel",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "audio_particles",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 17,
+                    "layer1.hue": 0.1,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.3,
+                    "layer1.p2": 0.5,
+                    "layer1.p3": 0.4,
+                    "layer1.p4": 0.3,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 7,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.8,
+                    "layer2.p1": 0.6,
+                    "layer2.p2": 0.7,
+                    "layer2.p3": 0.6,
+                    "layer2.p4": 0.4,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        },
+        {
+            "id": "a2237cf8-c226-4e32-af79-4386391daa40",
+            "name": "Storm",
+            "state": {
+                "layers": [
+                    {
+                        "colorA": [
+                            0.8,
+                            0.85,
+                            0.95
+                        ],
+                        "colorB": [
+                            0.3,
+                            0.3,
+                            0.5
+                        ],
+                        "effect": "smoke",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.5,
+                            0.6,
+                            1
+                        ],
+                        "colorB": [
+                            0.9,
+                            0.9,
+                            1
+                        ],
+                        "effect": "lightning",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0,
+                            0.9,
+                            1
+                        ],
+                        "colorB": [
+                            0.6,
+                            0,
+                            1
+                        ],
+                        "effect": "energy_rings",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            1,
+                            0.3,
+                            0.1
+                        ],
+                        "colorB": [
+                            0.1,
+                            0.3,
+                            1
+                        ],
+                        "effect": "kaleidoscope",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    },
+                    {
+                        "colorA": [
+                            0.1,
+                            0.5,
+                            1
+                        ],
+                        "colorB": [
+                            0.7,
+                            0.1,
+                            1
+                        ],
+                        "effect": "plasma",
+                        "enabled": true,
+                        "mask": 0,
+                        "maskFeather": 0.1,
+                        "maskSize": 0.5,
+                        "media": "",
+                        "mediaIn": 0,
+                        "mediaLoop": true,
+                        "mediaOut": 0,
+                        "mediaReverse": false,
+                        "solo": false,
+                        "text": "LUMAFLOW",
+                        "type": 0
+                    }
+                ],
+                "values": {
+                    "audio.gain": 1,
+                    "audio.reactivity": 0.5,
+                    "audio.smoothing": 0.6,
+                    "ext.1": 0,
+                    "ext.2": 0,
+                    "ext.3": 0,
+                    "ext.4": 0,
+                    "ext.5": 0,
+                    "ext.6": 0,
+                    "ext.7": 0,
+                    "ext.8": 0,
+                    "layer1.audio": 0,
+                    "layer1.blend": 0,
+                    "layer1.brightness": 1,
+                    "layer1.contrast": 1,
+                    "layer1.effect": 21,
+                    "layer1.hue": 0,
+                    "layer1.hue2": 0,
+                    "layer1.opacity": 1,
+                    "layer1.p1": 0.5,
+                    "layer1.p2": 0.5,
+                    "layer1.p3": 0.5,
+                    "layer1.p4": 0.5,
+                    "layer1.posx": 0,
+                    "layer1.posy": 0,
+                    "layer1.rotation": 0,
+                    "layer1.saturation": 1,
+                    "layer1.scale": 1,
+                    "layer1.speed": 1,
+                    "layer2.audio": 0,
+                    "layer2.blend": 1,
+                    "layer2.brightness": 1,
+                    "layer2.contrast": 1,
+                    "layer2.effect": 9,
+                    "layer2.hue": 0,
+                    "layer2.hue2": 0,
+                    "layer2.opacity": 0.6,
+                    "layer2.p1": 0.4,
+                    "layer2.p2": 0.5,
+                    "layer2.p3": 0.5,
+                    "layer2.p4": 0.5,
+                    "layer2.posx": 0,
+                    "layer2.posy": 0,
+                    "layer2.rotation": 0,
+                    "layer2.saturation": 1,
+                    "layer2.scale": 1,
+                    "layer2.speed": 1,
+                    "layer3.audio": 0,
+                    "layer3.blend": 3,
+                    "layer3.brightness": 1,
+                    "layer3.contrast": 1,
+                    "layer3.effect": 11,
+                    "layer3.hue": 0,
+                    "layer3.hue2": 0,
+                    "layer3.opacity": 0,
+                    "layer3.p1": 0.5,
+                    "layer3.p2": 0.3,
+                    "layer3.p3": 0.5,
+                    "layer3.p4": 0.5,
+                    "layer3.posx": 0,
+                    "layer3.posy": 0,
+                    "layer3.rotation": 0,
+                    "layer3.saturation": 1,
+                    "layer3.scale": 1,
+                    "layer3.speed": 1,
+                    "layer4.audio": 0,
+                    "layer4.blend": 0,
+                    "layer4.brightness": 1,
+                    "layer4.contrast": 1,
+                    "layer4.effect": 14,
+                    "layer4.hue": 0,
+                    "layer4.hue2": 0,
+                    "layer4.opacity": 0,
+                    "layer4.p1": 0.4,
+                    "layer4.p2": 0.5,
+                    "layer4.p3": 0.5,
+                    "layer4.p4": 0.3,
+                    "layer4.posx": 0,
+                    "layer4.posy": 0,
+                    "layer4.rotation": 0,
+                    "layer4.saturation": 1,
+                    "layer4.scale": 1,
+                    "layer4.speed": 1,
+                    "layer5.audio": 0,
+                    "layer5.blend": 0,
+                    "layer5.brightness": 1,
+                    "layer5.contrast": 1,
+                    "layer5.effect": 0,
+                    "layer5.hue": 0,
+                    "layer5.hue2": 0,
+                    "layer5.opacity": 0,
+                    "layer5.p1": 0.5,
+                    "layer5.p2": 0.5,
+                    "layer5.p3": 0.5,
+                    "layer5.p4": 0.5,
+                    "layer5.posx": 0,
+                    "layer5.posy": 0,
+                    "layer5.rotation": 0,
+                    "layer5.saturation": 1,
+                    "layer5.scale": 1,
+                    "layer5.speed": 1,
+                    "layer6.audio": 0,
+                    "layer6.blend": 0,
+                    "layer6.brightness": 1,
+                    "layer6.contrast": 1,
+                    "layer6.effect": 0,
+                    "layer6.hue": 0,
+                    "layer6.hue2": 0,
+                    "layer6.opacity": 0,
+                    "layer6.p1": 0.5,
+                    "layer6.p2": 0.5,
+                    "layer6.p3": 0.5,
+                    "layer6.p4": 0.5,
+                    "layer6.posx": 0,
+                    "layer6.posy": 0,
+                    "layer6.rotation": 0,
+                    "layer6.saturation": 1,
+                    "layer6.scale": 1,
+                    "layer6.speed": 1,
+                    "master.blackout": 0,
+                    "master.blue": 1,
+                    "master.green": 1,
+                    "master.intensity": 1,
+                    "master.red": 1,
+                    "master.saturation": 1,
+                    "master.strobe": 0,
+                    "show.bpm": 120,
+                    "show.control": 0,
+                    "show.scene": 0,
+                    "show.transition": 1
+                }
+            },
+            "transition": -1
+        }
+    ],
+    "schemaVersion": 3,
+    "spatial": [
+        {
+            "blocks": 1,
+            "bounce": false,
+            "colorA": [
+                0.2,
+                0.4,
+                1
+            ],
+            "colorB": [
+                0.8,
+                0,
+                1
+            ],
+            "colorSweep": false,
+            "delay": 0,
+            "enabled": true,
+            "excluded": [
+            ],
+            "gridColumns": 4,
+            "group": "Washes",
+            "groups": 1,
+            "high": 1,
+            "level": 1,
+            "low": 0,
+            "name": "Wash centre-out",
+            "offset": 0,
+            "order": "Centre outward",
+            "phaseSpread": 1,
+            "reverse": false,
+            "seed": 1,
+            "speed": 0.4,
+            "userOrder": [
+            ],
+            "waveform": "Sine",
+            "width": 0.5,
+            "wings": 1
+        },
+        {
+            "blocks": 1,
+            "bounce": false,
+            "colorA": [
+                1,
+                1,
+                1
+            ],
+            "colorB": [
+                0,
+                0,
+                0
+            ],
+            "colorSweep": false,
+            "delay": 0,
+            "enabled": false,
+            "excluded": [
+            ],
+            "gridColumns": 4,
+            "group": "Blinders",
+            "groups": 1,
+            "high": 1,
+            "level": 1,
+            "low": 0,
+            "name": "Blinder chase",
+            "offset": 0,
+            "order": "Left to right",
+            "phaseSpread": 1,
+            "reverse": false,
+            "seed": 1,
+            "speed": 1,
+            "userOrder": [
+            ],
+            "waveform": "Chase",
+            "width": 0.25,
+            "wings": 1
+        }
+    ],
+    "timecodeSource": "internal",
+    "timeline": {
+        "beatsPerBar": 4,
+        "bpm": 128,
+        "duration": 60,
+        "loop": false,
+        "loopIn": 0,
+        "loopOut": 0,
+        "markers": [
+            {
+                "name": "Intro",
+                "time": 0
+            },
+            {
+                "name": "Drop",
+                "time": 24
+            },
+            {
+                "name": "Outro",
+                "time": 56
+            }
+        ],
+        "name": "Show",
+        "speed": 1,
+        "tracks": [
+            {
+                "enabled": true,
+                "events": [
+                ],
+                "keys": [
+                    [
+                        0,
+                        0,
+                        "linear"
+                    ],
+                    [
+                        30,
+                        0.5,
+                        "ease-in-out"
+                    ],
+                    [
+                        60,
+                        1,
+                        "linear"
+                    ]
+                ],
+                "name": "Layer 1 hue",
+                "solo": false,
+                "target": "layer1.hue",
+                "type": "parameter"
+            },
+            {
+                "enabled": true,
+                "events": [
+                ],
+                "keys": [
+                    [
+                        0,
+                        0.2,
+                        "smooth"
+                    ],
+                    [
+                        4,
+                        1,
+                        "linear"
+                    ],
+                    [
+                        56,
+                        1,
+                        "smooth"
+                    ],
+                    [
+                        60,
+                        0,
+                        "linear"
+                    ]
+                ],
+                "name": "Master",
+                "solo": false,
+                "target": "master.intensity",
+                "type": "parameter"
+            },
+            {
+                "enabled": true,
+                "events": [
+                    {
+                        "action": "scene",
+                        "args": {
+                            "index": 1,
+                            "transition": 2
+                        },
+                        "label": "Vortex",
+                        "time": 8
+                    },
+                    {
+                        "action": "scene",
+                        "args": {
+                            "index": 2,
+                            "transition": 3
+                        },
+                        "label": "Kaleido",
+                        "time": 24
+                    },
+                    {
+                        "action": "scene",
+                        "args": {
+                            "index": 4,
+                            "transition": 2
+                        },
+                        "label": "Tunnel",
+                        "time": 40
+                    }
+                ],
+                "keys": [
+                ],
+                "name": "Scenes",
+                "solo": false,
+                "target": "",
+                "type": "scene"
+            },
+            {
+                "enabled": true,
+                "events": [
+                    {
+                        "action": "osc",
+                        "args": {
+                            "address": "/lumaflow/demo/marker",
+                            "value": 1
+                        },
+                        "label": "OSC marker",
+                        "time": 16
+                    }
+                ],
+                "keys": [
+                ],
+                "name": "OSC cues",
+                "solo": false,
+                "target": "",
+                "type": "osc"
+            }
+        ]
+    },
+    "video": {
+        "canvasHeight": 720,
+        "canvasWidth": 1280,
+        "outputs": [
+        ]
+    }
+}

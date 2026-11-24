@@ -1,0 +1,28 @@
+{
+ "format": "lfpreset",
+ "version": 1,
+ "id": "warm_smoke",
+ "name": "Warm Smoke",
+ "category": "Factory",
+ "layer": {
+  "source": {
+   "type": 0,
+   "effect": "smoke",
+   "colorA": [
+    1,
+    0.6,
+    0.3
+   ],
+   "colorB": [
+    0.3,
+    0.1,
+    0.05
+   ],
+   "enabled": true
+  },
+  "values": {
+   "opacity": 1,
+   "speed": 0.5
+  }
+ }
+}

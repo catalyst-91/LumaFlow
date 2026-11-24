@@ -1,0 +1,108 @@
+{
+ "format": "lfgraph",
+ "version": 1,
+ "name": "Audio Rings",
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "uv",
+   "x": 0,
+   "y": 0,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n2",
+   "type": "time",
+   "x": 0,
+   "y": 140,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n3",
+   "type": "audio",
+   "x": 0,
+   "y": 260,
+   "params": {
+    "band": 0
+   },
+   "label": ""
+  },
+  {
+   "id": "n4",
+   "type": "rings",
+   "x": 250,
+   "y": 0,
+   "params": {
+    "freq": 18
+   },
+   "label": ""
+  },
+  {
+   "id": "n5",
+   "type": "mul",
+   "x": 450,
+   "y": 60,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n6",
+   "type": "hsv",
+   "x": 650,
+   "y": 60,
+   "params": {
+    "s": 1,
+    "v": 1
+   },
+   "label": ""
+  },
+  {
+   "id": "n7",
+   "type": "output",
+   "x": 850,
+   "y": 60,
+   "params": {},
+   "label": ""
+  }
+ ],
+ "connections": [
+  [
+   "n1",
+   "p",
+   "n4",
+   "p"
+  ],
+  [
+   "n2",
+   "t",
+   "n4",
+   "phase"
+  ],
+  [
+   "n4",
+   "value",
+   "n5",
+   "a"
+  ],
+  [
+   "n3",
+   "value",
+   "n5",
+   "b"
+  ],
+  [
+   "n5",
+   "value",
+   "n6",
+   "h"
+  ],
+  [
+   "n6",
+   "color",
+   "n7",
+   "color"
+  ]
+ ]
+}
