@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>LUMAFLOW Remote</title>
+<style>
+:root{--bg:#111219;--panel:#1b1c28;--line:#2f3352;--fg:#e2e4f2;--muted:#9ea3c6;--blue:#3d8bff;--violet:#9a5cff;--red:#c0263f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px system-ui,sans-serif;padding:12px}
+h1{font-size:18px;margin:0 0 10px;background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+button{background:var(--panel);color:var(--fg);border:1px solid var(--line);border-radius:8px;padding:14px 16px;font-size:15px;min-width:64px;touch-action:manipulation}
+button.go{background:#1e4fb8;font-weight:700}button.bo{background:#5a1d28}button.bo.on{background:var(--red)}button.sel{border-color:var(--violet);background:#3b2f6e}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px}
+label{display:block;color:var(--muted);font-size:13px;margin:6px 0 2px}input[type=range]{width:100%;height:34px}
+select,input[type=password]{background:#0f1017;color:var(--fg);border:1px solid var(--line);border-radius:6px;padding:10px;width:100%;font-size:15px}
+#status{color:var(--muted);font-size:13px}.err{color:#ff8080}
+</style></head><body>
+<h1>LUMAFLOW Remote</h1>
+<div class="card" id="login"><label>Access token (shown in LUMAFLOW > Remote &amp; Sync)</label><input id="token" type="password" autocomplete="off"><div class="row" style="margin-top:8px"><button onclick="saveToken()">Connect</button></div></div>
+<div id="ui" style="display:none">
+<div class="row"><button class="go" onclick="post('/api/cue/go')">GO</button><button onclick="post('/api/cue/back')">BACK</button><button onclick="post('/api/take')">TAKE</button><button onclick="post('/api/tap')">TAP</button><button class="bo" id="bo" onclick="toggleBo()">BLACKOUT</button></div>
+<div class="card"><label>Master intensity</label><input type="range" min="0" max="1" step="0.001" id="master" oninput="param('master.intensity',this.value)"></div>
+<div class="card"><label>Scenes</label><div class="row" id="scenes"></div></div>
+<div class="card"><label>Layer</label><select id="layer" onchange="render()"></select>
+<label>Effect</label><select id="effect" onchange="setEffect(this.value)"></select>
+<label>Opacity</label><input type="range" min="0" max="1" step="0.001" id="opacity" oninput="lp('opacity',this.value)">
+<label>Speed</label><input type="range" min="0" max="1" step="0.001" id="speed" oninput="lp('speed',this.value)">
+<label>Scale</label><input type="range" min="0" max="1" step="0.001" id="scale" oninput="lp('scale',this.value)">
+<label>Hue</label><input type="range" min="0" max="1" step="0.001" id="hue" oninput="lp('hue',this.value)"></div>
+<div id="status"></div></div>
+<script>
+let token=localStorage.getItem('lfToken')||new URLSearchParams(location.search).get('token')||'';let state=null,effects=[],busy=false;
+function hdr(){return{'Content-Type':'application/json','Authorization':'Bearer '+token}}
+function saveToken(){token=document.getElementById('token').value.trim();localStorage.setItem('lfToken',token);start()}
+async function api(p,o){const r=await fetch(p,Object.assign({headers:hdr()},o||{}));if(r.status==401||r.status==403){status('Not authorised ('+r.status+')',true);if(r.status==401)showLogin();throw 0}return r.json()}
+function post(p,b){return api(p,{method:'POST',body:JSON.stringify(b||{})}).catch(()=>{})}
+function param(id,v){post('/api/param',{id:id,value:parseFloat(v)})}
+function lp(k,v){param('layer'+document.getElementById('layer').value+'.'+k,v)}
+function setEffect(id){post('/api/effect',{layer:parseInt(document.getElementById('layer').value),effect:id})}
+function toggleBo(){post('/api/blackout',{on:!(state&&state.blackout)})}
+function status(t,e){const s=document.getElementById('status');s.textContent=t;s.className=e?'err':''}
+function showLogin(){document.getElementById('login').style.display='';document.getElementById('ui').style.display='none'}
+function render(){if(!state)return;const L=document.getElementById('layer');if(!L.options.length)state.layers.forEach(l=>L.add(new Option('Layer '+l.index,l.index)));
+const l=state.layers[parseInt(L.value||1)-1];const E=document.getElementById('effect');if(!E.options.length)effects.forEach(e=>E.add(new Option(e.category+' / '+e.name,e.id)));
+if(document.activeElement!==E)E.value=l.effect;
+const set=(id,v)=>{const el=document.getElementById(id);if(document.activeElement!==el)el.value=v};
+set('master',state.master);set('opacity',l.opacity);set('speed',l.speed/4);set('scale',(l.scale-0.1)/3.9);set('hue',l.hue);
+const S=document.getElementById('scenes');S.innerHTML='';state.scenes.forEach((n,i)=>{const b=document.createElement('button');b.textContent=(i+1)+' '+n;if(i==state.activeScene)b.className='sel';b.onclick=()=>post('/api/scene/recall',{index:i+1});S.appendChild(b)});
+document.getElementById('bo').classList.toggle('on',state.blackout);status('Connected - '+state.fps.toFixed(0)+' fps, BPM '+state.bpm.toFixed(1)+(state.faults?' - '+state.faults+' fault(s)':''))}
+async function poll(){if(busy)return;busy=true;try{state=await api('/api/state');render()}catch(e){if(e)status('Connection lost - retrying',true)}busy=false}
+async function start(){if(!token){showLogin();return}try{effects=(await api('/api/effects')).effects;document.getElementById('login').style.display='none';document.getElementById('ui').style.display='';poll();setInterval(poll,500)}catch(e){}}
+start();
+</script></body></html>

@@ -40,6 +40,8 @@
     <file>shaders/effects/feedback.glsl</file>
     <file>shaders/effects/solid.glsl</file>
     <file>shaders/effects/test_pattern.glsl</file>
+    <file>icons/lumaflow.png</file>
+    <file>icons/lumaflow.svg</file>
     <file>themes/dark.qss</file>
     <file>remote/index.html</file>
     <file>presets/factory.lfpreset</file>
