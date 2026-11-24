@@ -11,7 +11,7 @@ for sub in ["applications", "console-integration", "effects", "documentation", "
 cp("build-release/lumaflow_3.0.0_amd64.deb", "applications/lumaflow_3.0.0_amd64.deb")
 cp("build-release/lumaflow-3.0.0-Linux.tar.gz", "applications/lumaflow-3.0.0-Linux.tar.gz")
 src = os.path.join(R, "applications/lumaflow-3.0.0-source.tar.gz")
-subprocess.run(["git", "-C", ROOT, "archive", "--format=tar.gz", "--prefix=lumaflow-3.0.0/", "-o", src, "HEAD"], check=True)
+subprocess.run(["git", "-C", ROOT, "archive", "--format=tar.gz", "--prefix=lumaflow-3.0.0/", "-o", src, "HEAD", "--", ".", ":!video/*.mp4", ":!releases"], check=True)
 open(os.path.join(R, "applications/BUILD_INSTRUCTIONS.md"), "w").write(open(os.path.join(ROOT, "documentation/DEVELOPER_GUIDE.md")).read() +
     "\n\n## Installers not included\nWindows (NSIS/ZIP), macOS (DMG) and the AppImage are produced by `.github/workflows/build.yml`; they were not built in the release environment (progress/BLOCKERS.md B3/B4).\n")
 # console integration
@@ -27,7 +27,7 @@ cp("documentation/images/effects", "effects/previews")
 for f in ["LUMAFLOW_Professional_User_Manual.pdf", "LUMAFLOW_Quick_Start_Guide.pdf", "DEVELOPER_GUIDE.md", "TROUBLESHOOTING.md", "COMPATIBILITY_MATRIX.md", "RELEASE_NOTES.md"]: cp("documentation/" + f, "documentation/" + f)
 cp("sdk", "documentation/plugin-sdk")
 # video
-for f in ["LUMAFLOW_Official_Demo.mp4", "LUMAFLOW_Demo_Script.pdf", "LUMAFLOW_Demo_Subtitles.srt", "LUMAFLOW_Demo_Storyboard.pdf", "demo_script.json", "demo_segments.py", "build_video.py", "timing.json"]:
+for f in ["LUMAFLOW_Official_Demo.mp4", "LUMAFLOW_Official_Demo_web.mp4", "LUMAFLOW_Demo_Script.pdf", "LUMAFLOW_Demo_Subtitles.srt", "LUMAFLOW_Demo_Storyboard.pdf", "demo_script.json", "demo_segments.py", "build_video.py", "timing.json"]:
     if os.path.exists(os.path.join(ROOT, "video", f)): cp("video/" + f, "video/" + f)
 open(os.path.join(R, "video/EDITABLE_PROJECT.md"), "w").write("The video is generated, not hand-edited. `demo_segments.py` (narration + timed UI actions) is the editable project: change it and run `build_video.py` on a display with LUMAFLOW built to re-record. `demo_script.json` is the resulting action script, `timing.json` the segment timing.\n")
 # QA
@@ -42,7 +42,8 @@ for dp, _, fn in os.walk(R):
         h = hashlib.sha256(open(p, "rb").read()).hexdigest(); files.append({"path": rel, "bytes": os.path.getsize(p), "sha256": h})
 files.sort(key=lambda x: x["path"])
 status = {"applications/lumaflow_3.0.0_amd64.deb": "built, installed and run on Ubuntu 24.04", "applications/lumaflow-3.0.0-Linux.tar.gz": "built",
-          "video/LUMAFLOW_Official_Demo.mp4": "recorded from the real application; console control simulated (labelled)",
+          "video/LUMAFLOW_Official_Demo.mp4": "master 1080p30, recorded from the real application; console control simulated (labelled); not in git (size)",
+          "video/LUMAFLOW_Official_Demo_web.mp4": "web encode of the master (<100 MB)",
           "console-integration/gdtf/LUMAFLOW_MediaServer.gdtf": "structurally validated + re-import round trip; not tested on consoles"}
 for f in files: f["verification"] = status.get(f["path"], "")
 json.dump({"product": "LUMAFLOW", "version": "3.0.0", "date": datetime.date.today().isoformat(), "git": subprocess.run(["git", "-C", ROOT, "rev-parse", "HEAD"], capture_output=True, text=True).stdout.strip(),

@@ -591,7 +591,7 @@
    "testStatus": "pass",
    "platforms": "linux",
    "knownLimitations": "",
-   "evidence": "deb built, installed with apt, CLI + GUI run from package"
+   "evidence": "deb built, installed with apt, CLI + GUI run from package; installed package loads example plugin from /usr/lib/lumaflow/plugins"
   },
   {
    "id": "F40",
@@ -663,11 +663,11 @@
    "sourceFiles": [
     "video/"
    ],
-   "status": "In progress",
-   "testStatus": "partial",
+   "status": "Verified",
+   "testStatus": "pass",
    "platforms": "-",
    "knownLimitations": "Narration is synthetic (espeak-ng); console control simulated and labelled",
-   "evidence": "see TEST_RESULTS.md"
+   "evidence": "11:50 1080p30 MP4 recorded from the real GUI (3 takes; defects found in takes 1-2 fixed), narration + embedded subtitles, script/storyboard PDFs; frames reviewed"
   }
  ]
 }
