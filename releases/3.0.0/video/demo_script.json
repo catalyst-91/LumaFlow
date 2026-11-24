@@ -1,0 +1,845 @@
+[
+ {
+  "action": "resize",
+  "w": 1920,
+  "h": 1080,
+  "t": 3.0
+ },
+ {
+  "action": "title",
+  "text": "LUMAFLOW 3.0\nReal-time visuals \u00b7 Pixel mapping \u00b7 Show control",
+  "height": 260,
+  "t": 3.0
+ },
+ {
+  "t": 3.05,
+  "action": "caption",
+  "text": "Welcome to LUMAFLOW, a native application for real-time visual effects, media playback, pixel mapping, spatial lighting effects and show control. Everything you are about to see is recorded live from the running application."
+ },
+ {
+  "action": "title",
+  "text": "",
+  "t": 21.71
+ },
+ {
+  "t": 21.76,
+  "action": "caption",
+  "text": "LUMAFLOW runs completely offline. It needs no account, no browser and no cloud service. In this recording it renders with a software OpenGL driver on a virtual display, so frame rates are lower than on a real graphics card."
+ },
+ {
+  "action": "demoShow",
+  "t": 22.21
+ },
+ {
+  "action": "workspace",
+  "name": "Live",
+  "t": 41.09
+ },
+ {
+  "t": 41.14,
+  "action": "caption",
+  "text": "This is the Live workspace. The effects library is on the left, with animated thumbnails. In the centre are the preview monitor, in green, and the program monitor, in red. Show control and the parameter editor are on the right, and the timeline is at the bottom."
+ },
+ {
+  "action": "scene",
+  "index": 0,
+  "transition": 1,
+  "t": 43.09
+ },
+ {
+  "t": 62.21,
+  "action": "caption",
+  "text": "Panels can be docked, tabbed or floated onto another monitor. Five built-in workspaces arrange the panels for live operation, programming, mapping, console work and system monitoring."
+ },
+ {
+  "action": "workspace",
+  "name": "Programming",
+  "t": 63.16
+ },
+ {
+  "action": "workspace",
+  "name": "Mapping",
+  "t": 65.66
+ },
+ {
+  "action": "workspace",
+  "name": "Console",
+  "t": 68.16
+ },
+ {
+  "action": "workspace",
+  "name": "Live",
+  "t": 70.66
+ },
+ {
+  "action": "layer",
+  "index": 0,
+  "t": 77.58
+ },
+ {
+  "t": 77.63,
+  "action": "caption",
+  "text": "LUMAFLOW includes thirty-seven GPU effects in five families: particles, energy, geometry, organic and additional effects such as text, logos, audio spectrum and feedback."
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "particle_vortex",
+  "opacity": 1,
+  "t": 78.58
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "lightning",
+  "t": 81.58
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "kaleidoscope",
+  "t": 84.58
+ },
+ {
+  "action": "raise",
+  "dock": "Parameters",
+  "t": 93.77
+ },
+ {
+  "t": 93.82,
+  "action": "caption",
+  "text": "Selecting an effect loads it on the current layer. Every effect has speed, scale, rotation, position and colour controls, plus four effect-specific parameters, such as segments, zoom and spin for the kaleidoscope."
+ },
+ {
+  "action": "ramp",
+  "id": "layer1.p1",
+  "from": 0.4,
+  "to": 0.9,
+  "duration": 4,
+  "t": 95.77
+ },
+ {
+  "action": "ramp",
+  "id": "layer1.speed",
+  "from": 1,
+  "to": 2.5,
+  "duration": 3,
+  "t": 99.77
+ },
+ {
+  "action": "param",
+  "id": "layer1.speed",
+  "value": 1,
+  "t": 112.2
+ },
+ {
+  "t": 112.25,
+  "action": "caption",
+  "text": "Here are a few more: smoke, fluid, a Julia fractal, a wireframe terrain and the energy ring effect. Shaders are compiled once and cached, so changing parameters never recompiles anything."
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "smoke",
+  "t": 112.4
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "fluid",
+  "t": 114.7
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "fractal",
+  "t": 117.2
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "wireframe",
+  "t": 119.7
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "energy_rings",
+  "t": 122.2
+ },
+ {
+  "action": "workspace",
+  "name": "Programming",
+  "t": 128.58
+ },
+ {
+  "t": 128.63,
+  "action": "caption",
+  "text": "The node editor builds new effects without code. Nodes for coordinates, noise, warping, colour and maths are connected with typed ports, and the graph is compiled into a single shader."
+ },
+ {
+  "action": "raise",
+  "dock": "Node Editor",
+  "t": 129.08
+ },
+ {
+  "action": "click",
+  "dock": "Node Editor",
+  "button": "Compile",
+  "t": 129.58
+ },
+ {
+  "t": 144.55,
+  "action": "caption",
+  "text": "Invalid connections and cycles are rejected before anything reaches the GPU. Valid graphs are validated with an isolated test compile, then shown live on the preview monitor. Saving adds the result to the library as a custom effect."
+ },
+ {
+  "action": "click",
+  "dock": "Node Editor",
+  "button": "Save as effect",
+  "t": 145.5
+ },
+ {
+  "action": "workspace",
+  "name": "Live",
+  "t": 163.96
+ },
+ {
+  "t": 164.01,
+  "action": "caption",
+  "text": "Six layers are composited on the GPU with alpha, additive, multiply, screen and masked blending. Here a particle layer is added over plasma, and a circular mask cuts a window into the top layer."
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "plasma",
+  "opacity": 1,
+  "t": 164.46
+ },
+ {
+  "action": "effect",
+  "layer": 1,
+  "id": "particle_cloud",
+  "opacity": 1,
+  "t": 165.96
+ },
+ {
+  "action": "param",
+  "id": "layer2.blend",
+  "value": 1,
+  "t": 166.06
+ },
+ {
+  "action": "layerSource",
+  "layer": 1,
+  "mask": 1,
+  "t": 168.96
+ },
+ {
+  "action": "layerSource",
+  "layer": 1,
+  "mask": 0,
+  "t": 172.96
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "geo_tunnel",
+  "preview": true,
+  "opacity": 1,
+  "t": 180.92
+ },
+ {
+  "t": 180.97,
+  "action": "caption",
+  "text": "Looks can be prepared on the preview composition while the program keeps running. Pressing TAKE crossfades the preview into the program over the transition time."
+ },
+ {
+  "action": "effect",
+  "layer": 1,
+  "id": "neon_lines",
+  "preview": true,
+  "opacity": 0.7,
+  "t": 181.92
+ },
+ {
+  "action": "take",
+  "transition": 3,
+  "t": 185.92
+ },
+ {
+  "t": 194.36,
+  "action": "caption",
+  "text": "A scene stores the complete composition. Scenes can be recalled with their own transition time, from the show control panel, a cue list, the timeline, OSC, MIDI or a lighting console."
+ },
+ {
+  "action": "scene",
+  "index": 1,
+  "transition": 2,
+  "t": 195.31
+ },
+ {
+  "action": "scene",
+  "index": 3,
+  "transition": 2,
+  "t": 199.31
+ },
+ {
+  "action": "scene",
+  "index": 2,
+  "transition": 2,
+  "t": 203.31
+ },
+ {
+  "action": "workspace",
+  "name": "Programming",
+  "t": 210.2
+ },
+ {
+  "t": 210.25,
+  "action": "caption",
+  "text": "Video and images play through FFmpeg on background threads with a bounded frame queue, so disk and decoder activity never block rendering. Media layers support looping, in and out points, speed, reverse for short clips, and the same transform, colour and mask controls as effects."
+ },
+ {
+  "action": "raise",
+  "dock": "Media Library",
+  "t": 210.7
+ },
+ {
+  "action": "effect",
+  "layer": 2,
+  "id": "text",
+  "opacity": 1,
+  "t": 212.2
+ },
+ {
+  "action": "param",
+  "id": "layer3.blend",
+  "value": 3,
+  "t": 212.3
+ },
+ {
+  "t": 233.91,
+  "action": "caption",
+  "text": "Text and logo layers render on top of any content. Missing media files are detected when a project opens and can be relinked from a folder."
+ },
+ {
+  "action": "param",
+  "id": "layer3.opacity",
+  "value": 0,
+  "t": 239.86
+ },
+ {
+  "action": "workspace",
+  "name": "Mapping",
+  "t": 246.24
+ },
+ {
+  "t": 246.29,
+  "action": "caption",
+  "text": "The pixel mapper samples the program canvas onto LED strips, matrices and patched fixtures. In the demonstration rig, LED tubes, battens, RGBW pars and a sixteen by eight matrix are mapped from their real positions."
+ },
+ {
+  "action": "raise",
+  "dock": "Pixel Mapper",
+  "t": 246.74
+ },
+ {
+  "action": "scene",
+  "index": 0,
+  "transition": 1,
+  "t": 247.24
+ },
+ {
+  "t": 265.94,
+  "action": "caption",
+  "text": "LUMAFLOW handles channel order, gamma, brightness limiting and universe boundaries. Pixels are never split across universes, conflicts are listed, and only universes you explicitly enable are transmitted. The identify test pattern shows each element's start and direction."
+ },
+ {
+  "action": "pixelTest",
+  "pattern": 2,
+  "t": 268.89
+ },
+ {
+  "action": "pixelTest",
+  "pattern": 3,
+  "t": 274.89
+ },
+ {
+  "action": "pixelTest",
+  "pattern": 0,
+  "t": 278.89
+ },
+ {
+  "action": "raise",
+  "dock": "3D Stage",
+  "t": 288.13
+ },
+ {
+  "t": 288.18,
+  "action": "caption",
+  "text": "The 3D stage shows every fixture at its real position, coloured by the DMX that is actually being sent. Fixture layouts can be imported from MVR files with their GDTF fixture types."
+ },
+ {
+  "action": "raise",
+  "dock": "Spatial Effects",
+  "t": 288.43
+ },
+ {
+  "t": 304.58,
+  "action": "caption",
+  "text": "Spatial effects order fixtures by position: left to right, centre outward, radial, symmetrical, random with a reproducible seed and more. Here a chase runs along the blinders, and the washes breathe from the centre outward."
+ },
+ {
+  "action": "spatial",
+  "index": 1,
+  "enabled": true,
+  "t": 305.53
+ },
+ {
+  "action": "spatial",
+  "index": 0,
+  "order": "Radial clockwise",
+  "waveform": "Chase",
+  "t": 310.53
+ },
+ {
+  "action": "spatial",
+  "index": 0,
+  "order": "Centre outward",
+  "waveform": "Sine",
+  "t": 315.53
+ },
+ {
+  "t": 323.38,
+  "action": "caption",
+  "text": "Fixtures with colour but no dimmer use a virtual dimmer, fixtures with a dimmer get intensity on the dimmer without double dimming, and intensity-only fixtures receive the level."
+ },
+ {
+  "action": "raise",
+  "dock": "Fixture Manager",
+  "t": 336.84
+ },
+ {
+  "t": 336.89,
+  "action": "caption",
+  "text": "The fixture manager holds the patch: fixture types, modes, universes, addresses, positions and groups. Capabilities such as dimmer, colour mixing, pan and tilt or multiple cells are detected automatically from GDTF data, and the patch is checked for overlaps and universe boundary errors."
+ },
+ {
+  "action": "workspace",
+  "name": "Console",
+  "t": 361.33
+ },
+ {
+  "t": 361.38,
+  "action": "caption",
+  "text": "LUMAFLOW works as a fixture-style media server for grandMA3 and ChamSys MagicQ. Both consoles can be connected at the same time on separate addresses, each with its own mapping set."
+ },
+ {
+  "action": "raise",
+  "dock": "Console Mapping",
+  "t": 361.83
+ },
+ {
+  "action": "tab",
+  "dock": "Console Mapping",
+  "index": 0,
+  "t": 361.93
+ },
+ {
+  "action": "network",
+  "artnetIn": true,
+  "t": 362.33
+ },
+ {
+  "action": "console",
+  "index": 0,
+  "enabled": true,
+  "universe": 1,
+  "address": 101,
+  "t": 362.83
+ },
+ {
+  "action": "caption",
+  "text": "SIMULATED CONSOLE: Art-Net packets from a software sender on this computer, not a real console",
+  "t": 377.32
+ },
+ {
+  "action": "artnet",
+  "channels": {
+   "101": 255,
+   "102": 255,
+   "103": 64,
+   "104": 255
+  },
+  "t": 380.32
+ },
+ {
+  "action": "artnet",
+  "channels": {
+   "101": 128,
+   "102": 0,
+   "103": 64,
+   "104": 255
+  },
+  "t": 383.32
+ },
+ {
+  "action": "artnet",
+  "channels": {
+   "101": 255,
+   "102": 255,
+   "103": 120,
+   "104": 255
+  },
+  "t": 386.32
+ },
+ {
+  "action": "artnet",
+  "channels": {
+   "101": 255,
+   "102": 255,
+   "103": 8,
+   "104": 255
+  },
+  "t": 389.32
+ },
+ {
+  "action": "console",
+  "index": 0,
+  "enabled": false,
+  "t": 396.87
+ },
+ {
+  "t": 396.92,
+  "action": "caption",
+  "text": "The fixture personality is generated from the internal parameter registry in four modes: sixteen, thirty-two, sixty-four and one hundred and twenty-eight channels. Lower modes are exact prefixes of higher ones, and channels never move when new parameters are added."
+ },
+ {
+  "action": "tab",
+  "dock": "Console Mapping",
+  "index": 3,
+  "t": 397.37
+ },
+ {
+  "t": 418.56,
+  "action": "caption",
+  "text": "When effects or scenes change, LUMAFLOW proposes an updated profile and shows exactly what changed. Breaking changes are flagged, nothing is applied without operator approval, and earlier versions can be rolled back. Export writes a GDTF file for the consoles, verified by re-importing it."
+ },
+ {
+  "action": "click",
+  "dock": "Console Mapping",
+  "button": "Check for updates",
+  "t": 420.51
+ },
+ {
+  "t": 442.96,
+  "action": "caption",
+  "text": "This is the Standard thirty-two channel mode: master intensity in sixteen bit, effect selection, opacity, speed, scale, rotation and colour for layer one, scene selection, transition time, a second layer, strobe and a control channel for go, back, blackout and tap tempo."
+ },
+ {
+  "action": "tab",
+  "dock": "Console Mapping",
+  "index": 1,
+  "t": 466.36
+ },
+ {
+  "t": 466.41,
+  "action": "caption",
+  "text": "The control mapping table connects OSC addresses, MIDI controls and DMX channels to any parameter or action, with scaling, inversion, deadband, smoothing, trigger edges and soft takeover. A learn button creates mappings by moving a control."
+ },
+ {
+  "action": "tab",
+  "dock": "Console Mapping",
+  "index": 2,
+  "t": 487.56
+ },
+ {
+  "t": 487.61,
+  "action": "caption",
+  "text": "Ownership policies decide who wins when a console and a touchscreen change the same value. Feedback is sent back to consoles and controllers without creating loops. Here OSC messages recall a scene and change the master."
+ },
+ {
+  "action": "osc",
+  "address": "/lumaflow/scene/recall",
+  "args": [
+   5
+  ],
+  "t": 491.56
+ },
+ {
+  "action": "osc",
+  "address": "/lumaflow/master/intensity",
+  "args": [
+   0.6
+  ],
+  "t": 495.56
+ },
+ {
+  "action": "osc",
+  "address": "/lumaflow/master/intensity",
+  "args": [
+   1.0
+  ],
+  "t": 498.56
+ },
+ {
+  "action": "workspace",
+  "name": "Live",
+  "t": 506.59
+ },
+ {
+  "t": 506.64,
+  "action": "caption",
+  "text": "Shows can run from cue lists with manual, auto-follow and wait cues, or from the multi-track timeline. Automation tracks animate any parameter with curves, and event tracks trigger scenes, cues and OSC messages."
+ },
+ {
+  "action": "raise",
+  "dock": "Timeline",
+  "t": 507.09
+ },
+ {
+  "action": "timeline",
+  "play": true,
+  "seek": 4,
+  "t": 507.59
+ },
+ {
+  "t": 525.03,
+  "action": "caption",
+  "text": "The timeline can follow its own clock, MIDI time code, linear time code decoded from audio, or the clock of another LUMAFLOW instance. The cue list GO button runs the next cue."
+ },
+ {
+  "action": "cue",
+  "t": 527.98
+ },
+ {
+  "action": "cue",
+  "t": 531.98
+ },
+ {
+  "action": "timeline",
+  "play": false,
+  "t": 540.74
+ },
+ {
+  "t": 540.79,
+  "action": "caption",
+  "text": "Audio analysis splits the input into six frequency bands, detects beats and estimates the tempo. Here a built-in test signal at one hundred and twenty-eight beats per minute drives an audio-reactive particle layer."
+ },
+ {
+  "action": "audio",
+  "device": "test:128",
+  "enabled": true,
+  "t": 541.04
+ },
+ {
+  "action": "raise",
+  "dock": "Audio",
+  "t": 541.24
+ },
+ {
+  "action": "effect",
+  "layer": 0,
+  "id": "audio_particles",
+  "opacity": 1,
+  "t": 541.74
+ },
+ {
+  "action": "param",
+  "id": "layer1.audio",
+  "value": 1,
+  "t": 541.94
+ },
+ {
+  "action": "effect",
+  "layer": 1,
+  "id": "spectrum",
+  "opacity": 0.8,
+  "t": 546.74
+ },
+ {
+  "action": "workspace",
+  "name": "System",
+  "t": 558.72
+ },
+ {
+  "t": 558.77,
+  "action": "caption",
+  "text": "The program can be sent to multiple displays and LED processors, with cropping, rotation and scaling per output, and recorded to video. Calibration sets gamma, colour balance and white point, and a safety limiter caps flash rates for photosensitive audiences."
+ },
+ {
+  "action": "raise",
+  "dock": "Calibration",
+  "t": 559.22
+ },
+ {
+  "action": "raise",
+  "dock": "Recovery",
+  "t": 580.79
+ },
+ {
+  "t": 580.84,
+  "action": "caption",
+  "text": "For reliability, LUMAFLOW autosaves, keeps versioned backups, detects crashes and offers recovery on the next start. A shader error only affects its own layer, a watchdog monitors the render thread, and the recovery dashboard lists every fault with a recommended action."
+ },
+ {
+  "action": "raise",
+  "dock": "Performance Monitor",
+  "t": 580.99
+ },
+ {
+  "action": "workspace",
+  "name": "System",
+  "t": 602.58
+ },
+ {
+  "t": 602.63,
+  "action": "caption",
+  "text": "Here is a deliberate fault. A custom effect with a shader error is loaded on layer two. The compile error is reported in the recovery panel, but layer one and every output keep running without interruption."
+ },
+ {
+  "action": "raise",
+  "dock": "Recovery",
+  "t": 602.78
+ },
+ {
+  "action": "brokenEffect",
+  "layer": 1,
+  "t": 604.58
+ },
+ {
+  "action": "effect",
+  "layer": 1,
+  "id": "particle_cloud",
+  "t": 614.58
+ },
+ {
+  "action": "raise",
+  "dock": "Calibration",
+  "t": 619.14
+ },
+ {
+  "t": 619.19,
+  "action": "caption",
+  "text": "Calibration test patterns help line up projectors, LED walls and monitors: colour bars with a grid and circle, a grey ramp for gamma, and full white. The red border marks the edge of the canvas."
+ },
+ {
+  "action": "testPattern",
+  "pattern": 0,
+  "t": 620.14
+ },
+ {
+  "action": "testPattern",
+  "pattern": 1,
+  "t": 624.14
+ },
+ {
+  "action": "testPattern",
+  "pattern": 2,
+  "t": 627.14
+ },
+ {
+  "action": "testPattern",
+  "pattern": -1,
+  "t": 629.64
+ },
+ {
+  "action": "workspace",
+  "name": "Programming",
+  "t": 636.14
+ },
+ {
+  "t": 636.19,
+  "action": "caption",
+  "text": "Tablets on the local network can control the show through a web interface with token based roles. Several LUMAFLOW machines can share their state. Plugins extend the effect library through a C plugin interface, and the AI assistant turns a sentence into an effect."
+ },
+ {
+  "action": "raise",
+  "dock": "AI Effect Assistant",
+  "t": 636.64
+ },
+ {
+  "action": "param",
+  "id": "layer2.opacity",
+  "value": 0,
+  "preview": true,
+  "t": 637.14
+ },
+ {
+  "action": "param",
+  "id": "layer3.opacity",
+  "value": 0,
+  "preview": true,
+  "t": 637.24
+ },
+ {
+  "action": "layer",
+  "index": 0,
+  "t": 637.34
+ },
+ {
+  "action": "aiPrompt",
+  "text": "Create a blue particle vortex",
+  "t": 642.14
+ },
+ {
+  "action": "click",
+  "dock": "AI Effect Assistant",
+  "button": "Validate",
+  "t": 645.14
+ },
+ {
+  "t": 657.53,
+  "action": "caption",
+  "text": "Generated effects are validated before they can be activated, and go to the preview first. The AI assistant works locally by default; an external model is optional."
+ },
+ {
+  "action": "take",
+  "transition": 2,
+  "t": 661.48
+ },
+ {
+  "action": "workspace",
+  "name": "Live",
+  "t": 671.88
+ },
+ {
+  "t": 671.93,
+  "action": "caption",
+  "text": "On Linux, LUMAFLOW installs from a Debian package. Windows and macOS installers are produced by the automated build pipeline. The professional user manual, quick start guide, console fixture profiles and protocol references are included with the release."
+ },
+ {
+  "action": "scene",
+  "index": 4,
+  "transition": 3,
+  "t": 672.88
+ },
+ {
+  "t": 692.88,
+  "action": "caption",
+  "text": "Console integration was demonstrated with simulated control only and must be validated on real consoles before a production. Thank you for watching LUMAFLOW."
+ },
+ {
+  "action": "scene",
+  "index": 2,
+  "transition": 3,
+  "t": 693.83
+ },
+ {
+  "action": "title",
+  "text": "LUMAFLOW 3.0\nThank you for watching",
+  "height": 240,
+  "t": 700.83
+ },
+ {
+  "t": 706.88,
+  "action": "caption",
+  "text": ""
+ },
+ {
+  "t": 707.38,
+  "action": "end",
+  "after": 3.0
+ }
+]

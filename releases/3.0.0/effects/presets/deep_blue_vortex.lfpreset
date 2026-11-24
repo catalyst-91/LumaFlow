@@ -1,0 +1,29 @@
+{
+ "format": "lfpreset",
+ "version": 1,
+ "id": "deep_blue_vortex",
+ "name": "Deep Blue Vortex",
+ "category": "Factory",
+ "layer": {
+  "source": {
+   "type": 0,
+   "effect": "particle_vortex",
+   "colorA": [
+    0.1,
+    0.3,
+    1
+   ],
+   "colorB": [
+    0.4,
+    0.1,
+    1
+   ],
+   "enabled": true
+  },
+  "values": {
+   "opacity": 1,
+   "speed": 0.8,
+   "p1": 0.8
+  }
+ }
+}

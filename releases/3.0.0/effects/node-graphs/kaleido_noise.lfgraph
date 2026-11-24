@@ -1,0 +1,107 @@
+{
+ "format": "lfgraph",
+ "version": 1,
+ "name": "Kaleido Noise",
+ "nodes": [
+  {
+   "id": "n1",
+   "type": "uv",
+   "x": 0,
+   "y": 0,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n2",
+   "type": "time",
+   "x": 0,
+   "y": 140,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n3",
+   "type": "kaleido",
+   "x": 200,
+   "y": 0,
+   "params": {
+    "segments": 8
+   },
+   "label": ""
+  },
+  {
+   "id": "n4",
+   "type": "warp",
+   "x": 400,
+   "y": 0,
+   "params": {
+    "amount": 0.4
+   },
+   "label": ""
+  },
+  {
+   "id": "n5",
+   "type": "noise",
+   "x": 600,
+   "y": 0,
+   "params": {
+    "scale": 4
+   },
+   "label": ""
+  },
+  {
+   "id": "n6",
+   "type": "palette",
+   "x": 800,
+   "y": 0,
+   "params": {},
+   "label": ""
+  },
+  {
+   "id": "n7",
+   "type": "output",
+   "x": 1000,
+   "y": 0,
+   "params": {},
+   "label": ""
+  }
+ ],
+ "connections": [
+  [
+   "n1",
+   "p",
+   "n3",
+   "p"
+  ],
+  [
+   "n3",
+   "p",
+   "n4",
+   "p"
+  ],
+  [
+   "n2",
+   "t",
+   "n4",
+   "t"
+  ],
+  [
+   "n4",
+   "p",
+   "n5",
+   "p"
+  ],
+  [
+   "n5",
+   "value",
+   "n6",
+   "t"
+  ],
+  [
+   "n6",
+   "color",
+   "n7",
+   "color"
+  ]
+ ]
+}

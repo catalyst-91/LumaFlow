@@ -1,0 +1,871 @@
+{
+ "product": "LUMAFLOW",
+ "version": "3.0.0",
+ "date": "2026-11-24",
+ "git": "fd3b01164d3e52c022ced1a0eddffc291b3829f3",
+ "not_included": [
+  "Windows installer (CI only)",
+  "macOS DMG (CI only)",
+  "AppImage (CI only)"
+ ],
+ "files": [
+  {
+   "path": "applications/BUILD_INSTRUCTIONS.md",
+   "bytes": 3980,
+   "sha256": "3f00486b1dc9a968d1bc33e3184cba538b2373582010196228dc40ef9c33f239",
+   "verification": ""
+  },
+  {
+   "path": "applications/lumaflow-3.0.0-Linux.tar.gz",
+   "bytes": 2444822,
+   "sha256": "75d23740e41fa7fbe2a75f3724e4d8c5504e101b46a21ed7eef6d55780eca8c9",
+   "verification": "built"
+  },
+  {
+   "path": "applications/lumaflow-3.0.0-source.tar.gz",
+   "bytes": 36435477,
+   "sha256": "cbfe99f440cea1b59ab9c11a94a97cc50ceea2fd8265bf9be7bcdfc22002f089",
+   "verification": ""
+  },
+  {
+   "path": "applications/lumaflow_3.0.0_amd64.deb",
+   "bytes": 2446072,
+   "sha256": "7bbd38966966226e3c5394f0a906173fd628f61bbef6ec94475ee61ae048ca50",
+   "verification": "built, installed and run on Ubuntu 24.04"
+  },
+  {
+   "path": "console-integration/DMX_CHANNEL_REFERENCE.md",
+   "bytes": 25264,
+   "sha256": "2e7ba43664c9daae5e8889228e5752e129a80c3f3641d44c84714a2477ec91c7",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/MIDI_REFERENCE.md",
+   "bytes": 1378,
+   "sha256": "a072e7b5923a0a273655a744475e771ad524a2671a4f59ea9e97f86df88dadc3",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/OSC_REFERENCE.md",
+   "bytes": 2636,
+   "sha256": "43de7d3902d645b708e893a7259f54a9fdb5e7d8a28ba8bae1c1ce79e04a8c0d",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Advanced.json",
+   "bytes": 32703,
+   "sha256": "8b15953fd3bcf9a950e9d79d7b3689620187d4859cf181d74467f74110e4d963",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Advanced_DMX.md",
+   "bytes": 11604,
+   "sha256": "4c2bd9959a872489970edaf16983d51ea9cdcd9e08e446852a17a6963f3b27f0",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Basic.json",
+   "bytes": 6215,
+   "sha256": "1a554e777a23db1bd7f2fcf1ea24cf7ebd631672aee2568da483ec7192e17e64",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Basic_DMX.md",
+   "bytes": 2618,
+   "sha256": "f6e87bf1786d70c6164774fbafc654512b1763e53f66b4a985c3d23fb6e7aa27",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Extended.json",
+   "bytes": 16976,
+   "sha256": "e153544bb3ffd8e41a7be1899b17f1c480341d8385d6a613ba2036d5c6a2a940",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Extended_DMX.md",
+   "bytes": 6195,
+   "sha256": "efda037d6d17b03f775aa938ae23c6c8f5412b0b4b08165ff781cffaffb37616",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Standard.json",
+   "bytes": 10502,
+   "sha256": "f2204fbe8575710fe318a5dae48d7ae81239ae4dca966b54a7a5ab4852aac197",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/definitions/LUMAFLOW_Standard_DMX.md",
+   "bytes": 4213,
+   "sha256": "1892aea4d1ca9ada3a2a8abde7aad7030912d594ca069df72fd326b2eac34997",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/example_mappings.json",
+   "bytes": 1462,
+   "sha256": "2811c7cb370b59ffbc00d4994bd578ee67a8232325e42aee92e3e519f99b92e1",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/gdtf/LUMAFLOW_MediaServer.gdtf",
+   "bytes": 8254,
+   "sha256": "f0647d4ba3b623d09e4950943e2f29d260edf38d46c31cb4d6ee516beec2aa02",
+   "verification": "structurally validated + re-import round trip; not tested on consoles"
+  },
+  {
+   "path": "console-integration/grandma3/LUMAFLOW_Advanced_setup.md",
+   "bytes": 12736,
+   "sha256": "f4373bb1785c1582ff26deee79eddd8dbfaf79c78ea6ad7ba6bb464fd39bd79b",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/grandma3/LUMAFLOW_Basic_setup.md",
+   "bytes": 3745,
+   "sha256": "787d9760457c220149fba629cd19b903967a2c3fead403213e607374cc39456f",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/grandma3/LUMAFLOW_Extended_setup.md",
+   "bytes": 7325,
+   "sha256": "8dfe0db9f452c528f5e15b0fd895deef2467066a76ff898eb73721c0bb386e9f",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/grandma3/LUMAFLOW_MediaServer.gdtf",
+   "bytes": 6835,
+   "sha256": "5d584982328aa9e0534db2a625d0d0da921600b6a767e78ed96ee6dcc0825d91",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/grandma3/LUMAFLOW_Standard_setup.md",
+   "bytes": 5343,
+   "sha256": "53a67084a08eae8ae2a845bb3a54c44353b91282536d9136b5d024b750f6ceac",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/magicq/LUMAFLOW_Advanced_channels.csv",
+   "bytes": 11323,
+   "sha256": "6cf1c7eb39716882c937e4087459e31032b6e037204255b21eada57a66de4965",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/magicq/LUMAFLOW_Basic_channels.csv",
+   "bytes": 2636,
+   "sha256": "0846b1e430e6b8e0011decfbde003a0195583e4bfb72f69845987f9fe0039766",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/magicq/LUMAFLOW_Extended_channels.csv",
+   "bytes": 6092,
+   "sha256": "fbb7243c8febe5cb20b479b2167b1c51d9a074e66893efdd9e6bfdbca37ed215",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/magicq/LUMAFLOW_MediaServer.gdtf",
+   "bytes": 6835,
+   "sha256": "5d584982328aa9e0534db2a625d0d0da921600b6a767e78ed96ee6dcc0825d91",
+   "verification": ""
+  },
+  {
+   "path": "console-integration/magicq/LUMAFLOW_Standard_channels.csv",
+   "bytes": 4194,
+   "sha256": "041b32879c97f72e8b79a51c9a66138d1686c7a68d0617673143c80cab97143c",
+   "verification": ""
+  },
+  {
+   "path": "documentation/COMPATIBILITY_MATRIX.md",
+   "bytes": 1357,
+   "sha256": "17618b2ff181202b88b5aec5dd06dbce74f0bd8f34f503f850e832a8ee96fa71",
+   "verification": ""
+  },
+  {
+   "path": "documentation/DEVELOPER_GUIDE.md",
+   "bytes": 3778,
+   "sha256": "dd9c2cae9db5baf1d83f498c9e6fd3d37b71cd07bb481853d949cb5da0ce8b95",
+   "verification": ""
+  },
+  {
+   "path": "documentation/LUMAFLOW_Professional_User_Manual.pdf",
+   "bytes": 20399169,
+   "sha256": "e11aa2a0e394ecfcbc6ea736d04dba9d28d3aa0abf4fc550c09cd029eb769330",
+   "verification": ""
+  },
+  {
+   "path": "documentation/LUMAFLOW_Quick_Start_Guide.pdf",
+   "bytes": 2077430,
+   "sha256": "eb00c0df211c0d954fb10d07dce96b7d8a8960e11e632bcbf686c3b097737071",
+   "verification": ""
+  },
+  {
+   "path": "documentation/RELEASE_NOTES.md",
+   "bytes": 1856,
+   "sha256": "e97be00047795c500d3b4edd671ea96b6ef9b841dc12fb7f39b8e584772fb772",
+   "verification": ""
+  },
+  {
+   "path": "documentation/TROUBLESHOOTING.md",
+   "bytes": 2321,
+   "sha256": "dd65b6f34f7a3daabeed0946b655a99c99610bf74d4f96930bf85950ccc43816",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/CMakeLists.txt",
+   "bytes": 361,
+   "sha256": "8b5faf9ddfa09b3dd88b0bc70ae6105ed04e38dc3ec9c05e01729a3f6adab15f",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/crashing_plugin/crash.c",
+   "bytes": 313,
+   "sha256": "cf8ffd98a9899628d44981726267e879f9b0847d3621d6f76a755a1a32c5181e",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/effect_starfield/CMakeLists.txt",
+   "bytes": 406,
+   "sha256": "4f53f6e39c143febc9877f8a3822c5665e3a16e16aaa87409a9376a304870af2",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/effect_starfield/starfield.c",
+   "bytes": 2453,
+   "sha256": "11c49d489130fb7fb0d0787b61c6c203d2f1cf4b2bc348e17ba39d537575d0f3",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/include/lumaflow_plugin.h",
+   "bytes": 3664,
+   "sha256": "bbeaa067c7ee7ff62a8ef63a9f698672e2364cad2045113bb2428993648c26d2",
+   "verification": ""
+  },
+  {
+   "path": "effects/builtin_effects.json",
+   "bytes": 19472,
+   "sha256": "0897f2203270381eca5c91acd913d2075d9dab3d108961b8f6af78439c3b32db",
+   "verification": ""
+  },
+  {
+   "path": "effects/node-graphs/audio_rings.lfgraph",
+   "bytes": 1133,
+   "sha256": "e7b45164cea3460e63d2ac91552f30fdce6c6bed80517788d7cdf7fdeafb84ea",
+   "verification": ""
+  },
+  {
+   "path": "effects/node-graphs/kaleido_noise.lfgraph",
+   "bytes": 1127,
+   "sha256": "eb308a4a174b6c9739d836cf6c2c7743eb052b6d4d1bf389b7e29b97fbaf1765",
+   "verification": ""
+  },
+  {
+   "path": "effects/node-graphs/midi_particles.lfgraph",
+   "bytes": 1206,
+   "sha256": "7d9930ec41d6deb51d9185b748dad8035f43f2be062779222d07ae81f37eb5f6",
+   "verification": ""
+  },
+  {
+   "path": "effects/pixel-mapping-rigs/demo_rig.mvr",
+   "bytes": 9522,
+   "sha256": "ea2306a66e167718c18fe0b79b97173c166ed0dad5e6a30a9b8b7e0771e8a3ae",
+   "verification": ""
+  },
+  {
+   "path": "effects/presets/bass_pulse_particles.lfpreset",
+   "bytes": 436,
+   "sha256": "6c037670ca1a0f089cf6db4408ab6a4440fce0880b2d58ffb2ce0c22be3e256a",
+   "verification": ""
+  },
+  {
+   "path": "effects/presets/beat_rings.lfpreset",
+   "bytes": 363,
+   "sha256": "32192a8e6a57244121675228ffa0da8c12f3260fb4af59c9c426ae80c3196b8e",
+   "verification": ""
+  },
+  {
+   "path": "effects/presets/deep_blue_vortex.lfpreset",
+   "bytes": 375,
+   "sha256": "a6b96c992a95eb83fa3b4fefd6684785b9030057db7b564aa63e94428c1798e7",
+   "verification": ""
+  },
+  {
+   "path": "effects/presets/spectrum_bars.lfpreset",
+   "bytes": 379,
+   "sha256": "b7e0827015beda9cc1551441c353673045768dd8980c6a813008851973cd178b",
+   "verification": ""
+  },
+  {
+   "path": "effects/presets/warm_smoke.lfpreset",
+   "bytes": 342,
+   "sha256": "b00ec27679bd2a7322fff4508bf2656524bf88a8a41ff385207918ed61b5bd61",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/audio_particles.png",
+   "bytes": 24612,
+   "sha256": "df936e3d48e46ff5fc5b88abd946cfab3d983d16c1ee7b09cd9727c39e8e9577",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/effects.tsv",
+   "bytes": 2523,
+   "sha256": "d3c5852aaac9655bc3ec9cc5ca721fc9fab4d436d03098d6ee518bfbb6b0454d",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/electric_arcs.png",
+   "bytes": 67171,
+   "sha256": "adec534d434d582fffb9d177b537cf64ff9fe73f77c219ea0b9f2b99b0d9b09e",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/energy_rings.png",
+   "bytes": 93349,
+   "sha256": "07f2188318e11f0136bfffb5ceb6b726a421b1a87ff42d810167f2dcc3f3145c",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/feedback.png",
+   "bytes": 32905,
+   "sha256": "af5046a96f539d8da83f6817e8101962ffa02572eaeb8493168eb36601dad2b6",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/flow_field.png",
+   "bytes": 258685,
+   "sha256": "bc8e2b6136648f47d2453b77e510e2f72194b30e8f0506f47347cbf4b288df6d",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/fluid.png",
+   "bytes": 44490,
+   "sha256": "5418cb5a21ce22b4301b959efa304d690ac2e1c7ad9423410307c59bcac72627",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/fractal.png",
+   "bytes": 60424,
+   "sha256": "c5ff77dc21bdf1df8c7a91b38c3c3456ceae877b9b432b506179d8d061455c8c",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/geo_tunnel.png",
+   "bytes": 24113,
+   "sha256": "4a6ded64c4fae3c5062070504680c8dd41491878afcdda85d5d5b88faea17a8e",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/glitch.png",
+   "bytes": 130020,
+   "sha256": "515b8eaaef4415a44f525607b2ed15af7163433f5f328043534b6331e5cfaa47",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/gradient.png",
+   "bytes": 1336,
+   "sha256": "8314660084bb502a48b21d1dd701c4c9161077b45d44b17607b9e6ecd58a751e",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/ink.png",
+   "bytes": 82267,
+   "sha256": "ff0ea943765383bccf2531b4c425e22c18bb3807b8ba3d1822f1d083c6298f76",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/kaleidoscope.png",
+   "bytes": 303423,
+   "sha256": "7dc8180db4063039107c02b2ad97f2d56e28cbafb9ed64af92fc97d373d1a923",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/lightning.png",
+   "bytes": 1154,
+   "sha256": "3ab0f928a982c126c2ba8714f2d3f48dccdc9d23860e8c39cba758b29187db7b",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/logo.png",
+   "bytes": 2633,
+   "sha256": "b1c26ae3859657c41c2d054ee413f3f6fdedc4e554b27cde7c52f932419c6b90",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/mandala.png",
+   "bytes": 42954,
+   "sha256": "b6950deb24d431e9d33f1968279b9567a28225fc42e0a7e8f5f15c4487b7a1b7",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/morph_geometry.png",
+   "bytes": 32793,
+   "sha256": "caa6ecc353830cb034d03461444f559d4fb559b29346802262477de19facb97b",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/neon_lines.png",
+   "bytes": 99516,
+   "sha256": "49c86d6b7abe56e274c0f01e8a1886113ce449df400f638c6268142ee8f6c4ef",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/organic_morph.png",
+   "bytes": 47947,
+   "sha256": "1843736b862f2eb4f4dc637f1169c9e850d67e7010a20478c122fe895a9a3a36",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_attract.png",
+   "bytes": 18260,
+   "sha256": "f0bbd0df75288a67960427ae9b66077c609ed1c396048f8da93540d764cf4b03",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_cloud.png",
+   "bytes": 86139,
+   "sha256": "4cdfef3f8e1c3cc6391879fc8bfa8c61b8ecbed66d0e4bbff85881bb143d18b7",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_explosion.png",
+   "bytes": 48805,
+   "sha256": "b447e339ce0eef1814a73319fbbb525b9c48f2efc27d81f8fc269a86d34b5562",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_storm.png",
+   "bytes": 51323,
+   "sha256": "756dc990c0f23a63a47986ff867e0ed764a683dca38bc5217270337ead6b931e",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_trails.png",
+   "bytes": 16460,
+   "sha256": "61294255f803de84e9e1cf361ab810fa159e0e5922469b67d30e84607f546ade",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_tunnel.png",
+   "bytes": 38164,
+   "sha256": "cdde562c9a2c59ed163a6258248e8b98cb4382e8691e4a05f2bb4df663032bc7",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/particle_vortex.png",
+   "bytes": 125156,
+   "sha256": "954f0b7c2708e31e4f524b151068dba9c96ccee7340ae5cf3a272f4f16dfc97e",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/plasma.png",
+   "bytes": 89083,
+   "sha256": "5d1b2fd9843d9cdd62b9479bbd779c56bbbdd63a03328e3ec445a8ddf4809282",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/pulse_field.png",
+   "bytes": 70268,
+   "sha256": "591ec197f6073fec5593e4843d4f313edd7b7fc671c40bbf285431fde84e98ab",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/rotating_pattern.png",
+   "bytes": 281196,
+   "sha256": "4b2b59c88740633d6cf9e0883984c30478d3d943b4d69709a1112561b4ddd061",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/smoke.png",
+   "bytes": 101230,
+   "sha256": "9c09c9f644a49cc903294cec5cda0af1d0d24b4fc3953f7cc65c36d82c1a6a30",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/solid.png",
+   "bytes": 1154,
+   "sha256": "b236c0e3a7a1162d02c4fb72f2f88bf70746c2f8b2490d81bffb1d1c47e0eb81",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/spectrum.png",
+   "bytes": 1284,
+   "sha256": "29ef8f70d076e9b9a333416345d253f9d3f623e3f68523240ed1099b69f272c1",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/strobe.png",
+   "bytes": 1154,
+   "sha256": "3ab0f928a982c126c2ba8714f2d3f48dccdc9d23860e8c39cba758b29187db7b",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/test_pattern.png",
+   "bytes": 12977,
+   "sha256": "dc4f86a77dd7e7f0a4012797b796a0a6ff1613a4ce4356af7f4c571d86a54ae9",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/text.png",
+   "bytes": 11162,
+   "sha256": "88dd21e4e1fdc5de49c541f5a8880fb6730db469e00bd2df9f08824e5dfb50bc",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/turbulence.png",
+   "bytes": 150204,
+   "sha256": "7f65a2c22ae8eded16d3373cb3f0f3be077666ee9f5132465c7c2fc2531be1ed",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/waveform.png",
+   "bytes": 46291,
+   "sha256": "69311d0085f0f4b0aefc737e6f158f0f8193fbd63a8d2c50416bd34b07ac6ec5",
+   "verification": ""
+  },
+  {
+   "path": "effects/previews/wireframe.png",
+   "bytes": 58487,
+   "sha256": "9f421b374df687b07e50e20c25954377e69dfe564073f764aee60c77196e6e42",
+   "verification": ""
+  },
+  {
+   "path": "effects/projects/demo_festival.lumaflow",
+   "bytes": 157447,
+   "sha256": "0a6a2427744cdbc4c094eedf5c509b03cef6ed1225f7a5bc2daf62c5a24bbf48",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/audio_particles.glsl",
+   "bytes": 717,
+   "sha256": "254d802379d483f294059ba4fbd09a23ac48b9cc8859c088b8315b960c4248f7",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/electric_arcs.glsl",
+   "bytes": 827,
+   "sha256": "862e8f3470730be50e3785ab8b16808e5aee3cb111ba747c8d661594a23ea3ea",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/energy_rings.glsl",
+   "bytes": 403,
+   "sha256": "10da07fbcd9dedc19e351620bc41b908acdf6554f6042bfca8b7f4e0c5b42567",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/feedback.glsl",
+   "bytes": 425,
+   "sha256": "7f85b4deb610b51cb1f2535f9f245babe6495c3109d1cd7e954dd6de15e84d84",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/flow_field.glsl",
+   "bytes": 511,
+   "sha256": "938295bc666639fe843a39544ee2cc0baacfe827a5a08f3490c8926cdfccb65b",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/fluid.glsl",
+   "bytes": 431,
+   "sha256": "13d5ac56101cca0e457b1710f0a2ab3ac248ed24e5c36405997ca1bfd8ddf66f",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/fractal.glsl",
+   "bytes": 705,
+   "sha256": "f33bd07234714a9ffdad252c0cf93309b65ab53860c66574d1a363929453c1e7",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/geo_tunnel.glsl",
+   "bytes": 556,
+   "sha256": "6495ee03824e2e7ee0e9098d5ba117dfce262e097b12b1c54f8ba653570bd90e",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/glitch.glsl",
+   "bytes": 790,
+   "sha256": "303cd7fdeb1fe6d9d93749658543b670ab1a06a7ec579571a2ab9e7c9eb8a50f",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/gradient.glsl",
+   "bytes": 387,
+   "sha256": "aa8a814777fb3be984a7e1b79333cf9b5e2a6fdc9bcf24db5f96301ee579e875",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/ink.glsl",
+   "bytes": 418,
+   "sha256": "5ba95153262821cccd48dc6c0e156b452559de8c9f612d32b668cfb8810d9e5f",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/kaleidoscope.glsl",
+   "bytes": 581,
+   "sha256": "ae1f3103685010398dff9b6e424afcf40362db1fec16190ecac55f540453b057",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/lightning.glsl",
+   "bytes": 1132,
+   "sha256": "d0d648e0790c52c4df07f224d55dfa3459b6e2f24791a18d29ef27e52e24d2b2",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/logo.glsl",
+   "bytes": 607,
+   "sha256": "48ebdcbecff5aaec595419c5fecdd55752b12619154d4991e830ab4874796339",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/mandala.glsl",
+   "bytes": 730,
+   "sha256": "5c70b6a722f8d05b83aac751323e6b5343573138ea132a51005f4e630f77b949",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/morph_geometry.glsl",
+   "bytes": 857,
+   "sha256": "3e817e6e75f0d640397e96f749a3cbfb0f250459e10ddb4684bacb2fa752dc42",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/neon_lines.glsl",
+   "bytes": 531,
+   "sha256": "ab29fd285ef7260ab48169b4048aa77715b03614ca65f46bd5d81f828a4dd453",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/organic_morph.glsl",
+   "bytes": 623,
+   "sha256": "a467df2852370f520eb91927b134a824da7959d6538dded13879326e38694d39",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_attract.glsl",
+   "bytes": 784,
+   "sha256": "fa34f7beda97b0559a667b9032cedf364ccd7172a7a1e601fc7b746fe7f768a4",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_cloud.glsl",
+   "bytes": 1085,
+   "sha256": "7cb0764fc57e025f1a23a5aeff65fc56d05a6bf75c1c0e898c63623e9bc22ac4",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_explosion.glsl",
+   "bytes": 822,
+   "sha256": "18c36f84b69c17fb3ab9a5ac2974c7a23cb75e5c27cbe39f4880f3535f40c4aa",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_storm.glsl",
+   "bytes": 807,
+   "sha256": "2ffd43008372b563ed2f7e910ae889bb8c3cb6533d7fa95b777d159beb2b2473",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_trails.glsl",
+   "bytes": 751,
+   "sha256": "b19ce94eb759a1421e86f337b383bfc59990ce0d5881e5ae469cacbdd6bf598c",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_tunnel.glsl",
+   "bytes": 563,
+   "sha256": "e4f6b21b8d53bfe19749997d8bcda3a661d91bff0dd1d1174efe0e47bcc721d0",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/particle_vortex.glsl",
+   "bytes": 720,
+   "sha256": "d6a82f65be3e7a718042b5d78737aac776b72f417cb31ac0a7cedb38ce90c1b7",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/plasma.glsl",
+   "bytes": 473,
+   "sha256": "0a976aa8571666fdbaabed60808fe3c2dc2c742f9ec0618261c5db111b06a15c",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/pulse_field.glsl",
+   "bytes": 463,
+   "sha256": "291c598b600d7a07d1eadb3da7bbd17db975d5916266878f24068f25e9ea8aa4",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/rotating_pattern.glsl",
+   "bytes": 541,
+   "sha256": "1ead3d77e5e49d30c56b99a433908a16edecefb590741e70fa1b77dbbe550da4",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/smoke.glsl",
+   "bytes": 385,
+   "sha256": "12927905f2f5291da77be84fedc90d3d76e06027f575f67c7edaa8f4919d6cd6",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/solid.glsl",
+   "bytes": 205,
+   "sha256": "9ab863d8b035c7ebe7c18485e9fbc61c31c469e17754c06003f244cbb72530b6",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/spectrum.glsl",
+   "bytes": 591,
+   "sha256": "b972a32527533c02bf323870eb3f443d78582ba00b757f76124fc59e67369a73",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/strobe.glsl",
+   "bytes": 422,
+   "sha256": "22037551e29ce44920094899e2ee79aad6758158c1c22b556cb4cde2ed5a9910",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/test_pattern.glsl",
+   "bytes": 1133,
+   "sha256": "8ceece4afe6bdc311c57518c2d1d2e1f43f764f6858c549492f9b9c549fba924",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/text.glsl",
+   "bytes": 1032,
+   "sha256": "47efac7e4845f91396222b9d95cbfa18d633ed92cf7df223f4aa4a2dcd289ddd",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/turbulence.glsl",
+   "bytes": 467,
+   "sha256": "ee9bd76fad1d7b97c7ff4ed99ada5c37e0abdc00822115dcb3123ae287d6203d",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/waveform.glsl",
+   "bytes": 619,
+   "sha256": "fc0d6807c1e944964b20a980de3a91ec3ff23282abb6cf5cb2840acfcb73ae5b",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/effects/wireframe.glsl",
+   "bytes": 756,
+   "sha256": "8362318d5c642d1caf2ffdc1a004657166a80d990b2d4cc10a371696662d9b25",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/main.glsl",
+   "bytes": 685,
+   "sha256": "79bc06668f4d242ff80a3a13903fbe57a4c2e49375aed0d5001d75f233423e95",
+   "verification": ""
+  },
+  {
+   "path": "effects/shaders/prelude.glsl",
+   "bytes": 2522,
+   "sha256": "1b6842dd46edde69634ef3651347ad5abb40135fa7a7a53ac494aeccf9ef8091",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/BLOCKERS.md",
+   "bytes": 1668,
+   "sha256": "290861620d11fe8d69ea218b91a65b44b4773a8da718aaa01f65d71f59f16cc1",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/BUILD_STATUS.md",
+   "bytes": 2268,
+   "sha256": "a8fbf624c4fd368e3b6921266a52a7aed00f1404e7a6deb160fa10cf0330a987",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/FEATURE_MANIFEST.json",
+   "bytes": 17475,
+   "sha256": "13b7244efbdeac31aa7950e34b0790c7573933f97a68d98307fef8b8bde55991",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/HARDWARE_VALIDATION_CHECKLIST.md",
+   "bytes": 2292,
+   "sha256": "735f30fe58a9e068f9f9ed0d1f22061efe3c7626dab34cb8b3fbd47d7fd0f492",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/KNOWN_LIMITATIONS.md",
+   "bytes": 4086,
+   "sha256": "357dee5fa990cc922c62e63c36e8baea3310bdd51ba83afa53c270e58d6064a5",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/TEST_RESULTS.md",
+   "bytes": 3996,
+   "sha256": "b157de285b0905b3b118f02ed6e39b5599f584048fdfdad86acd1fbeb1e6bada",
+   "verification": ""
+  },
+  {
+   "path": "quality-assurance/benchmark_llvmpipe_1080p.json",
+   "bytes": 6666,
+   "sha256": "35e3c3fa3cb4384118eb8235b593c779e6dad3a493314f9c85788caa5c3ef1db",
+   "verification": ""
+  },
+  {
+   "path": "video/EDITABLE_PROJECT.md",
+   "bytes": 283,
+   "sha256": "dd7db5be040578c9242a06a8f0e772fd13dc777540b6237fd84ffba60e0892d3",
+   "verification": ""
+  },
+  {
+   "path": "video/LUMAFLOW_Demo_Script.pdf",
+   "bytes": 116553,
+   "sha256": "1d073588f5845865580b0c45d7a3efbea9831ea9822dd75b8799611dfe6171af",
+   "verification": ""
+  },
+  {
+   "path": "video/LUMAFLOW_Demo_Storyboard.pdf",
+   "bytes": 1674845,
+   "sha256": "9abc79c6de6b388896c2b12ddd27ab04a731e8b1e7d9aef67715b1d57c596ce1",
+   "verification": ""
+  },
+  {
+   "path": "video/LUMAFLOW_Demo_Subtitles.srt",
+   "bytes": 12781,
+   "sha256": "02096df848296e99969978bdca975ed6bd8cbe88441a549aab2447e2b575af40",
+   "verification": ""
+  },
+  {
+   "path": "video/LUMAFLOW_Official_Demo.mp4",
+   "bytes": 339890726,
+   "sha256": "8d2ce76bb29b33112789be65f7b85d03d514b8639666abf1af87b3e656398e80",
+   "verification": "master 1080p30, recorded from the real application; console control simulated (labelled); not in git (size)"
+  },
+  {
+   "path": "video/LUMAFLOW_Official_Demo_web.mp4",
+   "bytes": 89645622,
+   "sha256": "7da0cf570622b83f03d75289454b62cc9fbc51f29f1204c811c631500791109a",
+   "verification": "web encode of the master (<100 MB)"
+  },
+  {
+   "path": "video/build_video.py",
+   "bytes": 4657,
+   "sha256": "3e34ebfabf0cf5c0b9e4452a305947c5f4b913ba2d45953bdb9905bb321df5af",
+   "verification": ""
+  },
+  {
+   "path": "video/demo_script.json",
+   "bytes": 19039,
+   "sha256": "506af3300ec4b098bf671e0399f85263949ce9313cae4a24cee349e33825d96d",
+   "verification": ""
+  },
+  {
+   "path": "video/demo_segments.py",
+   "bytes": 18335,
+   "sha256": "a30faef03dc180e32e9f42fab4d24616fd89b0aef074f14c02891405b8d465a0",
+   "verification": ""
+  },
+  {
+   "path": "video/timing.json",
+   "bytes": 17064,
+   "sha256": "8270e3a702001c318963ecf1af8cf20fe80a9e35e49a2adece56be29144625f9",
+   "verification": ""
+  }
+ ]
+}

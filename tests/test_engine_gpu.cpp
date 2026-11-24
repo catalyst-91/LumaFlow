@@ -169,6 +169,11 @@ private slots:
         QVERIFY(QFile::exists(dir.filePath("LUMAFLOW_MediaServer.gdtf")));
         QVERIFY(QFile::exists(dir.filePath("magicq/LUMAFLOW_Standard_channels.csv")));
         QVERIFY(rep.contains("footprints match"));
+        // re-export into the same folder must overwrite the console copies (regression)
+        QFile f(dir.filePath("grandma3/LUMAFLOW_MediaServer.gdtf")); f.open(QIODevice::WriteOnly); f.write("stale"); f.close();
+        QVERIFY(e->exportConsoleFiles(dir.path(), &rep));
+        QFile a(dir.filePath("LUMAFLOW_MediaServer.gdtf")), b(dir.filePath("grandma3/LUMAFLOW_MediaServer.gdtf"));
+        a.open(QIODevice::ReadOnly); b.open(QIODevice::ReadOnly); QCOMPARE(a.readAll(), b.readAll());
     }
 };
 QTEST_MAIN(TestEngineGpu)

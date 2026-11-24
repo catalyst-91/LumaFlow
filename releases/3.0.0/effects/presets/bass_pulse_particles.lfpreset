@@ -1,0 +1,32 @@
+{
+ "format": "lfpreset",
+ "version": 1,
+ "id": "bass_pulse_particles",
+ "name": "Bass Pulse Particles",
+ "category": "Audio-reactive",
+ "layer": {
+  "source": {
+   "type": 0,
+   "effect": "audio_particles",
+   "colorA": [
+    0.2,
+    0.6,
+    1
+   ],
+   "colorB": [
+    1,
+    0.2,
+    0.6
+   ],
+   "enabled": true
+  },
+  "values": {
+   "opacity": 1,
+   "speed": 1.2,
+   "scale": 1,
+   "audio": 0.9,
+   "p1": 0.7,
+   "p2": 0.8
+  }
+ }
+}

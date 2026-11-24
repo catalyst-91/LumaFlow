@@ -1,0 +1,229 @@
+{
+    "gpu": "llvmpipe (LLVM 20.1.2, 256 bits) | 4.5 (Core Profile) Mesa 25.2.8-0ubuntu0.24.04.5",
+    "height": 1080,
+    "results": [
+        {
+            "effect": "particle_cloud",
+            "fps": 7.703251310356171,
+            "msPerFrame": 129.81531560000002,
+            "renderMs": 126.85010095
+        },
+        {
+            "effect": "particle_explosion",
+            "fps": 2.089353065299989,
+            "msPerFrame": 478.61704975000004,
+            "renderMs": 475.47513955000005
+        },
+        {
+            "effect": "particle_storm",
+            "fps": 13.157232789535604,
+            "msPerFrame": 76.0038236,
+            "renderMs": 73.08703115
+        },
+        {
+            "effect": "particle_vortex",
+            "fps": 19.48293160661618,
+            "msPerFrame": 51.326977899999996,
+            "renderMs": 48.15863025
+        },
+        {
+            "effect": "particle_trails",
+            "fps": 6.656206296472693,
+            "msPerFrame": 150.23572819999998,
+            "renderMs": 146.74869954999997
+        },
+        {
+            "effect": "particle_tunnel",
+            "fps": 20.560466938237678,
+            "msPerFrame": 48.6370277,
+            "renderMs": 45.50349969999999
+        },
+        {
+            "effect": "particle_attract",
+            "fps": 2.191494824758345,
+            "msPerFrame": 456.3095421,
+            "renderMs": 453.3313028999999
+        },
+        {
+            "effect": "audio_particles",
+            "fps": 18.17101960740055,
+            "msPerFrame": 55.0326851,
+            "renderMs": 51.7740595
+        },
+        {
+            "effect": "plasma",
+            "fps": 16.636634989559816,
+            "msPerFrame": 60.108309199999994,
+            "renderMs": 57.224068450000004
+        },
+        {
+            "effect": "lightning",
+            "fps": 14.15789024890267,
+            "msPerFrame": 70.63199265,
+            "renderMs": 68.14213335000002
+        },
+        {
+            "effect": "electric_arcs",
+            "fps": 11.018527990881772,
+            "msPerFrame": 90.7562245,
+            "renderMs": 87.99973449999996
+        },
+        {
+            "effect": "energy_rings",
+            "fps": 24.533036526769504,
+            "msPerFrame": 40.7613627,
+            "renderMs": 38.25801750000001
+        },
+        {
+            "effect": "pulse_field",
+            "fps": 21.90350946417679,
+            "msPerFrame": 45.6547843,
+            "renderMs": 42.8579149
+        },
+        {
+            "effect": "neon_lines",
+            "fps": 18.828348334807316,
+            "msPerFrame": 53.1114032,
+            "renderMs": 50.34631165
+        },
+        {
+            "effect": "kaleidoscope",
+            "fps": 19.42342165239234,
+            "msPerFrame": 51.48423475,
+            "renderMs": 48.9420717
+        },
+        {
+            "effect": "fractal",
+            "fps": 13.431931239467138,
+            "msPerFrame": 74.44945795,
+            "renderMs": 71.91799495000001
+        },
+        {
+            "effect": "mandala",
+            "fps": 19.133609332905475,
+            "msPerFrame": 52.26405445,
+            "renderMs": 49.53272174999999
+        },
+        {
+            "effect": "geo_tunnel",
+            "fps": 21.91888047880076,
+            "msPerFrame": 45.622768050000005,
+            "renderMs": 43.02072410000001
+        },
+        {
+            "effect": "rotating_pattern",
+            "fps": 21.047166383104685,
+            "msPerFrame": 47.51233405,
+            "renderMs": 44.7506004
+        },
+        {
+            "effect": "morph_geometry",
+            "fps": 12.684000082532252,
+            "msPerFrame": 78.8394823,
+            "renderMs": 76.30920284999999
+        },
+        {
+            "effect": "wireframe",
+            "fps": 21.835758388822626,
+            "msPerFrame": 45.79644005,
+            "renderMs": 43.22594855
+        },
+        {
+            "effect": "smoke",
+            "fps": 18.757305935491924,
+            "msPerFrame": 53.3125601,
+            "renderMs": 50.70449144999999
+        },
+        {
+            "effect": "fluid",
+            "fps": 18.829258964759884,
+            "msPerFrame": 53.1088346,
+            "renderMs": 50.590368
+        },
+        {
+            "effect": "ink",
+            "fps": 15.885021557987683,
+            "msPerFrame": 62.952385449999994,
+            "renderMs": 60.01230835
+        },
+        {
+            "effect": "flow_field",
+            "fps": 19.39478048327057,
+            "msPerFrame": 51.560263899999995,
+            "renderMs": 48.4703574
+        },
+        {
+            "effect": "turbulence",
+            "fps": 17.337806390290314,
+            "msPerFrame": 57.677423399999995,
+            "renderMs": 53.572869900000015
+        },
+        {
+            "effect": "organic_morph",
+            "fps": 16.714004460091978,
+            "msPerFrame": 59.830066599999995,
+            "renderMs": 55.9684853
+        },
+        {
+            "effect": "glitch",
+            "fps": 19.74532059004041,
+            "msPerFrame": 50.644910800000005,
+            "renderMs": 47.38694479999999
+        },
+        {
+            "effect": "strobe",
+            "fps": 23.931188633529693,
+            "msPerFrame": 41.78647435,
+            "renderMs": 38.99203365000001
+        },
+        {
+            "effect": "gradient",
+            "fps": 24.402554127979432,
+            "msPerFrame": 40.97931695,
+            "renderMs": 38.35319085
+        },
+        {
+            "effect": "text",
+            "fps": 15.901639113688528,
+            "msPerFrame": 62.88659885,
+            "renderMs": 59.863808799999994
+        },
+        {
+            "effect": "logo",
+            "fps": 18.72085737587913,
+            "msPerFrame": 53.41635695,
+            "renderMs": 49.92555585000001
+        },
+        {
+            "effect": "spectrum",
+            "fps": 23.086404414593332,
+            "msPerFrame": 43.315536800000004,
+            "renderMs": 40.68893645000001
+        },
+        {
+            "effect": "waveform",
+            "fps": 22.30242185511556,
+            "msPerFrame": 44.83817975,
+            "renderMs": 42.32292940000001
+        },
+        {
+            "effect": "feedback",
+            "fps": 22.626025582305882,
+            "msPerFrame": 44.1968916,
+            "renderMs": 41.52391955
+        },
+        {
+            "effect": "solid",
+            "fps": 22.697263514524654,
+            "msPerFrame": 44.05817465,
+            "renderMs": 40.802853
+        },
+        {
+            "effect": "test_pattern",
+            "fps": 22.548784289172428,
+            "msPerFrame": 44.3482889,
+            "renderMs": 41.26554455
+        }
+    ],
+    "width": 1920
+}

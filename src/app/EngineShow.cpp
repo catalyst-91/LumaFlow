@@ -353,8 +353,11 @@ bool Engine::exportConsoleFiles(const QString& dir, QString* report) {
     for (int i = 0; i < modes.size(); ++i) if (back.type.modes.value(i).footprint() != modes[i].footprint()) { if (report) *report = "footprint mismatch after re-import"; return false; }
     rep << QString("Round-trip check: %1 modes re-imported, footprints match").arg(back.type.modes.size());
     QDir().mkpath(QDir(dir).filePath("grandma3")); QDir().mkpath(QDir(dir).filePath("magicq")); QDir().mkpath(QDir(dir).filePath("definitions"));
-    QFile::copy(gdtfPath, QDir(dir).filePath("grandma3/LUMAFLOW_MediaServer.gdtf"));
-    QFile::copy(gdtfPath, QDir(dir).filePath("magicq/LUMAFLOW_MediaServer.gdtf"));
+    for (const char* sub : {"grandma3/LUMAFLOW_MediaServer.gdtf", "magicq/LUMAFLOW_MediaServer.gdtf"}) {
+        const QString dst = QDir(dir).filePath(sub);
+        QFile::remove(dst);                                   // QFile::copy never overwrites
+        if (!QFile::copy(gdtfPath, dst)) { if (report) *report = "cannot write " + dst; return false; }
+    }
     for (const auto& p : modes) {
         const QString tag = personalityModeName(p.mode).section(' ', 0, 0);
         auto write = [&](const QString& path, const QString& text) { QFile f(path); if (f.open(QIODevice::WriteOnly | QIODevice::Text)) f.write(text.toUtf8()); rep << path; };

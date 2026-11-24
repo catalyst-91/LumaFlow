@@ -1,0 +1,73 @@
+{
+ "description": "Example control mappings (import via project or copy into a project's 'mappings' array). Console OSC addresses are templates: verify against your console software version.",
+ "mappings": [
+  {
+   "console": "grandMA3",
+   "source": "osc",
+   "address": "/gma3/Page1/Fader201",
+   "target": "master.intensity",
+   "inMin": 0,
+   "inMax": 100,
+   "softTakeover": true
+  },
+  {
+   "console": "grandMA3",
+   "source": "osc",
+   "address": "/gma3/Page1/Key101",
+   "target": "action:cue.go",
+   "edge": 1,
+   "threshold": 0.5
+  },
+  {
+   "console": "MagicQ",
+   "source": "osc",
+   "address": "/pb/1",
+   "target": "layer1.opacity",
+   "inMin": 0,
+   "inMax": 100
+  },
+  {
+   "console": "MagicQ",
+   "source": "osc",
+   "address": "/pb/1/go",
+   "target": "action:cue.go",
+   "edge": 1
+  },
+  {
+   "console": "generic",
+   "source": "midi",
+   "address": "cc:0:1",
+   "target": "layer1.speed",
+   "smoothing": 0.5
+  },
+  {
+   "console": "generic",
+   "source": "midi",
+   "address": "cc:0:7",
+   "target": "master.intensity",
+   "softTakeover": true
+  },
+  {
+   "console": "generic",
+   "source": "midi",
+   "address": "note:0:36",
+   "target": "action:cue.go",
+   "edge": 1
+  },
+  {
+   "console": "generic",
+   "source": "midi",
+   "address": "note:0:37",
+   "target": "action:tap",
+   "edge": 1
+  },
+  {
+   "console": "generic",
+   "source": "dmx",
+   "address": "1/500",
+   "target": "action:blackout",
+   "edge": 1,
+   "threshold": 0.5
+  }
+ ]
+}

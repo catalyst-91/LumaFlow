@@ -1,0 +1,1 @@
+The video is generated, not hand-edited. `demo_segments.py` (narration + timed UI actions) is the editable project: change it and run `build_video.py` on a display with LUMAFLOW built to re-record. `demo_script.json` is the resulting action script, `timing.json` the segment timing.
