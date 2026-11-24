@@ -211,7 +211,7 @@ private:
     EngineOptions m_opt;
     mutable QRecursiveMutex m_state;
     EffectLibrary m_effects;
-    Composition m_program{4}, m_preview{4}, m_outgoing{4};
+    Composition m_program{6}, m_preview{6}, m_outgoing{6};
     QVector<Scene> m_scenes;
     QVector<Preset> m_presets;
     CueList m_cues;

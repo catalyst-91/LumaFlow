@@ -92,6 +92,15 @@ QVector<PersonalityGenerator::CatalogEntry> PersonalityGenerator::catalogue(int 
       << CatalogEntry{"audio.smoothing", 8, "Effects9Adjust3"} << CatalogEntry{"show.bpm", 8, "Effects9Rate"}
       << CatalogEntry{"master.red", 8, "ColorRGB_Red"} << CatalogEntry{"master.green", 8, "ColorRGB_Green"} << CatalogEntry{"master.blue", 8, "ColorRGB_Blue"}
       << CatalogEntry{"master.saturation", 8, "Effects9Adjust4"};
+    // Layers 5+ (appended later in the catalogue's history; order must never change)
+    for (int l = 5; l <= layers; ++l) {
+        c << CatalogEntry{QString("layer%1.effect").arg(l), 8, QString("Effects%1").arg(l)} << CatalogEntry{QString("layer%1.opacity").arg(l), 8, QString("Effects%1Adjust1").arg(l)}
+          << CatalogEntry{QString("layer%1.speed").arg(l), 8, QString("Effects%1Rate").arg(l)} << CatalogEntry{QString("layer%1.scale").arg(l), 8, QString("Effects%1Adjust2").arg(l)}
+          << CatalogEntry{QString("layer%1.hue").arg(l), 8, QString("Effects%1Adjust4").arg(l)};
+        int adj = 3;
+        for (auto p : per) { c << CatalogEntry{QString("layer%1.%2").arg(l).arg(p), 8, QString("Effects%1Adjust%2").arg(l).arg(adj == 4 ? ++adj : adj)}; ++adj; }
+        c << CatalogEntry{QString("layer%1.posx").arg(l), 16, QString("Effects%1Adjust20").arg(l)} << CatalogEntry{QString("layer%1.posy").arg(l), 16, QString("Effects%1Adjust21").arg(l)};
+    }
     return c;
 }
 

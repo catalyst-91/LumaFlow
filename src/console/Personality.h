@@ -60,7 +60,7 @@ class PersonalityGenerator {
 public:
     // Channel catalogue entry: parameter id + resolution
     struct CatalogEntry { QString paramId; int resolution; QString gdtfAttribute; };
-    static QVector<CatalogEntry> catalogue(int layerCount = 4);
+    static QVector<CatalogEntry> catalogue(int layerCount = 6);
     static PersonalityProfile generate(const ParameterRegistry& reg, PersonalityMode mode, const QStringList& effectNames,
                                        const QStringList& sceneNames, const QStringList& customParams = {});
     static ProfileDiff compare(const PersonalityProfile& oldP, const PersonalityProfile& newP);

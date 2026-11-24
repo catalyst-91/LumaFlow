@@ -1,0 +1,231 @@
+{
+    "channels": [
+        {
+            "fine": 2,
+            "gdtf": "Dimmer",
+            "index": [
+            ],
+            "name": "Master Intensity",
+            "offset": 1,
+            "param": "master.intensity"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1",
+            "index": [
+                "Particle Cloud",
+                "Particle Explosion",
+                "Particle Storm",
+                "Particle Vortex",
+                "Particle Trails",
+                "Particle Tunnel",
+                "Attract / Repel",
+                "Audio Particles",
+                "Plasma",
+                "Lightning",
+                "Electric Arcs",
+                "Energy Rings",
+                "Pulsating Field",
+                "Neon Lines",
+                "Kaleidoscope",
+                "Julia Fractal",
+                "Mandala",
+                "Geometric Tunnel",
+                "Rotating Pattern",
+                "Morphing Geometry",
+                "Wireframe Terrain",
+                "Smoke",
+                "Fluid",
+                "Ink Clouds",
+                "Flow Field",
+                "Turbulence",
+                "Organic Morph",
+                "Glitch",
+                "Strobe",
+                "Gradient",
+                "Text",
+                "Logo / Image",
+                "Audio Spectrum",
+                "Waveform",
+                "Feedback Tunnel",
+                "Solid Colour",
+                "Test Pattern"
+            ],
+            "name": "Layer 1 Effect",
+            "offset": 3,
+            "param": "layer1.effect"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Adjust1",
+            "index": [
+            ],
+            "name": "Layer 1 Opacity",
+            "offset": 4,
+            "param": "layer1.opacity"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Rate",
+            "index": [
+            ],
+            "name": "Layer 1 Speed",
+            "offset": 5,
+            "param": "layer1.speed"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Adjust2",
+            "index": [
+            ],
+            "name": "Layer 1 Scale",
+            "offset": 6,
+            "param": "layer1.scale"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Adjust3",
+            "index": [
+            ],
+            "name": "Layer 1 Rotation",
+            "offset": 7,
+            "param": "layer1.rotation"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Adjust4",
+            "index": [
+            ],
+            "name": "Layer 1 Hue shift",
+            "offset": 8,
+            "param": "layer1.hue"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Adjust5",
+            "index": [
+            ],
+            "name": "Layer 1 Saturation",
+            "offset": 9,
+            "param": "layer1.saturation"
+        },
+        {
+            "fine": 0,
+            "gdtf": "MediaContent1",
+            "index": [
+                "Plasma Drift",
+                "Vortex Rings",
+                "Kaleido Neon",
+                "Liquid Trails",
+                "Tunnel Pulse",
+                "Storm"
+            ],
+            "name": "Show Scene",
+            "offset": 10,
+            "param": "show.scene"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects1Fade",
+            "index": [
+            ],
+            "name": "Show Transition time",
+            "offset": 11,
+            "param": "show.transition"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects2",
+            "index": [
+                "Particle Cloud",
+                "Particle Explosion",
+                "Particle Storm",
+                "Particle Vortex",
+                "Particle Trails",
+                "Particle Tunnel",
+                "Attract / Repel",
+                "Audio Particles",
+                "Plasma",
+                "Lightning",
+                "Electric Arcs",
+                "Energy Rings",
+                "Pulsating Field",
+                "Neon Lines",
+                "Kaleidoscope",
+                "Julia Fractal",
+                "Mandala",
+                "Geometric Tunnel",
+                "Rotating Pattern",
+                "Morphing Geometry",
+                "Wireframe Terrain",
+                "Smoke",
+                "Fluid",
+                "Ink Clouds",
+                "Flow Field",
+                "Turbulence",
+                "Organic Morph",
+                "Glitch",
+                "Strobe",
+                "Gradient",
+                "Text",
+                "Logo / Image",
+                "Audio Spectrum",
+                "Waveform",
+                "Feedback Tunnel",
+                "Solid Colour",
+                "Test Pattern"
+            ],
+            "name": "Layer 2 Effect",
+            "offset": 12,
+            "param": "layer2.effect"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects2Adjust1",
+            "index": [
+            ],
+            "name": "Layer 2 Opacity",
+            "offset": 13,
+            "param": "layer2.opacity"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Shutter1Strobe",
+            "index": [
+            ],
+            "name": "Master Strobe",
+            "offset": 14,
+            "param": "master.strobe"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Control1",
+            "index": [
+                "Idle",
+                "Cue Go",
+                "Cue Back",
+                "Blackout",
+                "Tap tempo",
+                "Freeze",
+                "Take preview"
+            ],
+            "name": "Show Control",
+            "offset": 15,
+            "param": "show.control"
+        },
+        {
+            "fine": 0,
+            "gdtf": "Effects9Adjust1",
+            "index": [
+            ],
+            "name": "Audio Audio reactivity",
+            "offset": 16,
+            "param": "audio.reactivity"
+        }
+    ],
+    "createdAt": "2026-11-24T11:20:52Z",
+    "fingerprint": "65fd4653a789",
+    "mode": "Basic 16ch",
+    "name": "LUMAFLOW Media Server",
+    "version": 1
+}
