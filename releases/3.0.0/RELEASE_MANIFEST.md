@@ -3,31 +3,31 @@
 | File | Size | SHA-256 (first 16) | Verification |
 |---|---:|---|---|
 | applications/BUILD_INSTRUCTIONS.md | 3,980 | `3f00486b1dc9a968` |  |
-| applications/lumaflow-3.0.0-Linux.tar.gz | 2,444,822 | `75d23740e41fa7fb` | built |
-| applications/lumaflow-3.0.0-source.tar.gz | 36,435,477 | `cbfe99f440cea1b5` |  |
-| applications/lumaflow_3.0.0_amd64.deb | 2,446,072 | `7bbd38966966226e` | built, installed and run on Ubuntu 24.04 |
+| applications/lumaflow-3.0.0-Linux.tar.gz | 2,433,412 | `46fb74c43b4b11ed` | built |
+| applications/lumaflow-3.0.0-source.tar.gz | 36,437,815 | `301788e59e4f4080` |  |
+| applications/lumaflow_3.0.0_amd64.deb | 2,448,964 | `2e15aa39d941cfcb` | built, installed and run on Ubuntu 24.04 |
 | console-integration/DMX_CHANNEL_REFERENCE.md | 25,264 | `2e7ba43664c9daae` |  |
 | console-integration/MIDI_REFERENCE.md | 1,378 | `a072e7b5923a0a27` |  |
 | console-integration/OSC_REFERENCE.md | 2,636 | `43de7d3902d645b7` |  |
-| console-integration/definitions/LUMAFLOW_Advanced.json | 32,703 | `8b15953fd3bcf9a9` |  |
+| console-integration/definitions/LUMAFLOW_Advanced.json | 32,703 | `1c5cc6d2c0dc6b61` |  |
 | console-integration/definitions/LUMAFLOW_Advanced_DMX.md | 11,604 | `4c2bd9959a872489` |  |
-| console-integration/definitions/LUMAFLOW_Basic.json | 6,215 | `1a554e777a23db1b` |  |
+| console-integration/definitions/LUMAFLOW_Basic.json | 6,215 | `e11877ee28d14d64` |  |
 | console-integration/definitions/LUMAFLOW_Basic_DMX.md | 2,618 | `f6e87bf1786d70c6` |  |
-| console-integration/definitions/LUMAFLOW_Extended.json | 16,976 | `e153544bb3ffd8e4` |  |
+| console-integration/definitions/LUMAFLOW_Extended.json | 16,976 | `b7288df6c02af79d` |  |
 | console-integration/definitions/LUMAFLOW_Extended_DMX.md | 6,195 | `efda037d6d17b03f` |  |
-| console-integration/definitions/LUMAFLOW_Standard.json | 10,502 | `f2204fbe8575710f` |  |
+| console-integration/definitions/LUMAFLOW_Standard.json | 10,502 | `8801b626816368a4` |  |
 | console-integration/definitions/LUMAFLOW_Standard_DMX.md | 4,213 | `1892aea4d1ca9ada` |  |
 | console-integration/example_mappings.json | 1,462 | `2811c7cb370b59ff` |  |
-| console-integration/gdtf/LUMAFLOW_MediaServer.gdtf | 8,254 | `f0647d4ba3b623d0` | structurally validated + re-import round trip; not tested on consoles |
+| console-integration/gdtf/LUMAFLOW_MediaServer.gdtf | 8,254 | `721c6fedb2f87aa4` | structurally validated + re-import round trip; not tested on consoles |
 | console-integration/grandma3/LUMAFLOW_Advanced_setup.md | 12,736 | `f4373bb1785c1582` |  |
 | console-integration/grandma3/LUMAFLOW_Basic_setup.md | 3,745 | `787d9760457c2201` |  |
 | console-integration/grandma3/LUMAFLOW_Extended_setup.md | 7,325 | `8dfe0db9f452c528` |  |
-| console-integration/grandma3/LUMAFLOW_MediaServer.gdtf | 6,835 | `5d584982328aa9e0` |  |
+| console-integration/grandma3/LUMAFLOW_MediaServer.gdtf | 8,254 | `721c6fedb2f87aa4` |  |
 | console-integration/grandma3/LUMAFLOW_Standard_setup.md | 5,343 | `53a67084a08eae8a` |  |
 | console-integration/magicq/LUMAFLOW_Advanced_channels.csv | 11,323 | `6cf1c7eb39716882` |  |
 | console-integration/magicq/LUMAFLOW_Basic_channels.csv | 2,636 | `0846b1e430e6b8e0` |  |
 | console-integration/magicq/LUMAFLOW_Extended_channels.csv | 6,092 | `fbb7243c8febe5cb` |  |
-| console-integration/magicq/LUMAFLOW_MediaServer.gdtf | 6,835 | `5d584982328aa9e0` |  |
+| console-integration/magicq/LUMAFLOW_MediaServer.gdtf | 8,254 | `721c6fedb2f87aa4` |  |
 | console-integration/magicq/LUMAFLOW_Standard_channels.csv | 4,194 | `041b32879c97f72e` |  |
 | documentation/COMPATIBILITY_MATRIX.md | 1,357 | `17618b2ff181202b` |  |
 | documentation/DEVELOPER_GUIDE.md | 3,778 | `dd9c2cae9db5baf1` |  |
@@ -51,7 +51,7 @@
 | quality-assurance/FEATURE_MANIFEST.json | 17,475 | `13b7244efbdeac31` |  |
 | quality-assurance/HARDWARE_VALIDATION_CHECKLIST.md | 2,292 | `735f30fe58a9e068` |  |
 | quality-assurance/KNOWN_LIMITATIONS.md | 4,086 | `357dee5fa990cc92` |  |
-| quality-assurance/TEST_RESULTS.md | 3,996 | `b157de285b0905b3` |  |
+| quality-assurance/TEST_RESULTS.md | 4,117 | `79b4c55238963b31` |  |
 | quality-assurance/benchmark_llvmpipe_1080p.json | 6,666 | `35e3c3fa3cb43841` |  |
 | video/EDITABLE_PROJECT.md | 283 | `dd7db5be040578c9` |  |
 | video/LUMAFLOW_Demo_Script.pdf | 116,553 | `1d073588f5845865` |  |

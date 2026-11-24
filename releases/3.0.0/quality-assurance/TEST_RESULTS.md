@@ -34,6 +34,7 @@ Environment: Ubuntu 24.04 container, GCC 13.3, Qt 6.4.2, FFmpeg 6.1 libs, Xvfb :
 * AI keyword priority (generic "particle" vs "vortex") – fixed.
 * Window larger than screen / exit blocked by save prompt in automation – fixed.
 * Advanced mode only 90 channels – catalogue extended (6 layers) to 128, append-only.
+* Console export did not overwrite existing grandma3/magicq GDTF copies (QFile::copy) – fixed, regression check added.
 * Demo console simulator sent zeros on unset channels (black output) – simulator now sends current values like a console.
 
 ## Not tested (see BLOCKERS.md)
