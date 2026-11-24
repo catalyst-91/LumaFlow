@@ -6,3 +6,6 @@ build-*/
 __pycache__/
 *.pyc
 /video/work/
+video/LUMAFLOW_Official_Demo.mp4
+releases/**/*.mp4
+!video/LUMAFLOW_Official_Demo_web.mp4

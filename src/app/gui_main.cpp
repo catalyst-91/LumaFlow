@@ -92,6 +92,18 @@ private:
         else if (a == "artnet") {
             // Simulated console: sends ArtDmx to this machine (labelled as simulation in the demo captions)
             artnet::DmxPacket pk; pk.portAddress = quint16(s["port"].toInt(0)); pk.data = QByteArray(512, 0);
+            // Like a real console, send the current value of every personality channel, then apply the overrides.
+            const ConsoleLink& link = m_e->consoles()[s["console"].toInt(0)];
+            const PersonalityProfile prof = m_e->profiles().hasActive(link.mode) ? m_e->profiles().active(link.mode) : m_e->generatePersonality(link.mode);
+            for (const auto& c : prof.channels) {
+                const int base = link.address - 1;
+                const ParameterDef d = m_e->params().def(c.paramId);
+                const double v = m_e->params().value(c.paramId);
+                if (!c.indexNames.isEmpty()) { pk.data[base + c.offset - 1] = char(std::min(255, int(v) * 8 + 3)); continue; }
+                const int v16 = int(std::lround(d.normalize(v) * 65535));
+                pk.data[base + c.offset - 1] = char(v16 >> 8);
+                if (c.fineOffset) pk.data[base + c.fineOffset - 1] = char(v16 & 0xFF);
+            }
             const QJsonObject ch = s["channels"].toObject();
             for (auto it = ch.begin(); it != ch.end(); ++it) pk.data[it.key().toInt() - 1] = char(it.value().toInt());
             static quint8 seq = 0;

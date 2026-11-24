@@ -17,6 +17,6 @@ First complete release of the native C++20 / Qt 6 application.
 * Audio analysis (FFT bands, beat, BPM), calibration and photosensitive safety limiter
 * Remote web UI with token roles, multi-instance UDP sync, plugin SDK (C ABI) with out-of-process probing, local AI assistant
 * Autosave, versioned backups, crash recovery, last-known-good, render watchdog, safe mode
-* 8 automated test suites (96 test functions) incl. GPU, network loopback and plugin isolation tests
+* 8 automated test suites (91 test functions) incl. GPU, network loopback and plugin isolation tests
 
 See KNOWN_LIMITATIONS.md for what is not yet verified.
