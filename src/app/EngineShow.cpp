@@ -488,6 +488,7 @@ QJsonObject Engine::toProjectJson() const {
     QJsonArray cl; for (auto& c : m_consoles) cl << c.toJson(); o["consoles"] = cl;
     o["network"] = m_net->config().toJson();
     o["video"] = m_videoOut.toJson();
+    QJsonArray streams; for (const auto& sc : m_streams->configs()) streams << sc.toJson(); o["streams"] = streams;
     o["calibration"] = m_calibration.toJson();
     o["safety"] = QJsonObject{{"maxStrobeHz", m_safety.maxStrobeHz}, {"maxBrightness", m_safety.maxBrightness}, {"limiter", m_safety.limiterEnabled}};
     o["audio"] = QJsonObject{{"device", m_audioSettings.device}, {"enabled", m_audioSettings.enabled}, {"gain", m_audioSettings.gain}, {"gate", m_audioSettings.gate}, {"smoothing", m_audioSettings.smoothing}, {"sensitivity", m_audioSettings.sensitivity}};
@@ -527,6 +528,7 @@ bool Engine::fromProjectJson(const QJsonObject& o, QStringList* warnings) {
         m_playersP.clear(); m_playersV.clear(); m_playersO.clear();
     }
     if (o.contains("network")) applyNetworkConfig(NetworkConfig::fromJson(o["network"].toObject()));
+    { QVector<StreamConfig> sc; for (auto v : o["streams"].toArray()) sc << StreamConfig::fromJson(v.toObject()); applyStreamConfigs(sc); }
     const QJsonObject au = o["audio"].toObject();
     if (!au.isEmpty()) { AudioSettings a; a.device = au["device"].toString("test:120"); a.enabled = au["enabled"].toBool(); a.gain = au["gain"].toDouble(1); a.gate = au["gate"].toDouble(0.01); a.smoothing = au["smoothing"].toDouble(0.6); a.sensitivity = au["sensitivity"].toDouble(1.4); applyAudioSettings(a); }
     const DependencyReport dep = ProjectIO::checkDependencies(o, m_effects.ids(), [this] { QStringList l; for (auto& p : m_plugins.records()) if (p.loaded) l << p.id; return l; }(), QFileInfo(m_projectPath).absolutePath());

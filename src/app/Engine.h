@@ -20,6 +20,7 @@
 #include "media/MediaPlayer.h"
 #include "renderer/RenderThread.h"
 #include "output/Output.h"
+#include "output/StreamSinks.h"
 #include "remote/RemoteServer.h"
 #include "sync/SyncService.h"
 #include "plugins/PluginHost.h"
@@ -108,6 +109,8 @@ public:
     OutputCalibration& calibration() { return m_calibration; }
     SafetyLimits& safety() { return m_safety; }
     RenderThread* renderThread() { return m_render.get(); }
+    StreamOutputManager& streams() { return *m_streams; }
+    void applyStreamConfigs(const QVector<StreamConfig>& c);
     QRecursiveMutex& stateMutex() { return m_state; }
     midi::Backend* midiBackend() { return m_midi.get(); }
 
@@ -240,6 +243,7 @@ private:
     std::unique_ptr<SessionGuard> m_session;
     std::unique_ptr<RenderThread> m_render;
     Recorder m_recorder;
+    std::unique_ptr<StreamOutputManager> m_streams;
     VideoOutputConfig m_videoOut;
     OutputCalibration m_calibration;
     SafetyLimits m_safety;

@@ -30,8 +30,21 @@ set_target_properties(lumacore PROPERTIES POSITION_INDEPENDENT_CODE ON)
 # ---------------------------------------------------------------- lumarender
 # GPU renderer: OpenGL 3.3 core / GLES 3 compatible via Qt's GL abstraction.
 file(GLOB LF_RENDER_SOURCES CONFIGURE_DEPENDS renderer/*.cpp renderer/*.h output/*.cpp output/*.h)
+if(LF_HAVE_SYPHON)
+    list(APPEND LF_RENDER_SOURCES output/SyphonSink.mm)
+    set_source_files_properties(output/SyphonSink.mm PROPERTIES COMPILE_FLAGS "-fobjc-arc")
+endif()
 add_library(lumarender STATIC ${LF_RENDER_SOURCES})
 target_link_libraries(lumarender PUBLIC lumacore Qt6::OpenGL)
+if(LF_HAVE_SPOUT)
+    target_link_libraries(lumarender PUBLIC SpoutDX_static d3d11 dxgi)
+    target_include_directories(lumarender PRIVATE ${spout2_SOURCE_DIR}/SPOUTSDK/SpoutDirectX/SpoutDX ${spout2_SOURCE_DIR}/SPOUTSDK/SpoutGL)
+    target_compile_definitions(lumarender PUBLIC LF_HAVE_SPOUT=1)
+endif()
+if(LF_HAVE_SYPHON)
+    target_link_libraries(lumarender PUBLIC ${SYPHON_FRAMEWORK} "-framework Metal" "-framework Foundation")
+    target_compile_definitions(lumarender PUBLIC LF_HAVE_SYPHON=1)
+endif()
 set_target_properties(lumarender PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 # ---------------------------------------------------------------- app engine

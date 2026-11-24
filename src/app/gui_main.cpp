@@ -178,7 +178,11 @@ int main(int argc, char** argv) {
             {"07_console_links", "Console", {"Console Mapping"}, nullptr},
             {"08_console_mapping", "Console", {"Console Mapping"}, [&] { if (auto* t = w.dock("Console Mapping")->widget()->findChild<QTabWidget*>()) t->setCurrentIndex(1); }},
             {"09_personality", "Console", {"Console Mapping"}, [&] { if (auto* t = w.dock("Console Mapping")->widget()->findChild<QTabWidget*>()) t->setCurrentIndex(3); }},
-            {"10_output_config", "Console", {"Output Configuration"}, nullptr},
+            {"10_output_config", "Console", {"Output Configuration"}, [&] {
+                StreamConfig n; n.type = "ndi"; n.enabled = true; StreamConfig sp; sp.type = "spout"; sp.name = "LUMAFLOW"; sp.enabled = true; StreamConfig sy; sy.type = "syphon"; sy.name = "LUMAFLOW"; sy.enabled = true;
+                engine.applyStreamConfigs({n, sp, sy});
+                if (auto* pnl = w.dock("Output Configuration")->widget()) for (auto* b : pnl->findChildren<QPushButton*>()) if (b->text() == "Apply network settings") { QMetaObject::invokeMethod(pnl, "loadConfig"); break; }
+            }},
             {"11_timeline", "Live", {"Timeline", "Show Control"}, [&] { engine.timeline().seek(20); }},
             {"12_audio", "System", {"Audio", "Recovery"}, [&] { AudioSettings a; a.device = "test:128"; a.enabled = true; engine.applyAudioSettings(a); }},
             {"13_performance_recovery", "System", {"Performance Monitor", "Recovery"}, nullptr},

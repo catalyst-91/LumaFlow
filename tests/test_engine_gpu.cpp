@@ -3,6 +3,7 @@
 #include "app/Engine.h"
 #include "renderer/GpuRenderer.h"
 #include "core/Log.h"
+#include <QLibrary>
 using namespace lf;
 
 static double meanLuma(const QImage& img) {
@@ -162,6 +163,21 @@ private slots:
         QCOMPARE(e->scenes().size(), 6); QCOMPARE(e->patch().fixtures.size(), before["patch"].toObject()["fixtures"].toArray().size());
         QCOMPARE(e->toProjectJson()["composition"], before["composition"]);
         QVERIFY(!e->dirty());
+    }
+    void streamOutputsFromRenderer() {
+        qputenv("LUMAFLOW_NDI_LIB", LF_MOCK_NDI);
+        QLibrary lib(LF_MOCK_NDI); lib.setLoadHints(QLibrary::PreventUnloadHint); QVERIFY(lib.load());
+        auto* frames = reinterpret_cast<int*>(reinterpret_cast<char*>(reinterpret_cast<void* (*)()>(lib.resolve("mock_ndi_state"))()) + 4 * sizeof(int));
+        StreamConfig c; c.type = "ndi"; c.name = "Engine Program"; c.enabled = true;
+        e->applyStreamConfigs({c});
+        const int before = *frames;
+        for (int i = 0; i < 10; ++i) { step(); QTest::qWait(15); }
+        QTRY_VERIFY_WITH_TIMEOUT(*frames > before, 3000);              // rendered program frames reach the NDI sender
+        QTemporaryDir dir; QString err; QVERIFY(e->saveProject(dir.filePath("s.lumaflow"), &err));
+        e->applyStreamConfigs({}); QVERIFY(e->streams().configs().isEmpty());
+        QStringList w; QVERIFY(e->loadProject(dir.filePath("s.lumaflow"), &w, &err));
+        QCOMPARE(e->streams().configs().size(), 1); QCOMPARE(e->streams().configs()[0].name, QString("Engine Program"));
+        e->applyStreamConfigs({});
     }
     void consoleExports() {
         QTemporaryDir dir; QString rep;

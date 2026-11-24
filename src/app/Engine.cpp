@@ -74,6 +74,7 @@ Engine::Engine(const EngineOptions& opt, QObject* parent) : QObject(parent), m_o
 #endif
     );
     m_plugins.setProbeExecutable(probe);
+    m_streams = std::make_unique<StreamOutputManager>(&m_plugins);
     m_showClock.start();
 }
 
@@ -114,6 +115,7 @@ void Engine::shutdown() {
     if (m_tick.isActive()) m_tick.stop();
     if (m_render) { m_render->watchdog().stop(); m_render->requestStop(); m_render->wait(5000); m_render.reset(); }
     m_recorder.finish();
+    if (m_streams) m_streams->stop();
     if (m_audioIn) { m_audioIn->stop(); m_audioIn.reset(); }
     m_remote.stop();
     m_sync.stop();
@@ -322,6 +324,7 @@ void Engine::onRenderOutput(const RenderOutput& out) {
     }
     for (auto it = dmx.begin(); it != dmx.end(); ++it) m_net->setOutput(it.key(), it.value());
     if (m_recorder.recording() && !out.program.isNull()) m_recorder.addFrame(out.program);
+    if (!out.program.isNull()) m_streams->submit(out.program, out.time);   // non-blocking mailbox
     {
         QMutexLocker l(&m_frameMutex);
         m_lastProgram = out.program; m_lastPreview = out.preview; m_lastDmx = dmx; m_lastStats = out.stats;
@@ -333,4 +336,15 @@ QImage Engine::lastProgramFrame() const { QMutexLocker l(&m_frameMutex); return 
 QImage Engine::lastPreviewFrame() const { QMutexLocker l(&m_frameMutex); return m_lastPreview; }
 QMap<int, DmxFrame> Engine::lastDmxOutput() const { QMutexLocker l(&m_frameMutex); return m_lastDmx; }
 
+} // namespace lf
+
+namespace lf {
+void Engine::applyStreamConfigs(const QVector<StreamConfig>& c) {
+    QVector<StreamConfig> cfg = c;
+    if (m_opt.safeMode) for (auto& x : cfg) x.enabled = false;   // safe mode: no stream outputs
+    m_streams->setRegions(m_videoOut.outputs);
+    m_streams->setFrameRate(m_render ? m_render->targetFps() : m_opt.fps);
+    m_streams->setConfigs(cfg);
+    ++m_showRevision;
+}
 } // namespace lf

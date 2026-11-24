@@ -26,10 +26,15 @@ class OutputPanel : public QWidget {
     Q_OBJECT
 public:
     OutputPanel(UiContext* ctx, QWidget* parent = nullptr);
+public slots:
     void loadConfig();
+public:
     void refreshStats();
 private:
     void applyNetwork();
+    void loadStreams();
+    void applyStreams();
+    QTableWidget* m_streams = nullptr; QLabel* m_streamInfo = nullptr;
     UiContext* c;
     QCheckBox *m_anOut, *m_anIn, *m_saOut, *m_saIn, *m_oscIn; QLineEdit *m_anTarget, *m_saTargets, *m_outU, *m_inU, *m_oscFb; QSpinBox *m_oscPort, *m_prio, *m_offset;
     QDoubleSpinBox* m_rate; QTableWidget* m_diag; QTableWidget* m_outputs; QSpinBox *m_cw, *m_ch; QLabel* m_rec;

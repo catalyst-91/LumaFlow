@@ -31,6 +31,7 @@
 #include <QSplitter>
 #include <QScrollArea>
 #include <QDir>
+#include <QInputDialog>
 #include <QJsonDocument>
 
 namespace lf {
@@ -103,8 +104,32 @@ OutputPanel::OutputPanel(UiContext* ctx, QWidget* parent) : QWidget(parent), c(c
     ob->addWidget(addOut); ob->addWidget(openOut); ob->addWidget(closeOut); ob->addStretch(); vv->addLayout(ob);
     auto* scr = new QLabel; QStringList sl; int i = 0; for (auto* s : QGuiApplication::screens()) sl << QString("%1: %2 %3x%4").arg(i++).arg(s->name()).arg(s->geometry().width()).arg(s->geometry().height());
     scr->setText("Screens: " + sl.join("   ") + "   (Shift+Esc closes a fullscreen output)"); scr->setWordWrap(true); vv->addWidget(scr);
-    auto* na = new QLabel("NDI, Spout (Windows), Syphon (macOS) and SDI are available as output plugins via the Plugin SDK output module interface; none are bundled in this build."); na->setWordWrap(true); na->setStyleSheet("color:#7a80a8;"); vv->addWidget(na);
     v->addWidget(vid);
+    auto* str = new QGroupBox("Video streams: NDI® / Spout / Syphon"); auto* sv = new QVBoxLayout(str);
+    m_streams = new QTableWidget(0, 8);
+    m_streams->setHorizontalHeaderLabels({"On", "Type", "Stream name", "Source", "NDI groups", "Status", "Frames / dropped", "Receivers"});
+    m_streams->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); m_streams->verticalHeader()->hide(); m_streams->setMinimumHeight(120);
+    sv->addWidget(m_streams);
+    auto* sb = new QHBoxLayout; auto* addNdi = new QPushButton("+ NDI"); auto* addSpout = new QPushButton("+ Spout"); auto* addSyphon = new QPushButton("+ Syphon");
+    auto* addPlugin = new QPushButton("+ Plugin output"); auto* remStream = new QPushButton("Remove"); auto* applyStr = new QPushButton("Apply streams");
+    for (auto* b : {addNdi, addSpout, addSyphon, addPlugin, remStream, applyStr}) sb->addWidget(b);
+    sb->addStretch(); sv->addLayout(sb);
+    m_streamInfo = new QLabel; m_streamInfo->setWordWrap(true); m_streamInfo->setStyleSheet("color:#8088b0;"); sv->addWidget(m_streamInfo);
+    v->addWidget(str);
+    auto addStream = [this](const QString& type, const QString& name) {
+        auto cfg = c->engine->streams().configs(); StreamConfig sc; sc.type = type; sc.name = name; sc.enabled = true; cfg << sc;
+        c->engine->applyStreamConfigs(cfg); loadStreams();
+    };
+    connect(addNdi, &QPushButton::clicked, this, [addStream] { addStream("ndi", "LUMAFLOW Program"); });
+    connect(addSpout, &QPushButton::clicked, this, [addStream] { addStream("spout", "LUMAFLOW"); });
+    connect(addSyphon, &QPushButton::clicked, this, [addStream] { addStream("syphon", "LUMAFLOW"); });
+    connect(addPlugin, &QPushButton::clicked, this, [this, addStream] {
+        QStringList types; for (const auto& a : c->engine->streams().availability()) if (a.type.startsWith("plugin:")) types << a.type;
+        if (types.isEmpty()) { QMessageBox::information(this, "Plugin outputs", "No output-module plugins are loaded (Plugin Manager)."); return; }
+        bool ok; const QString t = QInputDialog::getItem(this, "Plugin output", "Output module:", types, 0, false, &ok); if (ok) addStream(t, "LUMAFLOW");
+    });
+    connect(remStream, &QPushButton::clicked, this, [this] { const int r = m_streams->currentRow(); auto cfg = c->engine->streams().configs(); if (r < 0 || r >= cfg.size()) return; cfg.removeAt(r); c->engine->applyStreamConfigs(cfg); loadStreams(); });
+    connect(applyStr, &QPushButton::clicked, this, &OutputPanel::applyStreams);
     auto* rec = new QGroupBox("Recording"); auto* rv = new QHBoxLayout(rec);
     auto* recBtn = new QPushButton("● Record program..."); auto* stopBtn = new QPushButton("■ Stop"); m_rec = new QLabel;
     rv->addWidget(recBtn); rv->addWidget(stopBtn); rv->addWidget(m_rec, 1); v->addWidget(rec);
@@ -136,9 +161,11 @@ OutputPanel::OutputPanel(UiContext* ctx, QWidget* parent) : QWidget(parent), c(c
     connect(c->engine, &Engine::projectLoaded, this, &OutputPanel::loadConfig);
     auto* t = new QTimer(this); connect(t, &QTimer::timeout, this, &OutputPanel::refreshStats); t->start(1000);
     loadConfig();
+    loadStreams();
 }
 
 void OutputPanel::loadConfig() {
+    if (m_streams) loadStreams();
     const NetworkConfig nc = c->engine->network().config();
     m_anOut->setChecked(nc.artnetOut); m_anIn->setChecked(nc.artnetIn); m_saOut->setChecked(nc.sacnOut); m_saIn->setChecked(nc.sacnIn); m_oscIn->setChecked(nc.oscIn);
     m_anTarget->setText(nc.artnetTarget.toString()); m_offset->setValue(nc.artnetUniverseOffset);
@@ -156,6 +183,36 @@ void OutputPanel::loadConfig() {
         for (int k = 0; k < cols.size(); ++k) m_outputs->setItem(i, k, new QTableWidgetItem(cols[k]));
     }
     m_outputs->blockSignals(false);
+}
+
+void OutputPanel::loadStreams() {
+    const auto cfg = c->engine->streams().configs();
+    m_streams->setRowCount(cfg.size());
+    for (int i = 0; i < cfg.size(); ++i) {
+        auto* on = new QCheckBox; on->setChecked(cfg[i].enabled); m_streams->setCellWidget(i, 0, on);
+        auto* type = new QLabel(cfg[i].type); m_streams->setCellWidget(i, 1, type);
+        m_streams->setItem(i, 2, new QTableWidgetItem(cfg[i].name));
+        auto* src = new QComboBox; src->addItem("Whole canvas", -1);
+        for (int k = 0; k < c->engine->videoOutputs().outputs.size(); ++k) src->addItem("Region: " + c->engine->videoOutputs().outputs[k].name, k);
+        src->setCurrentIndex(std::max(0, src->findData(cfg[i].region))); m_streams->setCellWidget(i, 3, src);
+        m_streams->setItem(i, 4, new QTableWidgetItem(cfg[i].groups));
+        connect(on, &QCheckBox::toggled, this, &OutputPanel::applyStreams);
+    }
+    QStringList info;
+    for (const auto& a : c->engine->streams().availability()) info << QString("<b>%1</b>: %2 (%3)").arg(a.label, a.available ? "<span style='color:#6c6'>available</span>" : "<span style='color:#c96'>unavailable</span>", a.detail.toHtmlEscaped());
+    m_streamInfo->setText(info.join("<br>") + "<br>NDI® is a registered trademark of Vizrt NDI AB. The NDI runtime is not bundled; install it from ndi.video. "
+                          "Streams run on their own thread: a slow receiver drops frames instead of slowing the renderer.");
+}
+
+void OutputPanel::applyStreams() {
+    auto cfg = c->engine->streams().configs();
+    for (int i = 0; i < cfg.size() && i < m_streams->rowCount(); ++i) {
+        if (auto* on = qobject_cast<QCheckBox*>(m_streams->cellWidget(i, 0))) cfg[i].enabled = on->isChecked();
+        if (m_streams->item(i, 2)) cfg[i].name = m_streams->item(i, 2)->text();
+        if (auto* src = qobject_cast<QComboBox*>(m_streams->cellWidget(i, 3))) cfg[i].region = src->currentData().toInt();
+        if (m_streams->item(i, 4)) cfg[i].groups = m_streams->item(i, 4)->text();
+    }
+    c->engine->applyStreamConfigs(cfg);
 }
 
 void OutputPanel::applyNetwork() {
@@ -181,6 +238,15 @@ void OutputPanel::refreshStats() {
     for (auto it = s.universes.begin(); it != s.universes.end(); ++it, ++r) {
         const QStringList cols{QString::number(it.key()), QString::number(it->packetsOut), QString::number(it->rateOut, 'f', 1), QString::number(it->packetsIn), QString::number(it->rateIn, 'f', 1), it->lastSource};
         for (int k = 0; k < cols.size(); ++k) m_diag->setItem(r, k, new QTableWidgetItem(cols[k]));
+    }
+    {   // stream status
+        const auto st = c->engine->streams().status();
+        for (int r = 0; r < m_streams->rowCount() && r < st.size(); ++r) {
+            auto set = [&](int col, const QString& v) { if (!m_streams->item(r, col)) m_streams->setItem(r, col, new QTableWidgetItem); m_streams->item(r, col)->setText(v); m_streams->item(r, col)->setFlags(Qt::ItemIsEnabled); };
+            set(5, st[r].state + (st[r].width ? QString(" %1x%2").arg(st[r].width).arg(st[r].height) : QString()));
+            set(6, QString("%1 / %2").arg(st[r].frames).arg(st[r].dropped));
+            set(7, st[r].connections < 0 ? "-" : QString::number(st[r].connections));
+        }
     }
     m_rec->setText(c->engine->recording() ? "RECORDING" : QString("Art-Net out %1  sACN out %2  OSC in %3  errors %4").arg(s.artnetOut).arg(s.sacnOut).arg(s.oscIn).arg(s.errors));
 }
