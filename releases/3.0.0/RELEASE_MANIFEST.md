@@ -2,10 +2,10 @@
 
 | File | Size | SHA-256 (first 16) | Verification |
 |---|---:|---|---|
-| applications/BUILD_INSTRUCTIONS.md | 3,980 | `3f00486b1dc9a968` |  |
-| applications/lumaflow-3.0.0-Linux.tar.gz | 2,433,412 | `46fb74c43b4b11ed` | built |
-| applications/lumaflow-3.0.0-source.tar.gz | 36,437,815 | `301788e59e4f4080` |  |
-| applications/lumaflow_3.0.0_amd64.deb | 2,448,964 | `2e15aa39d941cfcb` | built, installed and run on Ubuntu 24.04 |
+| applications/BUILD_INSTRUCTIONS.md | 4,515 | `50c0a5418f0daa01` |  |
+| applications/lumaflow-3.0.0-Linux.tar.gz | 2,501,776 | `59469e3e89ca06b3` | built |
+| applications/lumaflow-3.0.0-source.tar.gz | 36,788,004 | `579fc79f5dfe52dd` |  |
+| applications/lumaflow_3.0.0_amd64.deb | 2,516,316 | `0c26988792e21564` | built, installed and run on Ubuntu 24.04 |
 | console-integration/DMX_CHANNEL_REFERENCE.md | 25,264 | `2e7ba43664c9daae` |  |
 | console-integration/MIDI_REFERENCE.md | 1,378 | `a072e7b5923a0a27` |  |
 | console-integration/OSC_REFERENCE.md | 2,636 | `43de7d3902d645b7` |  |
@@ -29,11 +29,11 @@
 | console-integration/magicq/LUMAFLOW_Extended_channels.csv | 6,092 | `fbb7243c8febe5cb` |  |
 | console-integration/magicq/LUMAFLOW_MediaServer.gdtf | 8,254 | `721c6fedb2f87aa4` |  |
 | console-integration/magicq/LUMAFLOW_Standard_channels.csv | 4,194 | `041b32879c97f72e` |  |
-| documentation/COMPATIBILITY_MATRIX.md | 1,357 | `17618b2ff181202b` |  |
-| documentation/DEVELOPER_GUIDE.md | 3,778 | `dd9c2cae9db5baf1` |  |
-| documentation/LUMAFLOW_Professional_User_Manual.pdf | 20,399,169 | `e11aa2a0e394ecfc` |  |
+| documentation/COMPATIBILITY_MATRIX.md | 1,663 | `2c3124f9d2182e37` |  |
+| documentation/DEVELOPER_GUIDE.md | 4,313 | `47192eae2c9aead7` |  |
+| documentation/LUMAFLOW_Professional_User_Manual.pdf | 20,580,609 | `52d5a4582c5646ce` |  |
 | documentation/LUMAFLOW_Quick_Start_Guide.pdf | 2,077,430 | `eb00c0df211c0d95` |  |
-| documentation/RELEASE_NOTES.md | 1,856 | `e97be00047795c50` |  |
+| documentation/RELEASE_NOTES.md | 1,976 | `920f7d24e071be9c` |  |
 | documentation/TROUBLESHOOTING.md | 2,321 | `dd65b6f34f7a3daa` |  |
 | effects/builtin_effects.json | 19,472 | `0897f2203270381e` |  |
 | effects/node-graphs/audio_rings.lfgraph | 1,133 | `e7b45164cea3460e` |  |
@@ -46,12 +46,12 @@
 | effects/presets/spectrum_bars.lfpreset | 379 | `b7e0827015beda9c` |  |
 | effects/presets/warm_smoke.lfpreset | 342 | `b00ec27679bd2a73` |  |
 | effects/projects/demo_festival.lumaflow | 157,447 | `0a6a2427744cdbc4` |  |
-| quality-assurance/BLOCKERS.md | 1,668 | `290861620d11fe8d` |  |
+| quality-assurance/BLOCKERS.md | 1,869 | `0d2b381add947b27` |  |
 | quality-assurance/BUILD_STATUS.md | 2,268 | `a8fbf624c4fd368e` |  |
-| quality-assurance/FEATURE_MANIFEST.json | 17,475 | `13b7244efbdeac31` |  |
+| quality-assurance/FEATURE_MANIFEST.json | 18,269 | `901fbe86fff80a84` |  |
 | quality-assurance/HARDWARE_VALIDATION_CHECKLIST.md | 2,292 | `735f30fe58a9e068` |  |
-| quality-assurance/KNOWN_LIMITATIONS.md | 4,086 | `357dee5fa990cc92` |  |
-| quality-assurance/TEST_RESULTS.md | 4,117 | `79b4c55238963b31` |  |
+| quality-assurance/KNOWN_LIMITATIONS.md | 4,643 | `70c07ed480b38feb` |  |
+| quality-assurance/TEST_RESULTS.md | 4,506 | `b27ca7bd21551135` |  |
 | quality-assurance/benchmark_llvmpipe_1080p.json | 6,666 | `35e3c3fa3cb43841` |  |
 | video/EDITABLE_PROJECT.md | 283 | `dd7db5be040578c9` |  |
 | video/LUMAFLOW_Demo_Script.pdf | 116,553 | `1d073588f5845865` |  |

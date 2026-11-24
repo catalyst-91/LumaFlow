@@ -10,6 +10,9 @@
 | Audio capture | ALSA (not hardware-tested), WAV, test signal | WAV, test signal | WAV, test signal | WAV, test signal |
 | Video decode | FFmpeg (libav) **tested** | FFmpeg (vcpkg) | FFmpeg (Homebrew) | FFmpeg |
 | Video outputs | windowed / fullscreen per screen | same | same | same |
+| NDI® stream out | runtime loaded at run time (tested with an ABI test double only) | same (not built) | same (not built) | same (not built) |
+| Spout stream out | – | SpoutDX / DX11 (CI build, untested) | – | – |
+| Syphon stream out | – | – | Syphon Metal server (CI build, untested) | same |
 | grandMA3 | GDTF + DMX + OSC (simulated only) | same | same | same |
 | ChamSys MagicQ | GDTF / CSV head sheet + DMX + OSC (simulated only) | same | same | same |
 | File formats | .lumaflow v3 (migrates v1/v2), .lfpreset, .lfscene, .lfeffect, .lfgraph, GDTF 1.x, MVR 1.x | same | same | same |

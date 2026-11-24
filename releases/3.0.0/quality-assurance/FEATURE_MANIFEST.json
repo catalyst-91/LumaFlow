@@ -458,7 +458,7 @@
    "status": "Implemented",
    "testStatus": "partial",
    "platforms": "linux",
-   "knownLimitations": "NDI/Spout/Syphon/SDI not bundled",
+   "knownLimitations": "SDI not bundled; NDI/Spout/Syphon see F45",
    "evidence": "Recorder used by CLI render-video; output windows not tested on physical displays"
   },
   {
@@ -668,6 +668,26 @@
    "platforms": "-",
    "knownLimitations": "Narration is synthetic (espeak-ng); console control simulated and labelled",
    "evidence": "11:50 1080p30 MP4 recorded from the real GUI (3 takes; defects found in takes 1-2 fixed), narration + embedded subtitles, script/storyboard PDFs; frames reviewed"
+  },
+  {
+   "id": "F45",
+   "description": "Video stream outputs: NDI (runtime-loaded), Spout (Windows, SpoutDX), Syphon (macOS, Metal), plugin output modules",
+   "dependencies": [
+    "F02",
+    "F33"
+   ],
+   "sourceFiles": [
+    "src/output/StreamSinks.cpp",
+    "src/output/SyphonSink.mm",
+    "tests/test_streams.cpp",
+    "tests/mock_ndi/mock_ndi.c",
+    "sdk/examples/output_framegrab/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass (NDI vs ABI test double, plugin outputs); Spout/Syphon not built here",
+   "platforms": "NDI all; Spout windows; Syphon macos",
+   "knownLimitations": "No real NDI runtime/receiver test; Spout/Syphon compiled only in CI (not run)",
+   "evidence": "test_streams 7/7, test_engine_gpu streamOutputsFromRenderer, screenshot 10_output_config"
   }
  ]
 }

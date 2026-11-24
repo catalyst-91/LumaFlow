@@ -36,7 +36,9 @@ Honest list of what is *not* verified or not implemented in this release.
 ## Functional limitations
 * Synchronisation between instances is LAN/UDP based (typically a few ms); it is **not frame-accurate** and has no genlock.
 * LTC/MTC sync accuracy has not been measured against a reference clock; frame-accurate timecode chase is **not claimed**.
-* NDI, Spout, Syphon and SDI outputs are not bundled (licensing/platform constraints); the plugin output-module ABI is provided.
+* **NDI** stream output is implemented by loading the user-installed NDI runtime; it was verified only against a test double of the runtime (ABI-level checks), not with the real NDI runtime and a receiver. The NDI runtime is not bundled.
+* **Spout** (Windows, SpoutDX/DirectX 11) and **Syphon** (macOS, Metal) stream outputs are implemented against the real SDK APIs (Spout2 pinned commit 2bd42d2, Syphon pinned commit f476167) but are compiled only in the Windows/macOS CI builds, which were not run here. Syphon's `flipped:` orientation is set for top-down frames and needs confirmation with a Syphon client.
+* SDI / capture-card outputs are not bundled; use an output-module plugin.
 * Effect selection over DMX is limited to the first 32 library entries per index channel (8 values per entry); further effects are
   selectable by OSC, MIDI mapping or the UI.
 * Video reverse playback requires clips that fit the frame cache (≤ 900 frames, < 768 MB); longer clips play forward only.

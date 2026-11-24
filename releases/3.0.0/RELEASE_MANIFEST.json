@@ -2,7 +2,7 @@
  "product": "LUMAFLOW",
  "version": "3.0.0",
  "date": "2026-11-24",
- "git": "0a3c264be55e699b4c0c467fab898a067aa10d73",
+ "git": "5403dc85e72c8addc505655b0ebce4aeaa65d76e",
  "not_included": [
   "Windows installer (CI only)",
   "macOS DMG (CI only)",
@@ -11,26 +11,26 @@
  "files": [
   {
    "path": "applications/BUILD_INSTRUCTIONS.md",
-   "bytes": 3980,
-   "sha256": "3f00486b1dc9a968d1bc33e3184cba538b2373582010196228dc40ef9c33f239",
+   "bytes": 4515,
+   "sha256": "50c0a5418f0daa019f30373afb45086350fdc20ab41f9a6a8c12c22facaaac1b",
    "verification": ""
   },
   {
    "path": "applications/lumaflow-3.0.0-Linux.tar.gz",
-   "bytes": 2433412,
-   "sha256": "46fb74c43b4b11edf719aa6685f3a5ac19c8bf6cef42fe8bb8e40d7bb31a4927",
+   "bytes": 2501776,
+   "sha256": "59469e3e89ca06b3e049221afbedf9bf514a01c72e797823cd3cd7e85dcd8b37",
    "verification": "built"
   },
   {
    "path": "applications/lumaflow-3.0.0-source.tar.gz",
-   "bytes": 36437815,
-   "sha256": "301788e59e4f40800c1113cec53d7cac1848503fe6044191f29b793475632fdb",
+   "bytes": 36788004,
+   "sha256": "579fc79f5dfe52dd34c4fbb0c38ec589f3affa68379b67bf6a021ac75b66e406",
    "verification": ""
   },
   {
    "path": "applications/lumaflow_3.0.0_amd64.deb",
-   "bytes": 2448964,
-   "sha256": "2e15aa39d941cfcb68eb2b3dcffe510d85a8ce5acb6f510e1b03cee3958a7d8b",
+   "bytes": 2516316,
+   "sha256": "0c26988792e215648699de5fad36890cb18fc385d59b44e235ed854ceccabba4",
    "verification": "built, installed and run on Ubuntu 24.04"
   },
   {
@@ -173,20 +173,20 @@
   },
   {
    "path": "documentation/COMPATIBILITY_MATRIX.md",
-   "bytes": 1357,
-   "sha256": "17618b2ff181202b88b5aec5dd06dbce74f0bd8f34f503f850e832a8ee96fa71",
+   "bytes": 1663,
+   "sha256": "2c3124f9d2182e37f666c31b4aa694d0b9546f93619f7470ed74f8953a73c228",
    "verification": ""
   },
   {
    "path": "documentation/DEVELOPER_GUIDE.md",
-   "bytes": 3778,
-   "sha256": "dd9c2cae9db5baf1d83f498c9e6fd3d37b71cd07bb481853d949cb5da0ce8b95",
+   "bytes": 4313,
+   "sha256": "47192eae2c9aead7e7934a665352d59bcb68ff1eb5ba8b81c37218bc45fbd45a",
    "verification": ""
   },
   {
    "path": "documentation/LUMAFLOW_Professional_User_Manual.pdf",
-   "bytes": 20399169,
-   "sha256": "e11aa2a0e394ecfcbc6ea736d04dba9d28d3aa0abf4fc550c09cd029eb769330",
+   "bytes": 20580609,
+   "sha256": "52d5a4582c5646ce5716782c7918728e0108554812a57d17c012b02170e59cdc",
    "verification": ""
   },
   {
@@ -197,8 +197,8 @@
   },
   {
    "path": "documentation/RELEASE_NOTES.md",
-   "bytes": 1856,
-   "sha256": "e97be00047795c500d3b4edd671ea96b6ef9b841dc12fb7f39b8e584772fb772",
+   "bytes": 1976,
+   "sha256": "920f7d24e071be9c1b328530bab7d4898b1cafa8dc9124f35b6dbb8e66882669",
    "verification": ""
   },
   {
@@ -209,8 +209,8 @@
   },
   {
    "path": "documentation/plugin-sdk/examples/CMakeLists.txt",
-   "bytes": 361,
-   "sha256": "8b5faf9ddfa09b3dd88b0bc70ae6105ed04e38dc3ec9c05e01729a3f6adab15f",
+   "bytes": 396,
+   "sha256": "6681d5e4663a84053a94ebfb8ba51d46dca2ac9a7a23dcc134a696045d643f6a",
    "verification": ""
   },
   {
@@ -229,6 +229,18 @@
    "path": "documentation/plugin-sdk/examples/effect_starfield/starfield.c",
    "bytes": 2453,
    "sha256": "11c49d489130fb7fb0d0787b61c6c203d2f1cf4b2bc348e17ba39d537575d0f3",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/output_framegrab/CMakeLists.txt",
+   "bytes": 412,
+   "sha256": "373a1afafee1e1626858233d0b5d7bfa0884cb1b9ae97a8e1737e3c7e71dfb23",
+   "verification": ""
+  },
+  {
+   "path": "documentation/plugin-sdk/examples/output_framegrab/framegrab.c",
+   "bytes": 1687,
+   "sha256": "7e360056ebfed75fae640e30458faefd87dc8f8364c542b4f3a2800642108cbf",
    "verification": ""
   },
   {
@@ -767,8 +779,8 @@
   },
   {
    "path": "quality-assurance/BLOCKERS.md",
-   "bytes": 1668,
-   "sha256": "290861620d11fe8d69ea218b91a65b44b4773a8da718aaa01f65d71f59f16cc1",
+   "bytes": 1869,
+   "sha256": "0d2b381add947b27a21e2c2802196857f3f054ac3f627cef14b1f72bad3ccaea",
    "verification": ""
   },
   {
@@ -779,8 +791,8 @@
   },
   {
    "path": "quality-assurance/FEATURE_MANIFEST.json",
-   "bytes": 17475,
-   "sha256": "13b7244efbdeac31aa7950e34b0790c7573933f97a68d98307fef8b8bde55991",
+   "bytes": 18269,
+   "sha256": "901fbe86fff80a84e388a3a43e3bf006f2b1a3685ec9dd062bae5e63e4130e9e",
    "verification": ""
   },
   {
@@ -791,14 +803,14 @@
   },
   {
    "path": "quality-assurance/KNOWN_LIMITATIONS.md",
-   "bytes": 4086,
-   "sha256": "357dee5fa990cc922c62e63c36e8baea3310bdd51ba83afa53c270e58d6064a5",
+   "bytes": 4643,
+   "sha256": "70c07ed480b38feb665c7af64a0d38e4fdb56cd6d3c937619e14f785282da7d6",
    "verification": ""
   },
   {
    "path": "quality-assurance/TEST_RESULTS.md",
-   "bytes": 4117,
-   "sha256": "79b4c55238963b315299658f79ed21df70306deee75be7481b0055716d46267d",
+   "bytes": 4506,
+   "sha256": "b27ca7bd21551135b6ac153bc387dd7ce1316bae58628729f1026f922b1f3e78",
    "verification": ""
   },
   {
