@@ -430,7 +430,15 @@ B("""
 - **Canvas**: set the program resolution (presets 720p, 1080p, 4K, 3840×1080 ultra-wide, 1024×512 LED, or custom up to 16384).
 - **Outputs**: each output has a screen index (−1 windowed, otherwise borderless fullscreen on that screen), a normalised crop of the canvas (multiple regions from one canvas), rotation 0/90/180/270, an optional fixed LED-processor size, an identify test pattern and blackout. **Open output windows** creates them; Shift+Esc closes a fullscreen output.
 - **Recording**: records the program to H.264 MP4 through the `ffmpeg` executable (bounded write buffer). `lumaflow-cli render-video` renders a project offline at a fixed frame rate, independent of real time.
-- NDI, Spout, Syphon and SDI are not bundled; they can be added as output-module plugins (chapter 35).
+- SDI and capture-card outputs are not bundled; they can be added as output-module plugins (chapter 35).
+## Video streams: NDI, Spout and Syphon
+**Output Configuration → Video streams** sends the program (or one output region) to other applications and machines without capture hardware:
+- **NDI®** (all platforms): network video. LUMAFLOW loads the NDI runtime installed on the machine (NDI Tools or NDI Runtime from ndi.video, found via `NDI_RUNTIME_DIR_V6`/`V5` or standard locations, or `LUMAFLOW_NDI_LIB`). The runtime is not bundled for licensing reasons. Frames are sent as progressive RGBA with synthesised timecode; an optional *NDI groups* field limits visibility; the *Receivers* column shows connected receivers.
+- **Spout** (Windows builds): DirectX 11 texture sharing with other applications on the same PC (Resolume, TouchDesigner, OBS with the Spout plugin, ...), built from the open-source Spout 2 SDK.
+- **Syphon** (macOS builds): Metal texture sharing with other applications on the same Mac, using the open-source Syphon framework.
+- **Plugin outputs**: output modules from plugins appear as additional stream types (example: the *Frame grabber* plugin writes PPM snapshots).
+Each stream has a name, a source (whole canvas or an output region with its crop/rotation/size) and a live status (state, frames sent, frames dropped). Streams run on their own thread with a latest-frame mailbox: a slow receiver drops frames instead of slowing the renderer. Unavailable stream types report the reason in the status column and in Recovery; they never affect other outputs.
+!note Verification status: the NDI sender was tested against a test double of the NDI runtime that checks the documented ABI (names, groups, frame size, FourCC, stride, row order, frame rate, connections, clean shutdown); it has not been tested with the real NDI runtime and an NDI receiver. Spout and Syphon code paths are compiled only in the Windows and macOS builds and have not been built or tested in the release environment.
 """)
 
 # ------------------------------------------------------------------ 32-36
@@ -697,7 +705,7 @@ story.append(Paragraph("Panel reference", S["h2"]))
 story.append(table([["Panel", "Purpose", "Chapter"], ["Effects Library", "browse, search, favourite, import/export effects", "8"], ["Layers", "layer on/solo/blend/opacity, preview editing", "11"], ["Parameters", "transform, effect, colour, mask, presets for the selected layer", "11"],
     ["Show Control", "GO/BACK/TAKE, master, transition, tempo, scenes, cue list", "30"], ["Timeline", "automation and event tracks, timecode source", "30"], ["Node Editor", "visual effect programming", "10"],
     ["Pixel Mapper", "strips, matrices, fixtures, test patterns, conflicts", "13"], ["3D Stage", "fixture positions, cameras, groups, live colours", "17"], ["Spatial Effects", "position-based fixture effects", "18"], ["Fixture Manager", "patch, MVR/GDTF import/export, validation", "14–16"],
-    ["Console Mapping", "console links, mappings, learn, ownership, personality", "21–24"], ["Output Configuration", "Art-Net/sACN/OSC settings, diagnostics, video outputs, recording", "27, 28, 31"], ["Media Library", "import, assign, relink media", "12"],
+    ["Console Mapping", "console links, mappings, learn, ownership, personality", "21–24"], ["Output Configuration", "Art-Net/sACN/OSC settings, diagnostics, video outputs, NDI/Spout/Syphon streams, recording", "27, 28, 31"], ["Media Library", "import, assign, relink media", "12"],
     ["Audio", "input, analysis, BPM", "29"], ["Calibration", "safety limits, output calibration, test patterns", "32"], ["Remote & Sync", "web remote server, users, clients, sync role", "33, 34"], ["Plugin Manager", "install, enable, remove plugins", "35"],
     ["AI Effect Assistant", "generate and validate effects from text", "36"], ["Performance Monitor", "frame rate, timing, quality, memory", "39"], ["Recovery", "faults, backups, autosave, log", "38"]], [40*mm, 105*mm, 25*mm]))
 story.append(PageBreak()); story.append(Paragraph("Plugin manager and calibration", S["h2"]))

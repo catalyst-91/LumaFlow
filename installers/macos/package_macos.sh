@@ -9,6 +9,11 @@ mkdir -p "$ROOT/dist"
 cp "$BUILD/src/lumaflow-cli" "$APP/Contents/MacOS/"
 mkdir -p "$APP/Contents/PlugIns/lumaflow" && cp "$BUILD"/sdk/examples/effect_starfield/*.so "$APP/Contents/PlugIns/lumaflow/" || true
 iconutil -c icns -o "$APP/Contents/Resources/lumaflow.icns" "$ROOT/installers/macos/lumaflow.iconset" 2>/dev/null || true
+# Embed Syphon.framework (if the build used it) before deployment/signing
+if [[ -d /tmp/syphon-build/Syphon.framework ]]; then
+  mkdir -p "$APP/Contents/Frameworks" && cp -R /tmp/syphon-build/Syphon.framework "$APP/Contents/Frameworks/"
+  install_name_tool -add_rpath "@executable_path/../Frameworks" "$APP/Contents/MacOS/lumaflow" || true
+fi
 macdeployqt "$APP" -executable="$APP/Contents/MacOS/lumaflow-cli"
 if [[ -n "${MACOS_CERT_P12:-}" ]]; then
   echo "$MACOS_CERT_P12" | base64 --decode > /tmp/cert.p12

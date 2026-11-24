@@ -10,10 +10,11 @@ Environment: Ubuntu 24.04 container, GCC 13.3, Qt 6.4.2, FFmpeg 6.1 libs, Xvfb :
 | test_mapping_spatial | 13 | PASS | pixel-aligned/continuous universe split, matrix zigzag, sampling/order/limiter/gamma, virtual vs physical dimmer, conflicts, test patterns, spatial ordering/seed/wings/blocks/exclusion/mixed capabilities |
 | test_console | 12 | PASS | personality prefixes & footprints, custom mode, GDTF validity, diff/approval/breaking/rollback/persistence, DMX decode, mapping scaling/deadband/smoothing/soft takeover/edges/ownership/feedback loop/learn |
 | test_show | 13 | PASS | keyframes, timeline events+loop+snap, cue follow, project save/backups/restore, migrations & newer-schema refusal, dependency/relink, node graphs, FFT/beat/BPM (120±3), WAV, AI local generator, registry |
-| test_engine_gpu | 14 | PASS | real GPU path: render, master/blackout, invalid shader isolation, last-good program, blend/mask/solo, scene crossfade midpoint, preview/take, strobe limiter (≤3 Hz), calibration, text/image layers, node effect on GPU, pixel map DMX from render, demo show save/load round trip, console export round trip |
+| test_engine_gpu | 15 | PASS | real GPU path: render, master/blackout, invalid shader isolation, last-good program, blend/mask/solo, scene crossfade midpoint, preview/take, strobe limiter (≤3 Hz), calibration, text/image layers, node effect on GPU, pixel map DMX from render, demo show save/load round trip, console export round trip (+overwrite regression), rendered frames reach the NDI stream + stream settings persist |
 | test_integration | 9 | PASS | loopback: Art-Net out (universe gating, blackout, keep-alive rate), sACN unicast out, OSC control & console OSC mapping, OSC feedback, Art-Net in → personality decode, remote HTTP 200/401/403/400, multi-instance sync (snapshot, deltas, events, RTT, loss, reconnect), crash detection, autosave, watchdog |
 | test_plugins | 3 | PASS | out-of-process probe + load of example plugin, disabled/safe mode, crashing plugin isolated |
-| **Total** | **91 test functions** (plus init/cleanup) | **8/8 suites pass** | integration suite repeated 3× without failure after RTT fix |
+| test_streams | 7 | PASS | NDI sink vs. ABI test double (name, groups, size, FourCC RGBA, stride, row order, progressive, synthesised timecode, frame rate, receivers, teardown), region crop + resize re-open, disabled/unavailable types, non-blocking submit, plugin output module (frame grabber PPM) |
+| **Total** | **99 test functions** (plus init/cleanup) | **9/9 suites pass** | integration suite repeated 3× without failure after RTT fix |
 
 ## Manual / end-to-end checks
 | Check | Result |

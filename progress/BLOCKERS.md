@@ -10,4 +10,5 @@
 | B6 | MagicQ .hed format not publicly specified | No native head file; GDTF + CSV channel sheet instead | Vendor documentation or validation with MagicQ Head Editor |
 | B7 | No LED fixtures, Art-Net nodes, displays | Output verified by decoding packets/frames only | Hardware checklist items 3–6 |
 | B8 | No API key for external AI | External AI backend untested | Set ANTHROPIC_API_KEY and test AI Assistant → external |
-| B9 | Not implemented: WinMM / CoreMIDI MIDI backends, Windows/macOS audio capture, NDI/Spout/Syphon/SDI outputs, async PBO readback | Feature gaps on those platforms | Future work (TASK_QUEUE.json) |
+| B10 | NDI runtime/receiver not installed (proprietary licence must be accepted by the user) | NDI sender tested with an ABI test double only | Install NDI Tools, enable an NDI stream, check with NDI Studio Monitor |
+| B9 | Not implemented: WinMM / CoreMIDI MIDI backends, Windows/macOS audio capture, SDI outputs, async PBO readback | Feature gaps on those platforms | Future work (TASK_QUEUE.json) |

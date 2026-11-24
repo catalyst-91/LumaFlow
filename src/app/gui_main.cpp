@@ -23,6 +23,8 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QSurfaceFormat>
+#include <QScrollArea>
+#include <QGroupBox>
 #include <QUdpSocket>
 #include <QDateTime>
 #include <cstdio>
@@ -182,6 +184,8 @@ int main(int argc, char** argv) {
                 StreamConfig n; n.type = "ndi"; n.enabled = true; StreamConfig sp; sp.type = "spout"; sp.name = "LUMAFLOW"; sp.enabled = true; StreamConfig sy; sy.type = "syphon"; sy.name = "LUMAFLOW"; sy.enabled = true;
                 engine.applyStreamConfigs({n, sp, sy});
                 if (auto* pnl = w.dock("Output Configuration")->widget()) for (auto* b : pnl->findChildren<QPushButton*>()) if (b->text() == "Apply network settings") { QMetaObject::invokeMethod(pnl, "loadConfig"); break; }
+                if (auto* pnl = w.dock("Output Configuration")->widget()) if (auto* sa = pnl->findChild<QScrollArea*>())
+                    for (auto* g : pnl->findChildren<QGroupBox*>()) if (g->title().startsWith("Video streams")) { sa->ensureWidgetVisible(g, 0, 0); break; }
             }},
             {"11_timeline", "Live", {"Timeline", "Show Control"}, [&] { engine.timeline().seek(20); }},
             {"12_audio", "System", {"Audio", "Recovery"}, [&] { AudioSettings a; a.device = "test:128"; a.enabled = true; engine.applyAudioSettings(a); }},
