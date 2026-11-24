@@ -27,6 +27,7 @@ struct SyncStatus {
     bool connected = false;
     QString peer;
     double clockOffsetMs = 0, rttMs = 0;
+    bool rttValid = false;
     quint64 packetsIn = 0, packetsOut = 0, gaps = 0, snapshots = 0;
     int peers = 0;
     QString lastEvent;
@@ -45,7 +46,7 @@ public:
     SyncService();
     ~SyncService() override;
     void setCallbacks(Callbacks cb) { QMutexLocker l(&m_mutex); m_cb = std::move(cb); }
-    bool start(SyncRole role, quint16 port = 7700, const QHostAddress& group = QHostAddress("239.255.77.77"), const QList<QHostAddress>& unicast = {});
+    bool start(SyncRole role, quint16 port = 7700, const QHostAddress& group = QHostAddress("239.255.77.77"), const QList<QHostAddress>& unicast = {}, quint16 peerPort = 0);
     void stop();
     // primary -> secondaries (thread-safe)
     void publishParam(const QString& id, double value);
@@ -66,7 +67,7 @@ private:
     QUdpSocket* m_sock = nullptr;
     QTimer* m_timer = nullptr;
     QUuid m_id = QUuid::createUuid();
-    QHostAddress m_group; QList<QHostAddress> m_unicast; quint16 m_port = 7700;
+    QHostAddress m_group; QList<QHostAddress> m_unicast; quint16 m_port = 7700, m_peerPort = 7700;
     mutable QMutex m_mutex;
     Callbacks m_cb;
     SyncStatus m_status;

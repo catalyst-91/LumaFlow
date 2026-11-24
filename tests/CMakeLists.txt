@@ -1,1 +1,14 @@
-
+# Each test_*.cpp becomes one executable registered with CTest.
+file(GLOB LF_TESTS CONFIGURE_DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/test_*.cpp)
+foreach(src ${LF_TESTS})
+    get_filename_component(name ${src} NAME_WE)
+    add_executable(${name} ${src})
+    target_link_libraries(${name} PRIVATE lumaengine Qt6::Test)
+    target_compile_definitions(${name} PRIVATE LF_TEST_DATA="${CMAKE_CURRENT_SOURCE_DIR}/data" LF_PLUGIN_DIR="${CMAKE_BINARY_DIR}/sdk/examples/effect_starfield")
+    add_test(NAME ${name} COMMAND ${name})
+    set_tests_properties(${name} PROPERTIES TIMEOUT 300)
+endforeach()
+if(TARGET lumaflow_starfield)
+    add_dependencies(test_plugins lumaflow_starfield)
+    add_dependencies(test_plugins lumaflow-cli)
+endif()

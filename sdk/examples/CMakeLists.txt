@@ -1,1 +1,6 @@
 add_subdirectory(effect_starfield)
+if(LUMAFLOW_BUILD_TESTS)
+    add_library(lumaflow_crashtest MODULE crashing_plugin/crash.c)
+    target_include_directories(lumaflow_crashtest PRIVATE ${CMAKE_SOURCE_DIR}/sdk/include)
+    set_target_properties(lumaflow_crashtest PROPERTIES PREFIX "" LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/sdk/examples/crashtest)
+endif()

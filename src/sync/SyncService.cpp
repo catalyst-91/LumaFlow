@@ -13,10 +13,10 @@ QString syncRoleName(SyncRole r) { return r == SyncRole::Primary ? "primary" : r
 SyncService::SyncService() : m_owner(QThread::currentThread()) { m_clock.start(); }
 SyncService::~SyncService() { stop(); }
 
-bool SyncService::start(SyncRole role, quint16 port, const QHostAddress& group, const QList<QHostAddress>& unicast) {
+bool SyncService::start(SyncRole role, quint16 port, const QHostAddress& group, const QList<QHostAddress>& unicast, quint16 peerPort) {
     stop();
     if (role == SyncRole::Off) return true;
-    m_group = group; m_unicast = unicast; m_port = port;
+    m_group = group; m_unicast = unicast; m_port = port; m_peerPort = peerPort ? peerPort : port;
     { QMutexLocker l(&m_mutex); m_status = SyncStatus{}; m_status.role = role; }
     m_thread = new QThread; m_thread->setObjectName("lf-sync");
     moveToThread(m_thread);
@@ -44,8 +44,8 @@ void SyncService::stop() {
 
 void SyncService::sendRaw(const QByteArray& data) {
     if (!m_sock) return;
-    if (m_unicast.isEmpty()) m_sock->writeDatagram(data, m_group, m_port);
-    else for (auto& h : m_unicast) m_sock->writeDatagram(data, h, m_port);
+    if (m_unicast.isEmpty()) m_sock->writeDatagram(data, m_group, m_peerPort);
+    else for (auto& h : m_unicast) m_sock->writeDatagram(data, h, m_peerPort);
     QMutexLocker l(&m_mutex); ++m_status.packetsOut;
 }
 
@@ -82,7 +82,7 @@ void SyncService::onTick() {
     SyncRole role; Callbacks cb;
     { QMutexLocker l(&m_mutex); role = m_status.role; cb = m_cb; }
     if (role == SyncRole::Primary) send({{"type", "hb"}, {"time", cb.showTime ? cb.showTime() : now / 1000.0}});
-    if (role == SyncRole::Secondary && now - m_lastPingMs > 1000) { m_lastPingMs = now; send({{"type", "ping"}, {"t0", double(now)}}); }
+    if (role == SyncRole::Secondary && now - m_lastPingMs > 1000) { m_lastPingMs = now; send({{"type", "ping"}, {"t0", m_clock.nsecsElapsed() / 1e6}}); }
     QMutexLocker l(&m_mutex);
     const bool was = m_status.connected;
     m_status.connected = now - m_lastPeerMs < 2000;
@@ -134,11 +134,12 @@ void SyncService::onRead() {
         else if (type == "event" && cb.applyEvent) cb.applyEvent(o["event"].toObject());
         else if (type == "snapshot" && cb.applySnapshot) { cb.applySnapshot(o["state"].toObject()); QMutexLocker l(&m_mutex); ++m_status.snapshots; m_status.lastEvent = "snapshot applied"; }
         else if (type == "pong" && o["to"].toString() == m_id.toString(QUuid::WithoutBraces)) {
-            const double rtt = now - o["t0"].toDouble();
+            const double nowMs = m_clock.nsecsElapsed() / 1e6;
+            const double rtt = std::max(0.0, nowMs - o["t0"].toDouble());
             QMutexLocker l(&m_mutex);
-            m_status.rttMs = m_status.rttMs > 0 ? m_status.rttMs * 0.8 + rtt * 0.2 : rtt;
+            m_status.rttMs = m_status.rttValid ? m_status.rttMs * 0.8 + rtt * 0.2 : rtt; m_status.rttValid = true;
             const double primaryNow = o["time"].toDouble() + rtt / 2000.0;
-            m_status.clockOffsetMs = (primaryNow - now / 1000.0) * 1000.0;
+            m_status.clockOffsetMs = (primaryNow - nowMs / 1000.0) * 1000.0;
         }
     }
 }

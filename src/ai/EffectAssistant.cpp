@@ -98,6 +98,9 @@ AiSuggestion EffectAssistant::generateLocal(const QString& promptIn, const QStri
     };
     QStringList matched;
     for (auto& r : rules) if (prompt.contains(r.key) && avail.contains(r.effect) && !matched.contains(r.effect)) matched << r.effect;
+    // a specific particle family supersedes the generic "particle" keyword
+    if (matched.size() > 1 && matched.contains("particle_cloud") && std::any_of(matched.begin(), matched.end(), [](const QString& m) { return m.startsWith("particle_") && m != "particle_cloud"; }))
+        matched.removeAll("particle_cloud");
 
     if (matched.size() >= 2 || prompt.contains("combine") || prompt.contains(" with ") && matched.size() == 1 && audio) {
         // Build a node graph combining two generator families
