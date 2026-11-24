@@ -23,6 +23,10 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QSurfaceFormat>
+#include <QUdpSocket>
+#include <QDateTime>
+#include <cstdio>
+#include "protocols/ArtNet.h"
 
 using namespace lf;
 
@@ -38,6 +42,7 @@ public:
         m_title->setStyleSheet("background: rgba(8,8,16,235); color: white; font-size: 44px; font-weight: bold; padding: 40px; border-radius: 16px; border: 2px solid #9a5cff;");
         m_title->setAlignment(Qt::AlignCenter); m_title->hide();
         m_clock.start();
+        std::fprintf(stderr, "DEMO_START %lld\n", (long long)QDateTime::currentMSecsSinceEpoch()); std::fflush(stderr);
         connect(&m_timer, &QTimer::timeout, this, [this] { tick(); });
         m_timer.start(20);
     }
@@ -84,11 +89,25 @@ private:
         else if (a == "osc") { osc::Message m; m.address = s["address"].toString(); for (auto v : s["args"].toArray()) m.args << v.toVariant(); m_e->network().sendOsc(m, QHostAddress::LocalHost, quint16(m_e->network().config().oscListenPort)); }
         else if (a == "network") { NetworkConfig nc = m_e->network().config(); nc.artnetOut = s["artnetOut"].toBool(); nc.sacnOut = s["sacnOut"].toBool(); nc.artnetIn = s["artnetIn"].toBool(); nc.artnetTarget = QHostAddress(s["target"].toString("127.0.0.1")); nc.inputUniverses = {1, 2}; m_e->applyNetworkConfig(nc); }
         else if (a == "console") { auto& c = m_e->consoles()[s["index"].toInt()]; c.enabled = s["enabled"].toBool(true); c.universe = s["universe"].toInt(c.universe); c.address = s["address"].toInt(c.address); }
+        else if (a == "artnet") {
+            // Simulated console: sends ArtDmx to this machine (labelled as simulation in the demo captions)
+            artnet::DmxPacket pk; pk.portAddress = quint16(s["port"].toInt(0)); pk.data = QByteArray(512, 0);
+            const QJsonObject ch = s["channels"].toObject();
+            for (auto it = ch.begin(); it != ch.end(); ++it) pk.data[it.key().toInt() - 1] = char(it.value().toInt());
+            static quint8 seq = 0;
+            for (int i = 0; i < 3; ++i) { pk.sequence = ++seq; m_udp.writeDatagram(artnet::encodeDmx(pk), QHostAddress::LocalHost, artnet::kPort); }
+        }
+        else if (a == "brokenEffect") {
+            EffectDef bad; bad.id = "broken_demo"; bad.name = "Broken shader (demo)"; bad.category = "Custom"; bad.source = "custom";
+            bad.glsl = "vec4 effect(vec2 p, vec2 uv, float t) { return vec4(undefined_symbol, 1.0); }";
+            m_e->effects().add(bad); m_e->setLayerEffect(s["layer"].toInt(1), "broken_demo"); m_e->params().set(Composition::pid(s["layer"].toInt(1), "opacity"), 1.0);
+        }
+        else if (a == "testPattern") m_e->setTestPattern(s["pattern"].toInt(-1));
         else if (a == "end") m_end = m_clock.elapsed() / 1000.0 + s["after"].toDouble(1.0);
         else if (a == "resize") { m_w->showNormal(); m_w->setGeometry(0, 0, s["w"].toInt(1920), s["h"].toInt(1080)); }
         else if (a == "layerSource") { LayerSource src = m_e->program().layers[s["layer"].toInt()]; if (s.contains("mask")) src.mask = MaskType(s["mask"].toInt()); if (s.contains("text")) src.text = s["text"].toString(); m_e->setLayerSource(s["layer"].toInt(), src); }
     }
-    MainWindow* m_w; Engine* m_e; QJsonArray m_steps; int m_i = 0; QTimer m_timer; QElapsedTimer m_clock; QLabel* m_caption; QLabel* m_title; double m_end = 1e9;
+    MainWindow* m_w; Engine* m_e; QJsonArray m_steps; int m_i = 0; QTimer m_timer; QElapsedTimer m_clock; QLabel* m_caption; QLabel* m_title; double m_end = 1e9; QUdpSocket m_udp;
 };
 
 int main(int argc, char** argv) {

@@ -1,0 +1,673 @@
+{
+ "project": "LUMAFLOW",
+ "version": "3.0.0",
+ "updated": "2026-11-24",
+ "statusLegend": [
+  "Not started",
+  "In progress",
+  "Implemented",
+  "Tested",
+  "Verified",
+  "Blocked",
+  "Failed"
+ ],
+ "features": [
+  {
+   "id": "F01",
+   "description": "Build system & native app shell - CMake, Qt6, lumacore/lumarender/lumaengine/lumaflow/lumaflow-cli",
+   "dependencies": [],
+   "sourceFiles": [
+    "CMakeLists.txt",
+    "src/CMakeLists.txt",
+    "src/app/gui_main.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "Builds clean on Linux; GUI launches under Xvfb; screenshots"
+  },
+  {
+   "id": "F02",
+   "description": "GPU renderer (OpenGL 3.3 core, offscreen, render thread)",
+   "dependencies": [
+    "F01"
+   ],
+   "sourceFiles": [
+    "src/renderer/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "Tested on Mesa llvmpipe only",
+   "evidence": "test_engine_gpu (12 cases), render-all of 37 effects"
+  },
+  {
+   "id": "F03",
+   "description": "37 built-in GPU effects - particles, energy, geometry, organic, additional",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "tools/gen_effects.py",
+    "resources/shaders/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "render-all, contact sheet reviewed, benchmark"
+  },
+  {
+   "id": "F04",
+   "description": "Shader caching, safe compilation, error isolation",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/renderer/GpuRenderer.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "GPU hangs from infinite loops can only be detected (watchdog), not prevented",
+   "evidence": "invalidShaderIsolated, lastGoodProgramKept; live demo in video"
+  },
+  {
+   "id": "F05",
+   "description": "Node-based effect editor + GLSL compiler - 73 node types, validation, cycles, subgraphs, custom GLSL",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/nodes/",
+    "src/ui/EditorPanels.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "nodeGraphCompile/Validation/CustomAndSubgraph, nodeEffectOnGpu, example graphs compile"
+  },
+  {
+   "id": "F06",
+   "description": "Multi-layer compositing (6 layers, blend modes, masks, solo)",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/layers/",
+    "src/renderer/GpuRenderer.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "layersBlendAndMask"
+  },
+  {
+   "id": "F07",
+   "description": "Preview/program, take, scene transitions",
+   "dependencies": [
+    "F06"
+   ],
+   "sourceFiles": [
+    "src/app/EngineShow.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "previewTake, sceneTransitionCrossfade"
+  },
+  {
+   "id": "F08",
+   "description": "Media playback (FFmpeg) + media library (SQLite)",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/media/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "Reverse only for cached clips <=900 frames",
+   "evidence": "textAndMediaLayers (image); video decode via FFmpeg exercised manually"
+  },
+  {
+   "id": "F09",
+   "description": "Text & logo layers",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/app/Engine.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "textAndMediaLayers, render-frame text"
+  },
+  {
+   "id": "F10",
+   "description": "Art-Net 4 (ArtDmx, ArtPoll/Reply, ArtSync)",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/protocols/ArtNet.*",
+    "src/protocols/NetworkIO.*"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all (portable)",
+   "knownLimitations": "Not tested with physical nodes",
+   "evidence": "artnet* unit tests, artnetOutput/artnetInputConsolePersonality loopback"
+  },
+  {
+   "id": "F11",
+   "description": "sACN E1.31",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/protocols/Sacn.*"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Not tested with physical receivers",
+   "evidence": "sacnRoundTrip, sacnOutput loopback"
+  },
+  {
+   "id": "F12",
+   "description": "OSC 1.0 in/out, bundles, patterns, native API, feedback",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/protocols/Osc.*",
+    "src/app/EngineShow.cpp"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "osc* tests, oscControl, oscFeedback"
+  },
+  {
+   "id": "F13",
+   "description": "MIDI parser + ALSA backend",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/protocols/Midi.*"
+   ],
+   "status": "Implemented",
+   "testStatus": "partial",
+   "platforms": "linux",
+   "knownLimitations": "WinMM/CoreMIDI backends not implemented",
+   "evidence": "midi* parser tests; ALSA I/O not exercised (no /dev/snd/seq)"
+  },
+  {
+   "id": "F14",
+   "description": "Timecode: SMPTE, MTC, LTC",
+   "dependencies": [
+    "F13"
+   ],
+   "sourceFiles": [
+    "src/protocols/Timecode.*"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Sync accuracy not measured",
+   "evidence": "timecodeDropFrame, mtcRoundTrip, ltcRoundTrip"
+  },
+  {
+   "id": "F15",
+   "description": "grandMA3 integration (personality, DMX in, OSC, feedback)",
+   "dependencies": [
+    "F10",
+    "F12",
+    "F17"
+   ],
+   "sourceFiles": [
+    "src/app/EngineShow.cpp",
+    "fixture-profiles/grandma3/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "No grandMA3 available; menu paths unverified",
+   "evidence": "artnetInputConsolePersonality (simulated)"
+  },
+  {
+   "id": "F16",
+   "description": "MagicQ integration",
+   "dependencies": [
+    "F10",
+    "F12",
+    "F17"
+   ],
+   "sourceFiles": [
+    "fixture-profiles/magicq/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "No .hed generated (format unpublished); no MagicQ available",
+   "evidence": "simulated only"
+  },
+  {
+   "id": "F17",
+   "description": "Personality generator 16/32/64/128 + custom, versioning, approval, rollback, GDTF export",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/console/Personality.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "GDTF not imported into console software; XSD not run",
+   "evidence": "modesArePrefixes, customMode, gdtfExportValid, diffAndApproval, moveIsBreaking, decodeDmx, consoleExports round-trip"
+  },
+  {
+   "id": "F18",
+   "description": "Bidirectional mapping: learn, scaling, deadband, smoothing, edges, soft takeover, ownership, loop prevention",
+   "dependencies": [
+    "F12",
+    "F13"
+   ],
+   "sourceFiles": [
+    "src/console/Mapping.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "mappingScaling*, mappingSmoothingAndSoftTakeover, edgeTriggers, ownershipPolicies, feedbackLoopPrevention, learn"
+  },
+  {
+   "id": "F19",
+   "description": "GDTF import (multi-instance) / export / validation",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/fixtures/Gdtf.*",
+    "src/storage/Zip.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Real manufacturer GDTF files not tested",
+   "evidence": "gdtfMultiInstanceImport, gdtfExportRoundTrip, gdtfValidationCatchesErrors, zipRoundTrip"
+  },
+  {
+   "id": "F20",
+   "description": "MVR import/export",
+   "dependencies": [
+    "F19"
+   ],
+   "sourceFiles": [
+    "src/fixtures/Mvr.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Groups not exported as GroupObjects",
+   "evidence": "mvrMatrix, mvrRoundTrip, mvrMissingDataWarnings"
+  },
+  {
+   "id": "F21",
+   "description": "Fixture capability engine + built-in library + patch validation",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/fixtures/Fixture.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "capabilities, dmx16bitAndDefaults, fixtureSpanningUniverse, patchValidation"
+  },
+  {
+   "id": "F22",
+   "description": "3D stage visualisation",
+   "dependencies": [
+    "F21"
+   ],
+   "sourceFiles": [
+    "src/ui/StagePanels.cpp"
+   ],
+   "status": "Implemented",
+   "testStatus": "partial",
+   "platforms": "linux",
+   "knownLimitations": "Software projection, no beam rendering",
+   "evidence": "screenshots, video"
+  },
+  {
+   "id": "F23",
+   "description": "Spatial effects (16 orders, wings/blocks/groups, seed)",
+   "dependencies": [
+    "F21"
+   ],
+   "sourceFiles": [
+    "src/spatial/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "spatialOrdering, spatialRandomReproducible, spatialWingsBlocksExclusion, spatialMixedCapabilities, waveforms"
+  },
+  {
+   "id": "F24",
+   "description": "Virtual dimmer & colour engine (RGBW/A, CMY, gamma, calibration)",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/fixtures/ColorEngine.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Colorimetric matching not measured",
+   "evidence": "colourConversion, fixturePixelMapVirtualDimmer/PhysicalDimmer"
+  },
+  {
+   "id": "F25",
+   "description": "Pixel mapping (strips, matrices, fixtures, universes, gamma, conflicts, test patterns)",
+   "dependencies": [
+    "F21",
+    "F24"
+   ],
+   "sourceFiles": [
+    "src/pixelmapping/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "No physical LEDs",
+   "evidence": "stripPixelAligned*, stripStartOffset, matrixZigzag, renderStripColoursAndOrder, conflictDetection, testPatterns, pixelMapFromRender"
+  },
+  {
+   "id": "F26",
+   "description": "Cue lists, scenes, presets",
+   "dependencies": [
+    "F07"
+   ],
+   "sourceFiles": [
+    "src/timeline/",
+    "src/layers/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "cueListFollow, sceneTransitionCrossfade, demoShowAndProject"
+  },
+  {
+   "id": "F27",
+   "description": "Multi-track timeline (automation, events, loop, tempo)",
+   "dependencies": [
+    "F26"
+   ],
+   "sourceFiles": [
+    "src/timeline/",
+    "src/ui/EditorPanels.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "keyframes, timelineEventsAndLoop"
+  },
+  {
+   "id": "F28",
+   "description": "Audio analysis (FFT, bands, beat, BPM) + inputs",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/audio/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "ALSA capture not hardware-tested",
+   "evidence": "fftAndBeats, wavIo; GUI with test signal (128 BPM detected)"
+  },
+  {
+   "id": "F29",
+   "description": "Calibration & photosensitive safety limiter",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/renderer/GpuRenderer.cpp",
+    "src/ui/SystemPanels.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Not measured with a photodiode",
+   "evidence": "strobeSafetyLimiter, calibration"
+  },
+  {
+   "id": "F30",
+   "description": "Video outputs (fullscreen per screen, crop, rotate, scale) + recording",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/output/",
+    "src/ui/SystemPanels.cpp"
+   ],
+   "status": "Implemented",
+   "testStatus": "partial",
+   "platforms": "linux",
+   "knownLimitations": "NDI/Spout/Syphon/SDI not bundled",
+   "evidence": "Recorder used by CLI render-video; output windows not tested on physical displays"
+  },
+  {
+   "id": "F31",
+   "description": "Remote control server (HTTP, token roles, web UI)",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/remote/",
+    "resources/remote/index.html"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Plain HTTP on LAN",
+   "evidence": "remoteControl (401/403/200/400)"
+  },
+  {
+   "id": "F32",
+   "description": "Multi-instance sync",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/sync/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "Not frame-accurate",
+   "evidence": "multiInstanceSync (snapshot, params, events, RTT, loss & reconnect)"
+  },
+  {
+   "id": "F33",
+   "description": "Plugin SDK + host (out-of-process probe, deps, enable/disable)",
+   "dependencies": [],
+   "sourceFiles": [
+    "sdk/",
+    "src/plugins/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "In-process after probe",
+   "evidence": "loadExampleOutOfProcess, disabledAndSafeMode, crashingPluginIsolated"
+  },
+  {
+   "id": "F34",
+   "description": "AI effect assistant (local; optional external)",
+   "dependencies": [
+    "F05",
+    "F23"
+   ],
+   "sourceFiles": [
+    "src/ai/"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "External API untested (no key)",
+   "evidence": "aiLocal; GUI validate & apply in video"
+  },
+  {
+   "id": "F35",
+   "description": "Project storage (.lumaflow v3 + migrations, typed files)",
+   "dependencies": [],
+   "sourceFiles": [
+    "src/storage/ProjectIO.*"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "projectRoundTripAndBackups, migrationAndSafety, dependencyCheck, demoShowAndProject"
+  },
+  {
+   "id": "F36",
+   "description": "Autosave, backups, crash recovery, LKG, watchdog, safe mode, recovery dashboard",
+   "dependencies": [
+    "F35"
+   ],
+   "sourceFiles": [
+    "src/recovery/",
+    "src/ui/SystemPanels.cpp"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "all",
+   "knownLimitations": "",
+   "evidence": "autosaveAndCrashRecovery, watchdog"
+  },
+  {
+   "id": "F37",
+   "description": "Performance: adaptive quality, stats, benchmark",
+   "dependencies": [
+    "F02"
+   ],
+   "sourceFiles": [
+    "src/renderer/RenderThread.cpp",
+    "src/app/cli_main.cpp"
+   ],
+   "status": "Tested",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "60fps@1080p not verified (no GPU)",
+   "evidence": "benchmark_llvmpipe_1080p.json"
+  },
+  {
+   "id": "F38",
+   "description": "Desktop UI (21 panels, workspaces, undo/redo, touch)",
+   "dependencies": [
+    "F01"
+   ],
+   "sourceFiles": [
+    "src/ui/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "18 automated screenshots, scripted demo run"
+  },
+  {
+   "id": "F39",
+   "description": "Linux packages (.deb, .tar.gz)",
+   "dependencies": [
+    "F01"
+   ],
+   "sourceFiles": [
+    "CMakeLists.txt"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "deb built, installed with apt, CLI + GUI run from package"
+  },
+  {
+   "id": "F40",
+   "description": "AppImage",
+   "dependencies": [
+    "F39"
+   ],
+   "sourceFiles": [
+    "installers/linux/build_appimage.sh"
+   ],
+   "status": "Blocked",
+   "testStatus": "n/a",
+   "platforms": "linux",
+   "knownLimitations": "",
+   "evidence": "Script + CI; local execution of third-party AppImage tools not permitted"
+  },
+  {
+   "id": "F41",
+   "description": "Windows installer (NSIS/ZIP)",
+   "dependencies": [
+    "F01"
+   ],
+   "sourceFiles": [
+    ".github/workflows/build.yml"
+   ],
+   "status": "Blocked",
+   "testStatus": "n/a",
+   "platforms": "windows",
+   "knownLimitations": "",
+   "evidence": "CI definition only; no Windows build host"
+  },
+  {
+   "id": "F42",
+   "description": "macOS DMG + signing/notarisation",
+   "dependencies": [
+    "F01"
+   ],
+   "sourceFiles": [
+    "installers/macos/"
+   ],
+   "status": "Blocked",
+   "testStatus": "n/a",
+   "platforms": "macos",
+   "knownLimitations": "",
+   "evidence": "CI definition only; no macOS host / certificates"
+  },
+  {
+   "id": "F43",
+   "description": "PDF user manual (82 pp) + quick start (6 pp)",
+   "dependencies": [
+    "F38"
+   ],
+   "sourceFiles": [
+    "tools/build_manual.py",
+    "documentation/"
+   ],
+   "status": "Verified",
+   "testStatus": "pass",
+   "platforms": "-",
+   "knownLimitations": "",
+   "evidence": "PDFs generated, rendered and inspected"
+  },
+  {
+   "id": "F44",
+   "description": "Demo video + script + subtitles + storyboard",
+   "dependencies": [
+    "F38"
+   ],
+   "sourceFiles": [
+    "video/"
+   ],
+   "status": "In progress",
+   "testStatus": "partial",
+   "platforms": "-",
+   "knownLimitations": "Narration is synthetic (espeak-ng); console control simulated and labelled",
+   "evidence": "see TEST_RESULTS.md"
+  }
+ ]
+}

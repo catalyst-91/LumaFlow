@@ -1,0 +1,523 @@
+1
+00:00:03,400 --> 00:00:08,936
+Welcome to LUMAFLOW, a native application for real-time visual effects,
+
+2
+00:00:08,936 --> 00:00:14,628
+media playback, pixel mapping, spatial lighting effects and show control.
+
+3
+00:00:14,628 --> 00:00:20,709
+Everything you are about to see is recorded live from the running application.
+
+4
+00:00:22,109 --> 00:00:26,502
+LUMAFLOW runs completely offline. It needs no account,
+
+5
+00:00:26,502 --> 00:00:33,335
+no browser and no cloud service. In this recording it renders with a software OpenGL
+
+6
+00:00:33,335 --> 00:00:40,086
+driver on a virtual display, so frame rates are lower than on a real graphics card.
+
+7
+00:00:41,486 --> 00:00:46,273
+This is the Live workspace. The effects library is on the left,
+
+8
+00:00:46,273 --> 00:00:51,136
+with animated thumbnails. In the centre are the preview monitor,
+
+9
+00:00:51,136 --> 00:00:57,518
+in green, and the program monitor, in red. Show control and the parameter editor are
+
+10
+00:00:57,518 --> 00:01:01,165
+on the right, and the timeline is at the bottom.
+
+11
+00:01:02,565 --> 00:01:07,288
+Panels can be docked, tabbed or floated onto another monitor.
+
+12
+00:01:07,288 --> 00:01:12,166
+Five built-in workspaces arrange the panels for live operation,
+
+13
+00:01:12,166 --> 00:01:16,579
+programming, mapping, console work and system monitoring.
+
+14
+00:01:17,979 --> 00:01:24,230
+LUMAFLOW includes thirty-seven GPU effects in five families: particles,
+
+15
+00:01:24,230 --> 00:01:29,688
+energy, geometry, organic and additional effects such as text,
+
+16
+00:01:29,688 --> 00:01:32,769
+logos, audio spectrum and feedback.
+
+17
+00:01:34,169 --> 00:01:38,225
+Selecting an effect loads it on the current layer.
+
+18
+00:01:38,225 --> 00:01:43,902
+Every effect has speed, scale, rotation, position and colour controls,
+
+19
+00:01:43,902 --> 00:01:48,363
+plus four effect-specific parameters, such as segments,
+
+20
+00:01:48,363 --> 00:01:51,202
+zoom and spin for the kaleidoscope.
+
+21
+00:01:52,602 --> 00:01:56,731
+Here are a few more: smoke, fluid, a Julia fractal,
+
+22
+00:01:56,731 --> 00:02:00,535
+a wireframe terrain and the energy ring effect.
+
+23
+00:02:00,535 --> 00:02:07,578
+Shaders are compiled once and cached, so changing parameters never recompiles anything.
+
+24
+00:02:08,978 --> 00:02:12,807
+The node editor builds new effects without code.
+
+25
+00:02:12,807 --> 00:02:19,748
+Nodes for coordinates, noise, warping, colour and maths are connected with typed ports,
+
+26
+00:02:19,748 --> 00:02:23,498
+and the graph is compiled into a single shader.
+
+27
+00:02:24,898 --> 00:02:30,893
+Invalid connections and cycles are rejected before anything reaches the GPU.
+
+28
+00:02:30,893 --> 00:02:35,390
+Valid graphs are validated with an isolated test compile,
+
+29
+00:02:35,390 --> 00:02:41,859
+then shown live on the preview monitor. Saving adds the result to the library as a
+
+30
+00:02:41,859 --> 00:02:42,963
+custom effect.
+
+31
+00:02:44,363 --> 00:02:48,272
+Six layers are composited on the GPU with alpha,
+
+32
+00:02:48,272 --> 00:02:52,100
+additive, multiply, screen and masked blending.
+
+33
+00:02:52,100 --> 00:02:58,778
+Here a particle layer is added over plasma, and a circular mask cuts a window into
+
+34
+00:02:58,778 --> 00:02:59,918
+the top layer.
+
+35
+00:03:01,318 --> 00:03:07,391
+Looks can be prepared on the preview composition while the program keeps running.
+
+36
+00:03:07,391 --> 00:03:13,315
+Pressing TAKE crossfades the preview into the program over the transition time.
+
+37
+00:03:14,715 --> 00:03:21,839
+A scene stores the complete composition. Scenes can be recalled with their own transition
+
+38
+00:03:21,839 --> 00:03:25,521
+time, from the show control panel, a cue list,
+
+39
+00:03:25,521 --> 00:03:29,203
+the timeline, OSC, MIDI or a lighting console.
+
+40
+00:03:30,603 --> 00:03:37,539
+Video and images play through FFmpeg on background threads with a bounded frame queue,
+
+41
+00:03:37,539 --> 00:03:41,652
+so disk and decoder activity never block rendering.
+
+42
+00:03:41,652 --> 00:03:45,523
+Media layers support looping, in and out points,
+
+43
+00:03:45,523 --> 00:03:49,959
+speed, reverse for short clips, and the same transform,
+
+44
+00:03:49,959 --> 00:03:52,862
+colour and mask controls as effects.
+
+45
+00:03:54,262 --> 00:03:58,240
+Text and logo layers render on top of any content.
+
+46
+00:03:58,240 --> 00:04:05,243
+Missing media files are detected when a project opens and can be relinked from a folder.
+
+47
+00:04:06,643 --> 00:04:11,807
+The pixel mapper samples the program canvas onto LED strips,
+
+48
+00:04:11,807 --> 00:04:16,626
+matrices and patched fixtures. In the demonstration rig,
+
+49
+00:04:16,626 --> 00:04:23,598
+LED tubes, battens, RGBW pars and a sixteen by eight matrix are mapped from their
+
+50
+00:04:23,598 --> 00:04:24,889
+real positions.
+
+51
+00:04:26,289 --> 00:04:32,720
+LUMAFLOW handles channel order, gamma, brightness limiting and universe boundaries.
+
+52
+00:04:32,720 --> 00:04:37,523
+Pixels are never split across universes, conflicts are listed,
+
+53
+00:04:37,523 --> 00:04:41,939
+and only universes you explicitly enable are transmitted.
+
+54
+00:04:41,939 --> 00:04:47,130
+The identify test pattern shows each element's start and direction.
+
+55
+00:04:48,530 --> 00:04:53,054
+The 3D stage shows every fixture at its real position,
+
+56
+00:04:53,054 --> 00:04:57,075
+coloured by the DMX that is actually being sent.
+
+57
+00:04:57,075 --> 00:05:03,526
+Fixture layouts can be imported from MVR files with their GDTF fixture types.
+
+58
+00:05:04,926 --> 00:05:09,494
+Spatial effects order fixtures by position: left to right,
+
+59
+00:05:09,494 --> 00:05:15,636
+centre outward, radial, symmetrical, random with a reproducible seed and more.
+
+60
+00:05:15,636 --> 00:05:22,330
+Here a chase runs along the blinders, and the washes breathe from the centre outward.
+
+61
+00:05:23,730 --> 00:05:27,582
+Fixtures with colour but no dimmer use a virtual dimmer,
+
+62
+00:05:27,582 --> 00:05:32,672
+fixtures with a dimmer get intensity on the dimmer without double dimming,
+
+63
+00:05:32,672 --> 00:05:35,836
+and intensity-only fixtures receive the level.
+
+64
+00:05:37,236 --> 00:05:41,382
+The fixture manager holds the patch: fixture types,
+
+65
+00:05:41,382 --> 00:05:45,448
+modes, universes, addresses, positions and groups.
+
+66
+00:05:45,448 --> 00:05:52,521
+Capabilities such as dimmer, colour mixing, pan and tilt or multiple cells are detected
+
+67
+00:05:52,521 --> 00:05:59,757
+automatically from GDTF data, and the patch is checked for overlaps and universe boundary
+
+68
+00:05:59,757 --> 00:06:00,326
+errors.
+
+69
+00:06:01,726 --> 00:06:08,168
+LUMAFLOW works as a fixture-style media server for grandMA3 and ChamSys MagicQ.
+
+70
+00:06:08,168 --> 00:06:13,875
+Both consoles can be connected at the same time on separate addresses,
+
+71
+00:06:13,875 --> 00:06:16,322
+each with its own mapping set.
+
+72
+00:06:17,722 --> 00:06:21,781
+No console hardware was available for this recording,
+
+73
+00:06:21,781 --> 00:06:28,598
+so the following control is a simulated console sending real Art-Net packets to LUMAFLOW.
+
+74
+00:06:28,598 --> 00:06:34,956
+The master intensity and the layer one effect are being driven over DMX through the
+
+75
+00:06:34,956 --> 00:06:35,875
+personality.
+
+76
+00:06:37,275 --> 00:06:43,531
+The fixture personality is generated from the internal parameter registry in four
+
+77
+00:06:43,531 --> 00:06:49,787
+modes: sixteen, thirty-two, sixty-four and one hundred and twenty-eight channels.
+
+78
+00:06:49,787 --> 00:06:53,339
+Lower modes are exact prefixes of higher ones,
+
+79
+00:06:53,339 --> 00:06:57,510
+and channels never move when new parameters are added.
+
+80
+00:06:58,910 --> 00:07:05,746
+When effects or scenes change, LUMAFLOW proposes an updated profile and shows exactly
+
+81
+00:07:05,746 --> 00:07:12,904
+what changed. Breaking changes are flagged, nothing is applied without operator approval,
+
+82
+00:07:12,904 --> 00:07:19,660
+and earlier versions can be rolled back. Export writes a GDTF file for the consoles,
+
+83
+00:07:19,660 --> 00:07:21,912
+verified by re-importing it.
+
+84
+00:07:23,312 --> 00:07:29,729
+This is the Standard thirty-two channel mode: master intensity in sixteen bit,
+
+85
+00:07:29,729 --> 00:07:35,900
+effect selection, opacity, speed, scale, rotation and colour for layer one,
+
+86
+00:07:35,900 --> 00:07:39,932
+scene selection, transition time, a second layer,
+
+87
+00:07:39,932 --> 00:07:45,362
+strobe and a control channel for go, back, blackout and tap tempo.
+
+88
+00:07:46,762 --> 00:07:50,855
+The control mapping table connects OSC addresses,
+
+89
+00:07:50,855 --> 00:07:55,700
+MIDI controls and DMX channels to any parameter or action,
+
+90
+00:07:55,700 --> 00:08:02,216
+with scaling, inversion, deadband, smoothing, trigger edges and soft takeover.
+
+91
+00:08:02,216 --> 00:08:06,560
+A learn button creates mappings by moving a control.
+
+92
+00:08:07,960 --> 00:08:14,673
+Ownership policies decide who wins when a console and a touchscreen change the same
+
+93
+00:08:14,673 --> 00:08:21,144
+value. Feedback is sent back to consoles and controllers without creating loops.
+
+94
+00:08:21,144 --> 00:08:25,592
+Here OSC messages recall a scene and change the master.
+
+95
+00:08:26,992 --> 00:08:32,518
+Shows can run from cue lists with manual, auto-follow and wait cues,
+
+96
+00:08:32,518 --> 00:08:39,507
+or from the multi-track timeline. Automation tracks animate any parameter with curves,
+
+97
+00:08:39,507 --> 00:08:43,976
+and event tracks trigger scenes, cues and OSC messages.
+
+98
+00:08:45,376 --> 00:08:49,833
+The timeline can follow its own clock, MIDI time code,
+
+99
+00:08:49,833 --> 00:08:56,354
+linear time code decoded from audio, or the clock of another LUMAFLOW instance.
+
+100
+00:08:56,354 --> 00:08:59,738
+The cue list GO button runs the next cue.
+
+101
+00:09:01,138 --> 00:09:05,596
+Audio analysis splits the input into six frequency bands,
+
+102
+00:09:05,596 --> 00:09:11,931
+detects beats and estimates the tempo. Here a built-in test signal at one hundred
+
+103
+00:09:11,931 --> 00:09:17,719
+and twenty-eight beats per minute drives an audio-reactive particle layer.
+
+104
+00:09:19,119 --> 00:09:24,308
+The program can be sent to multiple displays and LED processors,
+
+105
+00:09:24,308 --> 00:09:28,118
+with cropping, rotation and scaling per output,
+
+106
+00:09:28,118 --> 00:09:31,848
+and recorded to video. Calibration sets gamma,
+
+107
+00:09:31,848 --> 00:09:38,983
+colour balance and white point, and a safety limiter caps flash rates for photosensitive
+
+108
+00:09:38,983 --> 00:09:39,794
+audiences.
+
+109
+00:09:41,194 --> 00:09:45,851
+For reliability, LUMAFLOW autosaves, keeps versioned backups,
+
+110
+00:09:45,851 --> 00:09:49,975
+detects crashes and offers recovery on the next start.
+
+111
+00:09:49,975 --> 00:09:56,160
+A shader error only affects its own layer, a watchdog monitors the render thread,
+
+112
+00:09:56,160 --> 00:10:01,581
+and the recovery dashboard lists every fault with a recommended action.
+
+113
+00:10:02,981 --> 00:10:09,075
+Here is a deliberate fault. A custom effect with a shader error is loaded on layer
+
+114
+00:10:09,075 --> 00:10:13,311
+two. The compile error is reported in the recovery panel,
+
+115
+00:10:13,311 --> 00:10:18,142
+but layer one and every output keep running without interruption.
+
+116
+00:10:19,542 --> 00:10:23,603
+Calibration test patterns help line up projectors,
+
+117
+00:10:23,603 --> 00:10:28,395
+LED walls and monitors: colour bars with a grid and circle,
+
+118
+00:10:28,395 --> 00:10:35,137
+a grey ramp for gamma, and full white. The red border marks the edge of the canvas.
+
+119
+00:10:36,537 --> 00:10:42,956
+Tablets on the local network can control the show through a web interface with token
+
+120
+00:10:42,956 --> 00:10:47,618
+based roles. Several LUMAFLOW machines can share their state.
+
+121
+00:10:47,618 --> 00:10:52,433
+Plugins extend the effect library through a C plugin interface,
+
+122
+00:10:52,433 --> 00:10:56,483
+and the AI assistant turns a sentence into an effect.
+
+123
+00:10:57,883 --> 00:11:02,778
+Generated effects are validated before they can be activated,
+
+124
+00:11:02,778 --> 00:11:09,438
+and go to the preview first. The AI assistant works locally by default; an external
+
+125
+00:11:09,438 --> 00:11:10,883
+model is optional.
+
+126
+00:11:12,283 --> 00:11:16,176
+On Linux, LUMAFLOW installs from a Debian package.
+
+127
+00:11:16,176 --> 00:11:21,938
+Windows and macOS installers are produced by the automated build pipeline.
+
+128
+00:11:21,938 --> 00:11:25,676
+The professional user manual, quick start guide,
+
+129
+00:11:25,676 --> 00:11:31,827
+console fixture profiles and protocol references are included with the release.
+
+130
+00:11:33,227 --> 00:11:39,925
+Console integration was demonstrated with simulated control only and must be validated
+
+131
+00:11:39,925 --> 00:11:45,377
+on real consoles before a production. Thank you for watching LUMAFLOW.

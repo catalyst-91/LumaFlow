@@ -1,0 +1,14 @@
+{
+ "updated": "2026-11-24",
+ "done": ["architecture", "app shell", "GPU renderer", "effects", "UI", "storage", "layers & scenes", "protocols", "grandMA3 (simulated)", "MagicQ (simulated)", "personality generator", "bidirectional mapping", "GDTF/MVR", "capability engine", "3D stage", "spatial effects", "virtual dimmers", "pixel mapping", "node editor", "media playback", "timeline", "audio", "calibration", "remote", "sync", "plugin SDK", "AI assistant", "recovery", "performance tooling", "automated tests", "Linux packages", "PDF manual", "quick start", "demo video"],
+ "queue": [
+  {"id": "Q1", "task": "Run CI workflow on Windows/macOS, fix platform compile issues, publish installers", "blockedBy": "B3"},
+  {"id": "Q2", "task": "Validate GDTF import and DMX/OSC control on grandMA3 and MagicQ; correct OSC templates", "blockedBy": "B1"},
+  {"id": "Q3", "task": "Benchmark on hardware GPUs; implement PBO async readback if needed", "blockedBy": "B2"},
+  {"id": "Q4", "task": "Implement WinMM and CoreMIDI MIDI backends; WASAPI/CoreAudio capture", "blockedBy": null},
+  {"id": "Q5", "task": "NDI / Spout / Syphon output plugins via LfOutputDesc", "blockedBy": "licensing review"},
+  {"id": "Q6", "task": "Hardware validation checklist (documentation/HARDWARE_VALIDATION_CHECKLIST.md)", "blockedBy": "B1,B5,B7"},
+  {"id": "Q7", "task": "Export MVR GroupObjects; DMX break > 0 support", "blockedBy": null},
+  {"id": "Q8", "task": "Measure MTC/LTC chase accuracy against reference clock", "blockedBy": "hardware"}
+ ]
+}

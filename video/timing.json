@@ -1,0 +1,384 @@
+[
+ {
+  "chapter": "Introduction",
+  "text": "Welcome to LUMAFLOW, a native application for real-time visual effects, media playback, pixel mapping, spatial lighting effects and show control. Everything you are about to see is recorded live from the running application.",
+  "min": 9,
+  "start": 3.0,
+  "tts": 17.30907029478458,
+  "wav": "/home/user/LumaFlow/video/work/seg00.wav",
+  "sr": 22050,
+  "length": 18.709070294784578
+ },
+ {
+  "chapter": "Introduction",
+  "text": "LUMAFLOW runs completely offline. It needs no account, no browser and no cloud service. In this recording it renders with a software OpenGL driver on a virtual display, so frame rates are lower than on a real graphics card.",
+  "min": 8,
+  "start": 21.709070294784578,
+  "tts": 17.977097505668933,
+  "wav": "/home/user/LumaFlow/video/work/seg01.wav",
+  "sr": 22050,
+  "length": 19.37709750566893
+ },
+ {
+  "chapter": "Main interface",
+  "text": "This is the Live workspace. The effects library is on the left, with animated thumbnails. In the centre are the preview monitor, in green, and the program monitor, in red. Show control and the parameter editor are on the right, and the timeline is at the bottom.",
+  "min": 10,
+  "start": 41.08616780045351,
+  "tts": 19.67859410430839,
+  "wav": "/home/user/LumaFlow/video/work/seg02.wav",
+  "sr": 22050,
+  "length": 21.07859410430839
+ },
+ {
+  "chapter": "Main interface",
+  "text": "Panels can be docked, tabbed or floated onto another monitor. Five built-in workspaces arrange the panels for live operation, programming, mapping, console work and system monitoring.",
+  "min": 11,
+  "start": 62.1647619047619,
+  "tts": 14.014013605442177,
+  "wav": "/home/user/LumaFlow/video/work/seg03.wav",
+  "sr": 22050,
+  "length": 15.414013605442177
+ },
+ {
+  "chapter": "Generative effects",
+  "text": "LUMAFLOW includes thirty-seven GPU effects in five families: particles, energy, geometry, organic and additional effects such as text, logos, audio spectrum and feedback.",
+  "min": 10,
+  "start": 77.57877551020408,
+  "tts": 14.790657596371883,
+  "wav": "/home/user/LumaFlow/video/work/seg04.wav",
+  "sr": 22050,
+  "length": 16.19065759637188
+ },
+ {
+  "chapter": "Generative effects",
+  "text": "Selecting an effect loads it on the current layer. Every effect has speed, scale, rotation, position and colour controls, plus four effect-specific parameters, such as segments, zoom and spin for the kaleidoscope.",
+  "min": 11,
+  "start": 93.76943310657596,
+  "tts": 17.03265306122449,
+  "wav": "/home/user/LumaFlow/video/work/seg05.wav",
+  "sr": 22050,
+  "length": 18.43265306122449
+ },
+ {
+  "chapter": "Generative effects",
+  "text": "Here are a few more: smoke, fluid, a Julia fractal, a wireframe terrain and the energy ring effect. Shaders are compiled once and cached, so changing parameters never recompiles anything.",
+  "min": 12,
+  "start": 112.20208616780045,
+  "tts": 14.975873015873017,
+  "wav": "/home/user/LumaFlow/video/work/seg06.wav",
+  "sr": 22050,
+  "length": 16.375873015873015
+ },
+ {
+  "chapter": "Node-based effects editor",
+  "text": "The node editor builds new effects without code. Nodes for coordinates, noise, warping, colour and maths are connected with typed ports, and the graph is compiled into a single shader.",
+  "min": 10,
+  "start": 128.57795918367347,
+  "tts": 14.519818594104308,
+  "wav": "/home/user/LumaFlow/video/work/seg07.wav",
+  "sr": 22050,
+  "length": 15.919818594104308
+ },
+ {
+  "chapter": "Node-based effects editor",
+  "text": "Invalid connections and cycles are rejected before anything reaches the GPU. Valid graphs are validated with an isolated test compile, then shown live on the preview monitor. Saving adds the result to the library as a custom effect.",
+  "min": 11,
+  "start": 144.49777777777777,
+  "tts": 18.065714285714286,
+  "wav": "/home/user/LumaFlow/video/work/seg08.wav",
+  "sr": 22050,
+  "length": 19.465714285714284
+ },
+ {
+  "chapter": "Multi-layer compositing",
+  "text": "Six layers are composited on the GPU with alpha, additive, multiply, screen and masked blending. Here a particle layer is added over plasma, and a circular mask cuts a window into the top layer.",
+  "min": 12,
+  "start": 163.96349206349205,
+  "tts": 15.554512471655329,
+  "wav": "/home/user/LumaFlow/video/work/seg09.wav",
+  "sr": 22050,
+  "length": 16.954512471655327
+ },
+ {
+  "chapter": "Multi-layer compositing",
+  "text": "Looks can be prepared on the preview composition while the program keeps running. Pressing TAKE crossfades the preview into the program over the transition time.",
+  "min": 10,
+  "start": 180.9180045351474,
+  "tts": 11.996780045351475,
+  "wav": "/home/user/LumaFlow/video/work/seg10.wav",
+  "sr": 22050,
+  "length": 13.396780045351475
+ },
+ {
+  "chapter": "Multi-layer compositing",
+  "text": "A scene stores the complete composition. Scenes can be recalled with their own transition time, from the show control panel, a cue list, the timeline, OSC, MIDI or a lighting console.",
+  "min": 12,
+  "start": 194.31478458049887,
+  "tts": 14.48843537414966,
+  "wav": "/home/user/LumaFlow/video/work/seg11.wav",
+  "sr": 22050,
+  "length": 15.88843537414966
+ },
+ {
+  "chapter": "Video and image playback",
+  "text": "Video and images play through FFmpeg on background threads with a bounded frame queue, so disk and decoder activity never block rendering. Media layers support looping, in and out points, speed, reverse for short clips, and the same transform, colour and mask controls as effects.",
+  "min": 14,
+  "start": 210.20321995464852,
+  "tts": 22.25873015873016,
+  "wav": "/home/user/LumaFlow/video/work/seg12.wav",
+  "sr": 22050,
+  "length": 23.658730158730158
+ },
+ {
+  "chapter": "Video and image playback",
+  "text": "Text and logo layers render on top of any content. Missing media files are detected when a project opens and can be relinked from a folder.",
+  "min": 8,
+  "start": 233.86195011337867,
+  "tts": 10.980725623582767,
+  "wav": "/home/user/LumaFlow/video/work/seg13.wav",
+  "sr": 22050,
+  "length": 12.380725623582768
+ },
+ {
+  "chapter": "Pixel mapping",
+  "text": "The pixel mapper samples the program canvas onto LED strips, matrices and patched fixtures. In the demonstration rig, LED tubes, battens, RGBW pars and a sixteen by eight matrix are mapped from their real positions.",
+  "min": 11,
+  "start": 246.24267573696144,
+  "tts": 18.24625850340136,
+  "wav": "/home/user/LumaFlow/video/work/seg14.wav",
+  "sr": 22050,
+  "length": 19.64625850340136
+ },
+ {
+  "chapter": "Pixel mapping",
+  "text": "LUMAFLOW handles channel order, gamma, brightness limiting and universe boundaries. Pixels are never split across universes, conflicts are listed, and only universes you explicitly enable are transmitted. The identify test pattern shows each element's start and direction.",
+  "min": 15,
+  "start": 265.8889342403628,
+  "tts": 20.84140589569161,
+  "wav": "/home/user/LumaFlow/video/work/seg15.wav",
+  "sr": 22050,
+  "length": 22.24140589569161
+ },
+ {
+  "chapter": "3D stage and spatial effects",
+  "text": "The 3D stage shows every fixture at its real position, coloured by the DMX that is actually being sent. Fixture layouts can be imported from MVR files with their GDTF fixture types.",
+  "min": 10,
+  "start": 288.13034013605443,
+  "tts": 14.995555555555555,
+  "wav": "/home/user/LumaFlow/video/work/seg16.wav",
+  "sr": 22050,
+  "length": 16.395555555555553
+ },
+ {
+  "chapter": "3D stage and spatial effects",
+  "text": "Spatial effects order fixtures by position: left to right, centre outward, radial, symmetrical, random with a reproducible seed and more. Here a chase runs along the blinders, and the washes breathe from the centre outward.",
+  "min": 14,
+  "start": 304.52589569161,
+  "tts": 17.40421768707483,
+  "wav": "/home/user/LumaFlow/video/work/seg17.wav",
+  "sr": 22050,
+  "length": 18.80421768707483
+ },
+ {
+  "chapter": "3D stage and spatial effects",
+  "text": "Fixtures with colour but no dimmer use a virtual dimmer, fixtures with a dimmer get intensity on the dimmer without double dimming, and intensity-only fixtures receive the level.",
+  "min": 9,
+  "start": 323.3301133786848,
+  "tts": 12.105714285714285,
+  "wav": "/home/user/LumaFlow/video/work/seg18.wav",
+  "sr": 22050,
+  "length": 13.505714285714285
+ },
+ {
+  "chapter": "3D stage and spatial effects",
+  "text": "The fixture manager holds the patch: fixture types, modes, universes, addresses, positions and groups. Capabilities such as dimmer, colour mixing, pan and tilt or multiple cells are detected automatically from GDTF data, and the patch is checked for overlaps and universe boundary errors.",
+  "min": 13,
+  "start": 336.8358276643991,
+  "tts": 23.090612244897958,
+  "wav": "/home/user/LumaFlow/video/work/seg19.wav",
+  "sr": 22050,
+  "length": 24.490612244897957
+ },
+ {
+  "chapter": "grandMA3 and MagicQ integration",
+  "text": "LUMAFLOW works as a fixture-style media server for grandMA3 and ChamSys MagicQ. Both consoles can be connected at the same time on separate addresses, each with its own mapping set.",
+  "min": 11,
+  "start": 361.32643990929705,
+  "tts": 14.595147392290249,
+  "wav": "/home/user/LumaFlow/video/work/seg20.wav",
+  "sr": 22050,
+  "length": 15.99514739229025
+ },
+ {
+  "chapter": "grandMA3 and MagicQ integration",
+  "text": "No console hardware was available for this recording, so the following control is a simulated console sending real Art-Net packets to LUMAFLOW. The master intensity and the layer one effect are being driven over DMX through the personality.",
+  "min": 15,
+  "keepCaption": true,
+  "start": 377.32158730158733,
+  "tts": 18.15324263038549,
+  "wav": "/home/user/LumaFlow/video/work/seg21.wav",
+  "sr": 22050,
+  "length": 19.553242630385487
+ },
+ {
+  "chapter": "Fixture profile generation",
+  "text": "The fixture personality is generated from the internal parameter registry in four modes: sixteen, thirty-two, sixty-four and one hundred and twenty-eight channels. Lower modes are exact prefixes of higher ones, and channels never move when new parameters are added.",
+  "min": 13,
+  "start": 396.87482993197284,
+  "tts": 20.234965986394556,
+  "wav": "/home/user/LumaFlow/video/work/seg22.wav",
+  "sr": 22050,
+  "length": 21.634965986394555
+ },
+ {
+  "chapter": "Fixture profile generation",
+  "text": "When effects or scenes change, LUMAFLOW proposes an updated profile and shows exactly what changed. Breaking changes are flagged, nothing is applied without operator approval, and earlier versions can be rolled back. Export writes a GDTF file for the consoles, verified by re-importing it.",
+  "min": 14,
+  "start": 418.5097959183674,
+  "tts": 23.00204081632653,
+  "wav": "/home/user/LumaFlow/video/work/seg23.wav",
+  "sr": 22050,
+  "length": 24.40204081632653
+ },
+ {
+  "chapter": "Fixture profile generation",
+  "text": "This is the Standard thirty-two channel mode: master intensity in sixteen bit, effect selection, opacity, speed, scale, rotation and colour for layer one, scene selection, transition time, a second layer, strobe and a control channel for go, back, blackout and tap tempo.",
+  "min": 12,
+  "start": 442.9118367346939,
+  "tts": 22.04997732426304,
+  "wav": "/home/user/LumaFlow/video/work/seg24.wav",
+  "sr": 22050,
+  "length": 23.44997732426304
+ },
+ {
+  "chapter": "Bidirectional control",
+  "text": "The control mapping table connects OSC addresses, MIDI controls and DMX channels to any parameter or action, with scaling, inversion, deadband, smoothing, trigger edges and soft takeover. A learn button creates mappings by moving a control.",
+  "min": 12,
+  "start": 466.36181405895695,
+  "tts": 19.798503401360545,
+  "wav": "/home/user/LumaFlow/video/work/seg25.wav",
+  "sr": 22050,
+  "length": 21.198503401360544
+ },
+ {
+  "chapter": "Bidirectional control",
+  "text": "Ownership policies decide who wins when a console and a touchscreen change the same value. Feedback is sent back to consoles and controllers without creating loops. Here OSC messages recall a scene and change the master.",
+  "min": 13,
+  "start": 487.5603174603175,
+  "tts": 17.63215419501134,
+  "wav": "/home/user/LumaFlow/video/work/seg26.wav",
+  "sr": 22050,
+  "length": 19.032154195011337
+ },
+ {
+  "chapter": "Timeline and automation",
+  "text": "Shows can run from cue lists with manual, auto-follow and wait cues, or from the multi-track timeline. Automation tracks animate any parameter with curves, and event tracks trigger scenes, cues and OSC messages.",
+  "min": 12,
+  "start": 506.59247165532884,
+  "tts": 16.9837641723356,
+  "wav": "/home/user/LumaFlow/video/work/seg27.wav",
+  "sr": 22050,
+  "length": 18.3837641723356
+ },
+ {
+  "chapter": "Timeline and automation",
+  "text": "The timeline can follow its own clock, MIDI time code, linear time code decoded from audio, or the clock of another LUMAFLOW instance. The cue list GO button runs the next cue.",
+  "min": 11,
+  "start": 524.9762358276645,
+  "tts": 14.361678004535147,
+  "wav": "/home/user/LumaFlow/video/work/seg28.wav",
+  "sr": 22050,
+  "length": 15.761678004535147
+ },
+ {
+  "chapter": "Audio reactivity and output",
+  "text": "Audio analysis splits the input into six frequency bands, detects beats and estimates the tempo. Here a built-in test signal at one hundred and twenty-eight beats per minute drives an audio-reactive particle layer.",
+  "min": 13,
+  "start": 540.7379138321996,
+  "tts": 16.58063492063492,
+  "wav": "/home/user/LumaFlow/video/work/seg29.wav",
+  "sr": 22050,
+  "length": 17.98063492063492
+ },
+ {
+  "chapter": "Audio reactivity and output",
+  "text": "The program can be sent to multiple displays and LED processors, with cropping, rotation and scaling per output, and recorded to video. Calibration sets gamma, colour balance and white point, and a safety limiter caps flash rates for photosensitive audiences.",
+  "min": 13,
+  "start": 558.7185487528345,
+  "tts": 20.67501133786848,
+  "wav": "/home/user/LumaFlow/video/work/seg30.wav",
+  "sr": 22050,
+  "length": 22.075011337868478
+ },
+ {
+  "chapter": "Reliability",
+  "text": "For reliability, LUMAFLOW autosaves, keeps versioned backups, detects crashes and offers recovery on the next start. A shader error only affects its own layer, a watchdog monitors the render thread, and the recovery dashboard lists every fault with a recommended action.",
+  "min": 13,
+  "start": 580.793560090703,
+  "tts": 20.387573696145125,
+  "wav": "/home/user/LumaFlow/video/work/seg31.wav",
+  "sr": 22050,
+  "length": 21.787573696145124
+ },
+ {
+  "chapter": "Reliability",
+  "text": "Here is a deliberate fault. A custom effect with a shader error is loaded on layer two. The compile error is reported in the recovery panel, but layer one and every output keep running without interruption.",
+  "min": 14,
+  "start": 602.5811337868481,
+  "tts": 15.160725623582767,
+  "wav": "/home/user/LumaFlow/video/work/seg32.wav",
+  "sr": 22050,
+  "length": 16.560725623582766
+ },
+ {
+  "chapter": "Audio reactivity and output",
+  "text": "Calibration test patterns help line up projectors, LED walls and monitors: colour bars with a grid and circle, a grey ramp for gamma, and full white. The red border marks the edge of the canvas.",
+  "min": 12,
+  "start": 619.1418594104309,
+  "tts": 15.594965986394557,
+  "wav": "/home/user/LumaFlow/video/work/seg33.wav",
+  "sr": 22050,
+  "length": 16.994965986394558
+ },
+ {
+  "chapter": "Remote, sync, plugins and AI",
+  "text": "Tablets on the local network can control the show through a web interface with token based roles. Several LUMAFLOW machines can share their state. Plugins extend the effect library through a C plugin interface, and the AI assistant turns a sentence into an effect.",
+  "min": 14,
+  "start": 636.1368253968254,
+  "tts": 19.946213151927438,
+  "wav": "/home/user/LumaFlow/video/work/seg34.wav",
+  "sr": 22050,
+  "length": 21.346213151927437
+ },
+ {
+  "chapter": "Remote, sync, plugins and AI",
+  "text": "Generated effects are validated before they can be activated, and go to the preview first. The AI assistant works locally by default; an external model is optional.",
+  "min": 9,
+  "start": 657.4830385487529,
+  "tts": 12.999863945578232,
+  "wav": "/home/user/LumaFlow/video/work/seg35.wav",
+  "sr": 22050,
+  "length": 14.399863945578232
+ },
+ {
+  "chapter": "Installation and conclusion",
+  "text": "On Linux, LUMAFLOW installs from a Debian package. Windows and macOS installers are produced by the automated build pipeline. The professional user manual, quick start guide, console fixture profiles and protocol references are included with the release.",
+  "min": 13,
+  "start": 671.8829024943311,
+  "tts": 19.544263038548753,
+  "wav": "/home/user/LumaFlow/video/work/seg36.wav",
+  "sr": 22050,
+  "length": 20.94426303854875
+ },
+ {
+  "chapter": "Installation and conclusion",
+  "text": "Console integration was demonstrated with simulated control only and must be validated on real consoles before a production. Thank you for watching LUMAFLOW.",
+  "min": 11,
+  "final": true,
+  "start": 692.8271655328799,
+  "tts": 12.149433106575964,
+  "wav": "/home/user/LumaFlow/video/work/seg37.wav",
+  "sr": 22050,
+  "length": 13.549433106575965
+ }
+]
