@@ -1,0 +1,69 @@
+# LUMAFLOW reproducible release builds for Linux, Windows and macOS.
+name: build
+on:
+  push: { branches: ["**"], tags: ["v*"] }
+  pull_request:
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build qt6-base-dev qt6-base-dev-tools libqt6opengl6-dev libgl-dev libegl-dev \
+            libavformat-dev libavcodec-dev libswscale-dev libavutil-dev zlib1g-dev libsqlite3-dev libasound2-dev xvfb ffmpeg libfuse2
+      - name: Configure & build
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release && cmake --build build
+      - name: Tests (Xvfb + Mesa)
+        run: xvfb-run -s "-screen 0 1920x1080x24" ctest --test-dir build --output-on-failure
+      - name: Packages (DEB, TGZ)
+        run: cd build && cpack -G "DEB;TGZ"
+      - name: AppImage
+        run: |
+          mkdir -p /tmp/tools && cd /tmp/tools
+          wget -q https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage -O linuxdeploy
+          wget -q https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage -O linuxdeploy-plugin-qt
+          wget -q https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage -O appimagetool
+          chmod +x linuxdeploy linuxdeploy-plugin-qt appimagetool
+          cd $GITHUB_WORKSPACE && BUILD=$GITHUB_WORKSPACE/build OUT=$GITHUB_WORKSPACE/dist ./installers/linux/build_appimage.sh
+      - uses: actions/upload-artifact@v4
+        with: { name: lumaflow-linux, path: "build/*.deb\nbuild/*.tar.gz\ndist/*.AppImage" }
+  windows:
+    runs-on: windows-2022
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jurplel/install-qt-action@v4
+        with: { version: "6.7.3", arch: win64_msvc2019_64 }
+      - name: vcpkg dependencies
+        run: vcpkg install ffmpeg[avcodec,avformat,swscale]:x64-windows zlib:x64-windows sqlite3:x64-windows pkgconf:x64-windows
+      - uses: ilammy/msvc-dev-cmd@v1
+      - name: Build
+        run: |
+          cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DLUMAFLOW_WITH_ALSA=OFF -DCMAKE_TOOLCHAIN_FILE=$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake
+          cmake --build build
+      - name: Deploy Qt + NSIS installer
+        run: |
+          windeployqt --release --no-translations build/src/lumaflow.exe
+          cd build; cpack -G "NSIS;ZIP"
+      - uses: actions/upload-artifact@v4
+        with: { name: lumaflow-windows, path: "build/*.exe\nbuild/*.zip" }
+  macos:
+    strategy: { matrix: { include: [ { os: macos-14, arch: arm64 }, { os: macos-13, arch: x86_64 } ] } }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Dependencies
+        run: brew install qt ffmpeg ninja pkg-config sqlite
+      - name: Build
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_PREFIX_PATH=$(brew --prefix qt) && cmake --build build
+      - name: Bundle, sign, notarise, DMG
+        env:
+          MACOS_CERT_P12: ${{ secrets.MACOS_CERT_P12 }}
+          MACOS_CERT_PASSWORD: ${{ secrets.MACOS_CERT_PASSWORD }}
+          APPLE_ID: ${{ secrets.APPLE_ID }}
+          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
+        run: ./installers/macos/package_macos.sh build ${{ matrix.arch }}
+      - uses: actions/upload-artifact@v4
+        with: { name: lumaflow-macos-${{ matrix.arch }}, path: "dist/*.dmg" }

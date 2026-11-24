@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=LUMAFLOW
+GenericName=Media Server and Show Control
+Comment=Real-time visual effects, media server, pixel mapping and show control
+Exec=lumaflow %f
+Icon=lumaflow
+Terminal=false
+Categories=AudioVideo;Video;
+MimeType=application/x-lumaflow-project;
+Keywords=VJ;DMX;Art-Net;sACN;OSC;MIDI;pixel mapping;lighting;
