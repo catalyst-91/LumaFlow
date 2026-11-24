@@ -1,0 +1,59 @@
+uv	Coordinates	Input
+time	Time	Input
+constant	Constant	Input
+color	Colour	Input
+vec2	Vector	Input
+param	Exposed Parameter	Parameter modulation
+audio	Audio Band	Audio input
+beat	Beat Pulse	Audio input
+spectrum	Spectrum	Audio input
+midi	MIDI Input	MIDI input
+osc	OSC Input	OSC input
+dmx	DMX Input	DMX input
+timecode	Timecode	Timecode
+image	Image / Video Input	Video input
+feedback	Previous Frame	Video input
+noise	Noise (fBm)	Noise
+valuenoise	Value Noise	Noise
+voronoi	Voronoi	Noise
+circle	Circle	Generators
+rings	Rings	Generators
+stripes	Stripes	Generators
+checker	Checker	Generators
+polygon	Polygon	Generators
+plasma	Plasma	Generators
+particles	Particles	Particles
+palette	Palette	Colour
+hsv	HSV to RGB	Colour
+gradient	Gradient Map	Colour
+tint	Tint	Colour
+huerot	Hue Rotate	Colour
+rotate	Rotate	Transform
+scale	Scale	Transform
+translate	Translate	Transform
+polar	To Polar	Transform
+kaleido	Kaleidoscope	Transform
+tile	Tile	Transform
+twirl	Twirl	Distortion
+warp	Noise Warp	Distortion
+ripple	Ripple	Distortion
+smoothstep	Smooth Mask	Masks
+threshold	Threshold	Masks
+invert	Invert	Masks
+applymask	Apply Mask	Masks
+addc	Add (Colour)	Compositing
+mulc	Multiply (Colour)	Compositing
+screen	Screen	Compositing
+mixc	Mix (Colour)	Compositing
+maxc	Lighten	Compositing
+remap	Remap	Mathematics
+length	Length	Mathematics
+split	Split Vector	Mathematics
+luma	Luminance	Mathematics
+step	Compare (a >= b)	Logic
+select	Select	Logic
+lfo	LFO	Parameter modulation
+glsl	Custom GLSL	Custom
+subgraph	Subgraph	Custom
+subin	Subgraph Inputs	Custom
+output	Output	Output
