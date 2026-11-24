@@ -1,0 +1,8 @@
+build/
+build-*/
+*.user
+/releases/*/
+!/releases/README.md
+__pycache__/
+*.pyc
+/video/work/

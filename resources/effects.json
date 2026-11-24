@@ -1,0 +1,1337 @@
+{
+ "version": 1,
+ "effects": [
+  {
+   "id": "particle_cloud",
+   "name": "Particle Cloud",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.5
+    },
+    {
+     "name": "Size",
+     "default": 0.4
+    },
+    {
+     "name": "Drift",
+     "default": 0.3
+    },
+    {
+     "name": "Glow",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "Layered drifting particle field with twinkle.",
+   "photosensitive": false,
+   "shader": "effects/particle_cloud.glsl"
+  },
+  {
+   "id": "particle_explosion",
+   "name": "Particle Explosion",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.6
+    },
+    {
+     "name": "Burst rate",
+     "default": 0.4
+    },
+    {
+     "name": "Spread",
+     "default": 0.6
+    },
+    {
+     "name": "Trail",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.6,
+    0.1
+   ],
+   "colorB": [
+    1.0,
+    0.1,
+    0.3
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_explosion.glsl"
+  },
+  {
+   "id": "particle_storm",
+   "name": "Particle Storm",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Density",
+     "default": 0.6
+    },
+    {
+     "name": "Wind",
+     "default": 0.6
+    },
+    {
+     "name": "Turbulence",
+     "default": 0.5
+    },
+    {
+     "name": "Streak",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.6,
+    0.8,
+    1.0
+   ],
+   "colorB": [
+    0.9,
+    0.9,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_storm.glsl"
+  },
+  {
+   "id": "particle_vortex",
+   "name": "Particle Vortex",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.6
+    },
+    {
+     "name": "Twist",
+     "default": 0.5
+    },
+    {
+     "name": "Suction",
+     "default": 0.5
+    },
+    {
+     "name": "Size",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_vortex.glsl"
+  },
+  {
+   "id": "particle_trails",
+   "name": "Particle Trails",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.5
+    },
+    {
+     "name": "Length",
+     "default": 0.6
+    },
+    {
+     "name": "Speed var",
+     "default": 0.5
+    },
+    {
+     "name": "Wave",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_trails.glsl"
+  },
+  {
+   "id": "particle_tunnel",
+   "name": "Particle Tunnel",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Density",
+     "default": 0.5
+    },
+    {
+     "name": "Depth speed",
+     "default": 0.5
+    },
+    {
+     "name": "Twist",
+     "default": 0.3
+    },
+    {
+     "name": "Size",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.2,
+    0.6,
+    1.0
+   ],
+   "colorB": [
+    0.8,
+    0.2,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_tunnel.glsl"
+  },
+  {
+   "id": "particle_attract",
+   "name": "Attract / Repel",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.6
+    },
+    {
+     "name": "Force",
+     "default": 0.5
+    },
+    {
+     "name": "Repel",
+     "default": 0.0
+    },
+    {
+     "name": "Orbit",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/particle_attract.glsl"
+  },
+  {
+   "id": "audio_particles",
+   "name": "Audio Particles",
+   "category": "Particles",
+   "params": [
+    {
+     "name": "Count",
+     "default": 0.6
+    },
+    {
+     "name": "Bass kick",
+     "default": 0.7
+    },
+    {
+     "name": "Treble sparkle",
+     "default": 0.6
+    },
+    {
+     "name": "Size",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "Particles that expand on beats and sparkle with treble energy.",
+   "photosensitive": false,
+   "shader": "effects/audio_particles.glsl"
+  },
+  {
+   "id": "plasma",
+   "name": "Plasma",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Complexity",
+     "default": 0.5
+    },
+    {
+     "name": "Warp",
+     "default": 0.4
+    },
+    {
+     "name": "Contrast",
+     "default": 0.5
+    },
+    {
+     "name": "Colour cycle",
+     "default": 0.3
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.1,
+    0.6
+   ],
+   "colorB": [
+    0.1,
+    0.4,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/plasma.glsl"
+  },
+  {
+   "id": "lightning",
+   "name": "Lightning",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Bolts",
+     "default": 0.4
+    },
+    {
+     "name": "Branching",
+     "default": 0.5
+    },
+    {
+     "name": "Rate",
+     "default": 0.5
+    },
+    {
+     "name": "Glow",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.5,
+    0.6,
+    1.0
+   ],
+   "colorB": [
+    0.9,
+    0.9,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": true,
+   "shader": "effects/lightning.glsl"
+  },
+  {
+   "id": "electric_arcs",
+   "name": "Electric Arcs",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Arcs",
+     "default": 0.5
+    },
+    {
+     "name": "Jitter",
+     "default": 0.6
+    },
+    {
+     "name": "Thickness",
+     "default": 0.4
+    },
+    {
+     "name": "Hum",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.3,
+    0.7,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.3,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/electric_arcs.glsl"
+  },
+  {
+   "id": "energy_rings",
+   "name": "Energy Rings",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Rings",
+     "default": 0.5
+    },
+    {
+     "name": "Width",
+     "default": 0.3
+    },
+    {
+     "name": "Spacing",
+     "default": 0.5
+    },
+    {
+     "name": "Audio",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.0,
+    0.9,
+    1.0
+   ],
+   "colorB": [
+    0.6,
+    0.0,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/energy_rings.glsl"
+  },
+  {
+   "id": "pulse_field",
+   "name": "Pulsating Field",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Cells",
+     "default": 0.5
+    },
+    {
+     "name": "Pulse",
+     "default": 0.6
+    },
+    {
+     "name": "Sharpness",
+     "default": 0.5
+    },
+    {
+     "name": "Audio",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/pulse_field.glsl"
+  },
+  {
+   "id": "neon_lines",
+   "name": "Neon Lines",
+   "category": "Energy",
+   "params": [
+    {
+     "name": "Lines",
+     "default": 0.5
+    },
+    {
+     "name": "Wobble",
+     "default": 0.4
+    },
+    {
+     "name": "Glow",
+     "default": 0.6
+    },
+    {
+     "name": "Scroll",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.1,
+    0.8
+   ],
+   "colorB": [
+    0.1,
+    0.9,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/neon_lines.glsl"
+  },
+  {
+   "id": "kaleidoscope",
+   "name": "Kaleidoscope",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Segments",
+     "default": 0.4
+    },
+    {
+     "name": "Zoom",
+     "default": 0.5
+    },
+    {
+     "name": "Detail",
+     "default": 0.5
+    },
+    {
+     "name": "Spin",
+     "default": 0.3
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.3,
+    0.1
+   ],
+   "colorB": [
+    0.1,
+    0.3,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/kaleidoscope.glsl"
+  },
+  {
+   "id": "fractal",
+   "name": "Julia Fractal",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Iterations",
+     "default": 0.6
+    },
+    {
+     "name": "Morph",
+     "default": 0.5
+    },
+    {
+     "name": "Zoom",
+     "default": 0.4
+    },
+    {
+     "name": "Colour bands",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.2,
+    1.0
+   ],
+   "colorB": [
+    1.0,
+    0.5,
+    0.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/fractal.glsl"
+  },
+  {
+   "id": "mandala",
+   "name": "Mandala",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Petals",
+     "default": 0.5
+    },
+    {
+     "name": "Layers",
+     "default": 0.5
+    },
+    {
+     "name": "Line width",
+     "default": 0.3
+    },
+    {
+     "name": "Breathe",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.7,
+    0.2
+   ],
+   "colorB": [
+    0.9,
+    0.1,
+    0.5
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/mandala.glsl"
+  },
+  {
+   "id": "geo_tunnel",
+   "name": "Geometric Tunnel",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Sides",
+     "default": 0.3
+    },
+    {
+     "name": "Speed depth",
+     "default": 0.5
+    },
+    {
+     "name": "Twist",
+     "default": 0.4
+    },
+    {
+     "name": "Line width",
+     "default": 0.3
+    }
+   ],
+   "colorA": [
+    0.0,
+    1.0,
+    0.7
+   ],
+   "colorB": [
+    0.6,
+    0.0,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/geo_tunnel.glsl"
+  },
+  {
+   "id": "rotating_pattern",
+   "name": "Rotating Pattern",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Density",
+     "default": 0.5
+    },
+    {
+     "name": "Counter-spin",
+     "default": 0.5
+    },
+    {
+     "name": "Shape",
+     "default": 0.3
+    },
+    {
+     "name": "Line width",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/rotating_pattern.glsl"
+  },
+  {
+   "id": "morph_geometry",
+   "name": "Morphing Geometry",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Vertices",
+     "default": 0.4
+    },
+    {
+     "name": "Morph speed",
+     "default": 0.5
+    },
+    {
+     "name": "Fill",
+     "default": 0.3
+    },
+    {
+     "name": "Echoes",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.2,
+    1.0,
+    0.6
+   ],
+   "colorB": [
+    1.0,
+    0.2,
+    0.6
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/morph_geometry.glsl"
+  },
+  {
+   "id": "wireframe",
+   "name": "Wireframe Terrain",
+   "category": "Geometry",
+   "params": [
+    {
+     "name": "Grid density",
+     "default": 0.5
+    },
+    {
+     "name": "Height",
+     "default": 0.5
+    },
+    {
+     "name": "Scroll",
+     "default": 0.5
+    },
+    {
+     "name": "Horizon",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.2,
+    0.8
+   ],
+   "colorB": [
+    0.2,
+    0.4,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/wireframe.glsl"
+  },
+  {
+   "id": "smoke",
+   "name": "Smoke",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Density",
+     "default": 0.5
+    },
+    {
+     "name": "Rise",
+     "default": 0.5
+    },
+    {
+     "name": "Detail",
+     "default": 0.5
+    },
+    {
+     "name": "Softness",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.8,
+    0.85,
+    0.95
+   ],
+   "colorB": [
+    0.3,
+    0.3,
+    0.5
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/smoke.glsl"
+  },
+  {
+   "id": "fluid",
+   "name": "Fluid",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Viscosity",
+     "default": 0.5
+    },
+    {
+     "name": "Swirl",
+     "default": 0.6
+    },
+    {
+     "name": "Scale",
+     "default": 0.5
+    },
+    {
+     "name": "Contrast",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.0,
+    0.4,
+    1.0
+   ],
+   "colorB": [
+    0.0,
+    1.0,
+    0.8
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/fluid.glsl"
+  },
+  {
+   "id": "ink",
+   "name": "Ink Clouds",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Spread",
+     "default": 0.5
+    },
+    {
+     "name": "Billow",
+     "default": 0.5
+    },
+    {
+     "name": "Darkness",
+     "default": 0.5
+    },
+    {
+     "name": "Flow",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.5,
+    0.0,
+    1.0
+   ],
+   "colorB": [
+    0.0,
+    0.2,
+    0.6
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/ink.glsl"
+  },
+  {
+   "id": "flow_field",
+   "name": "Flow Field",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Lines",
+     "default": 0.6
+    },
+    {
+     "name": "Curl",
+     "default": 0.5
+    },
+    {
+     "name": "Length",
+     "default": 0.5
+    },
+    {
+     "name": "Speed var",
+     "default": 0.4
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/flow_field.glsl"
+  },
+  {
+   "id": "turbulence",
+   "name": "Turbulence",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Octaves",
+     "default": 0.6
+    },
+    {
+     "name": "Distortion",
+     "default": 0.5
+    },
+    {
+     "name": "Scale",
+     "default": 0.5
+    },
+    {
+     "name": "Sharpness",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    0.4,
+    0.0
+   ],
+   "colorB": [
+    0.2,
+    0.0,
+    0.6
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/turbulence.glsl"
+  },
+  {
+   "id": "organic_morph",
+   "name": "Organic Morph",
+   "category": "Organic",
+   "params": [
+    {
+     "name": "Blobs",
+     "default": 0.5
+    },
+    {
+     "name": "Gooeyness",
+     "default": 0.5
+    },
+    {
+     "name": "Speed var",
+     "default": 0.5
+    },
+    {
+     "name": "Rim",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.0,
+    1.0,
+    0.5
+   ],
+   "colorB": [
+    0.0,
+    0.4,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/organic_morph.glsl"
+  },
+  {
+   "id": "glitch",
+   "name": "Glitch",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Intensity",
+     "default": 0.5
+    },
+    {
+     "name": "Block size",
+     "default": 0.5
+    },
+    {
+     "name": "RGB split",
+     "default": 0.5
+    },
+    {
+     "name": "Rate",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.2,
+    0.9,
+    1.0
+   ],
+   "colorB": [
+    1.0,
+    0.0,
+    0.5
+   ],
+   "description": "",
+   "photosensitive": true,
+   "shader": "effects/glitch.glsl"
+  },
+  {
+   "id": "strobe",
+   "name": "Strobe",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Rate",
+     "default": 0.3
+    },
+    {
+     "name": "Duty",
+     "default": 0.2
+    },
+    {
+     "name": "Random",
+     "default": 0.0
+    },
+    {
+     "name": "Beat sync",
+     "default": 0.0
+    }
+   ],
+   "colorA": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "colorB": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "description": "Full-frame strobe. Rate is capped by the photosensitive safety limiter.",
+   "photosensitive": true,
+   "shader": "effects/strobe.glsl"
+  },
+  {
+   "id": "gradient",
+   "name": "Gradient",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Angle",
+     "default": 0.0
+    },
+    {
+     "name": "Scroll",
+     "default": 0.3
+    },
+    {
+     "name": "Bands",
+     "default": 0.0
+    },
+    {
+     "name": "Radial",
+     "default": 0.0
+    }
+   ],
+   "colorA": [
+    0.0,
+    0.3,
+    1.0
+   ],
+   "colorB": [
+    0.8,
+    0.0,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/gradient.glsl"
+  },
+  {
+   "id": "text",
+   "name": "Text",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Scroll",
+     "default": 0.0
+    },
+    {
+     "name": "Outline glow",
+     "default": 0.4
+    },
+    {
+     "name": "Wave",
+     "default": 0.0
+    },
+    {
+     "name": "Size",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "colorB": [
+    0.2,
+    0.5,
+    1.0
+   ],
+   "description": "Renders the layer's text string (set in the Parameter Editor).",
+   "photosensitive": false,
+   "shader": "effects/text.glsl"
+  },
+  {
+   "id": "logo",
+   "name": "Logo / Image",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Pulse",
+     "default": 0.0
+    },
+    {
+     "name": "Spin",
+     "default": 0.0
+    },
+    {
+     "name": "Glow",
+     "default": 0.3
+    },
+    {
+     "name": "Tint",
+     "default": 0.0
+    }
+   ],
+   "colorA": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "colorB": [
+    0.3,
+    0.5,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/logo.glsl"
+  },
+  {
+   "id": "spectrum",
+   "name": "Audio Spectrum",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Bars",
+     "default": 0.5
+    },
+    {
+     "name": "Gap",
+     "default": 0.3
+    },
+    {
+     "name": "Mirror",
+     "default": 1.0
+    },
+    {
+     "name": "Peak glow",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.0,
+    1.0,
+    0.6
+   ],
+   "colorB": [
+    1.0,
+    0.1,
+    0.5
+   ],
+   "description": "Live FFT spectrum bars from the audio input.",
+   "photosensitive": false,
+   "shader": "effects/spectrum.glsl"
+  },
+  {
+   "id": "waveform",
+   "name": "Waveform",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Lines",
+     "default": 0.3
+    },
+    {
+     "name": "Amplitude",
+     "default": 0.5
+    },
+    {
+     "name": "Thickness",
+     "default": 0.3
+    },
+    {
+     "name": "Audio drive",
+     "default": 0.8
+    }
+   ],
+   "colorA": [
+    0.2,
+    1.0,
+    1.0
+   ],
+   "colorB": [
+    1.0,
+    0.2,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/waveform.glsl"
+  },
+  {
+   "id": "feedback",
+   "name": "Feedback Tunnel",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Decay",
+     "default": 0.8
+    },
+    {
+     "name": "Zoom",
+     "default": 0.5
+    },
+    {
+     "name": "Rotate",
+     "default": 0.5
+    },
+    {
+     "name": "Seed",
+     "default": 0.5
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "Feeds the previous frame back with zoom/rotation for trails.",
+   "photosensitive": false,
+   "shader": "effects/feedback.glsl"
+  },
+  {
+   "id": "solid",
+   "name": "Solid Colour",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Mix B",
+     "default": 0.0
+    },
+    {
+     "name": "Pulse",
+     "default": 0.0
+    },
+    {
+     "name": "-",
+     "default": 0.0
+    },
+    {
+     "name": "-",
+     "default": 0.0
+    }
+   ],
+   "colorA": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "colorB": [
+    0.0,
+    0.0,
+    1.0
+   ],
+   "description": "",
+   "photosensitive": false,
+   "shader": "effects/solid.glsl"
+  },
+  {
+   "id": "test_pattern",
+   "name": "Test Pattern",
+   "category": "Additional",
+   "params": [
+    {
+     "name": "Mode",
+     "default": 0.0
+    },
+    {
+     "name": "Grid",
+     "default": 0.5
+    },
+    {
+     "name": "-",
+     "default": 0.0
+    },
+    {
+     "name": "-",
+     "default": 0.0
+    }
+   ],
+   "colorA": [
+    0.1,
+    0.5,
+    1.0
+   ],
+   "colorB": [
+    0.7,
+    0.1,
+    1.0
+   ],
+   "description": "Colour bars, grey ramp, white field or RGB cycle, with canvas edge markers.",
+   "photosensitive": false,
+   "shader": "effects/test_pattern.glsl"
+  }
+ ]
+}

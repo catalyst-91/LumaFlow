@@ -1,0 +1,105 @@
+cmake_minimum_required(VERSION 3.21)
+
+project(LUMAFLOW
+    VERSION 3.0.0
+    DESCRIPTION "LUMAFLOW - real-time visual effects, media server, pixel mapping and show control"
+    HOMEPAGE_URL "https://github.com/catalyst-91/lumaflow"
+    LANGUAGES C CXX)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+    set(CMAKE_BUILD_TYPE Release CACHE STRING "Build type" FORCE)
+endif()
+
+option(LUMAFLOW_BUILD_TESTS   "Build unit and integration tests" ON)
+option(LUMAFLOW_BUILD_GUI     "Build the desktop application" ON)
+option(LUMAFLOW_WITH_FFMPEG   "Enable FFmpeg (libav*) video decoding" ON)
+option(LUMAFLOW_WITH_ALSA     "Enable ALSA audio capture and MIDI on Linux" ON)
+
+find_package(Qt6 6.4 REQUIRED COMPONENTS Core Gui Network Xml Concurrent OpenGL)
+if(LUMAFLOW_BUILD_GUI)
+    find_package(Qt6 6.4 REQUIRED COMPONENTS Widgets OpenGLWidgets)
+endif()
+if(LUMAFLOW_BUILD_TESTS)
+    find_package(Qt6 6.4 REQUIRED COMPONENTS Test)
+endif()
+
+find_package(ZLIB REQUIRED)
+find_package(SQLite3 REQUIRED)
+find_package(PkgConfig)
+
+set(LF_HAVE_FFMPEG OFF)
+if(LUMAFLOW_WITH_FFMPEG AND PkgConfig_FOUND)
+    pkg_check_modules(LIBAV IMPORTED_TARGET libavformat libavcodec libswscale libavutil)
+    if(LIBAV_FOUND)
+        set(LF_HAVE_FFMPEG ON)
+    endif()
+endif()
+
+set(LF_HAVE_ALSA OFF)
+if(LUMAFLOW_WITH_ALSA AND UNIX AND NOT APPLE AND PkgConfig_FOUND)
+    pkg_check_modules(ALSA IMPORTED_TARGET alsa)
+    if(ALSA_FOUND)
+        set(LF_HAVE_ALSA ON)
+    endif()
+endif()
+
+message(STATUS "LUMAFLOW: FFmpeg=${LF_HAVE_FFMPEG} ALSA=${LF_HAVE_ALSA}")
+
+if(MSVC)
+    add_compile_options(/W4 /permissive- /utf-8)
+else()
+    add_compile_options(-Wall -Wextra -Wno-unused-parameter)
+endif()
+
+include(GNUInstallDirs)
+add_subdirectory(src)
+add_subdirectory(sdk/examples)
+
+if(LUMAFLOW_BUILD_TESTS)
+    enable_testing()
+    add_subdirectory(tests)
+endif()
+
+# ---------------------------------------------------------------- install
+install(DIRECTORY resources/presets DESTINATION ${CMAKE_INSTALL_DATADIR}/lumaflow)
+install(DIRECTORY examples/ DESTINATION ${CMAKE_INSTALL_DATADIR}/lumaflow/examples)
+install(DIRECTORY fixture-profiles/ DESTINATION ${CMAKE_INSTALL_DATADIR}/lumaflow/fixture-profiles)
+install(DIRECTORY sdk/include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/lumaflow)
+install(FILES LICENSE README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
+if(UNIX AND NOT APPLE)
+    install(FILES installers/linux/lumaflow.desktop DESTINATION ${CMAKE_INSTALL_DATADIR}/applications)
+    install(FILES resources/icons/lumaflow.png DESTINATION ${CMAKE_INSTALL_DATADIR}/icons/hicolor/256x256/apps)
+    install(FILES installers/linux/lumaflow.metainfo.xml DESTINATION ${CMAKE_INSTALL_DATADIR}/metainfo)
+endif()
+
+# ---------------------------------------------------------------- packaging
+set(CPACK_PACKAGE_NAME "lumaflow")
+set(CPACK_PACKAGE_VENDOR "LUMAFLOW Project")
+set(CPACK_PACKAGE_CONTACT "LUMAFLOW maintainers")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "${PROJECT_DESCRIPTION}")
+set(CPACK_PACKAGE_INSTALL_DIRECTORY "LUMAFLOW")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_PACKAGE_EXECUTABLES "lumaflow" "LUMAFLOW")
+set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
+set(CPACK_DEBIAN_PACKAGE_SECTION "video")
+set(CPACK_DEBIAN_FILE_NAME DEB-DEFAULT)
+set(CPACK_NSIS_DISPLAY_NAME "LUMAFLOW ${PROJECT_VERSION}")
+set(CPACK_NSIS_CREATE_ICONS_EXTRA "CreateShortCut '$DESKTOP\\\\LUMAFLOW.lnk' '$INSTDIR\\\\bin\\\\lumaflow.exe'")
+set(CPACK_NSIS_DELETE_ICONS_EXTRA "Delete '$DESKTOP\\\\LUMAFLOW.lnk'")
+set(CPACK_NSIS_ENABLE_UNINSTALL_BEFORE_INSTALL ON)
+set(CPACK_DMG_VOLUME_NAME "LUMAFLOW")
+if(WIN32)
+    set(CPACK_GENERATOR "NSIS;ZIP")
+elseif(APPLE)
+    set(CPACK_GENERATOR "DragNDrop")
+else()
+    set(CPACK_GENERATOR "DEB;TGZ")
+endif()
+include(CPack)
