@@ -129,6 +129,7 @@ FixturePanel::FixturePanel(UiContext* ctx, QWidget* parent) : QWidget(parent), c
         m_caps->setText(m ? QString("<b>%1</b> - %2 channels: %3").arg(f.name).arg(m->footprint()).arg(analyzeCapabilities(*m).describe().join(", ")) : "unknown type");
     });
     connect(c->engine, &Engine::projectLoaded, this, [this, fillTypes] { fillTypes(); refresh(); });
+    connect(c->engine, &Engine::showStateChanged, this, [this] { if (m_table->rowCount() != c->engine->patch().fixtures.size()) refresh(); });
     refresh();
 }
 

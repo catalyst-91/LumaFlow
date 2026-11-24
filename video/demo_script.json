@@ -760,6 +760,25 @@
   "t": 636.64
  },
  {
+  "action": "param",
+  "id": "layer2.opacity",
+  "value": 0,
+  "preview": true,
+  "t": 637.14
+ },
+ {
+  "action": "param",
+  "id": "layer3.opacity",
+  "value": 0,
+  "preview": true,
+  "t": 637.24
+ },
+ {
+  "action": "layer",
+  "index": 0,
+  "t": 637.34
+ },
+ {
   "action": "aiPrompt",
   "text": "Create a blue particle vortex",
   "t": 642.14
