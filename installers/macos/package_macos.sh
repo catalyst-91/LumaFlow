@@ -46,9 +46,12 @@ else
 fi
 codesign --verify --deep --strict --verbose=2 "$APP"
 # Launch check: the bundled CLI must load every framework and the Qt platform plugin.
-QT_QPA_PLATFORM=offscreen "$APP/Contents/MacOS/lumaflow-cli" --version
-QT_QPA_PLATFORM=offscreen "$APP/Contents/MacOS/lumaflow-cli" effects > "$BUILD/effects-check.txt"
+"$APP/Contents/MacOS/lumaflow-cli" --version
+"$APP/Contents/MacOS/lumaflow-cli" effects > "$BUILD/effects-check.txt"
 echo "Bundled CLI lists $(wc -l < "$BUILD/effects-check.txt") effects"
+# GPU check (informational: CI virtual machines may not expose a usable OpenGL device)
+"$APP/Contents/MacOS/lumaflow-cli" render-frame -e plasma -t 0.2 -o "$BUILD/render-check.png" \
+  && echo "Bundled CLI rendered a frame on the GPU" || echo "WARNING: GPU render check failed on this runner"
 DMG="$ROOT/dist/LUMAFLOW-3.0.0-macOS-$ARCH.dmg"
 hdiutil create -volname LUMAFLOW -srcfolder "$APP" -ov -format UDZO "$DMG"
 if [[ -n "${APPLE_ID:-}" ]]; then

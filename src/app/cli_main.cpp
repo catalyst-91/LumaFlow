@@ -49,7 +49,12 @@ int main(int argc, char** argv) {
         out(QJsonDocument(info).toJson(QJsonDocument::Compact));
         return 0;
     }
+#ifndef Q_OS_MACOS
+    // Headless by default on Linux/Windows. On macOS the native cocoa plugin is used: it renders
+    // to offscreen GL surfaces without opening a window, and it is the only platform plugin
+    // macdeployqt bundles (the offscreen plugin has no OpenGL support on macOS).
     if (qEnvironmentVariableIsEmpty("QT_QPA_PLATFORM")) qputenv("QT_QPA_PLATFORM", "offscreen");
+#endif
     QGuiApplication app(argc, argv);
     app.setApplicationName("LUMAFLOW"); app.setOrganizationName("LUMAFLOW"); app.setApplicationVersion(LUMAFLOW_VERSION);
     Log::instance().setEcho(qEnvironmentVariableIsSet("LUMAFLOW_VERBOSE"));
